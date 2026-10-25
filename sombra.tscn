@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://clkwhmlcwm8a8" path="res://sombra.gd" id="1_5qid6"]
 [ext_resource type="Texture2D" uid="uid://b5fhova30neq" path="res://icon.svg" id="2_sgjm3"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+
 [node name="Sombra" type="CharacterBody2D" unique_id=1092208446]
 collision_layer = 2
 collision_mask = 20
@@ -13,3 +15,4 @@ modulate = Color(0.119677044, 1.92523e-07, 0.72777206, 1)
 texture = ExtResource("2_sgjm3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255377934]
+shape = SubResource("RectangleShape2D_onrkg")
