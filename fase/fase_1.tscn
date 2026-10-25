@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://ku2qhciexdrr"]
 
-[ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase_1.gd" id="1_eb6rn"]
-[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player.tscn" id="2_hffw0"]
-[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra.tscn" id="3_68bho"]
-[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://parede_bloqueia_player.tscn" id="4_ge8mc"]
-[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede_bloqueia_sombra.tscn" id="5_8t630"]
-[ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede_geral.tscn" id="6_h75nb"]
+[ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase_1.gd" id="1_eb6rn"]
+[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_hffw0"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra/sombra.tscn" id="3_68bho"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://parede/parede_bloqueia_player.tscn" id="4_ge8mc"]
+[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="5_8t630"]
+[ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="6_h75nb"]
 
 [node name="Fase1" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_eb6rn")
