@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b0nugb86ufv0r"]
 
-[ext_resource type="Texture2D" uid="uid://b5fhova30neq" path="res://assets/icon.svg" id="1_a4oy7"]
+[ext_resource type="Texture2D" uid="uid://sq0ylhhc2fj3" path="res://assets/parede.png" id="1_ct658"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
 size = Vector2(123, 125)
@@ -9,8 +9,7 @@ size = Vector2(123, 125)
 collision_layer = 8
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=736548034]
-modulate = Color(0.09199918, 0.58344203, 0.5352838, 1)
-texture = ExtResource("1_a4oy7")
+texture = ExtResource("1_ct658")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943126472]
 position = Vector2(-0.5, -0.5)

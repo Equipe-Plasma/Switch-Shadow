@@ -17,6 +17,7 @@ script = ExtResource("1_eb6rn")
 position = Vector2(1030, 538)
 textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")
+textura_dos_lados_direta = ExtResource("5_nitit")
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("3_68bho")]
 modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)

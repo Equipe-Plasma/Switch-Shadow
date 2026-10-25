@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c38q4f7g50dtq"]
 
 [ext_resource type="Script" uid="uid://clkwhmlcwm8a8" path="res://sombra/sombra.gd" id="1_5qid6"]
-[ext_resource type="Texture2D" uid="uid://b5fhova30neq" path="res://assets/icon.svg" id="2_sgjm3"]
+[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="2_x44nn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(117, 119)
@@ -12,8 +12,8 @@ collision_mask = 20
 script = ExtResource("1_5qid6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460049725]
-modulate = Color(0.119677044, 1.92523e-07, 0.72777206, 1)
-texture = ExtResource("2_sgjm3")
+modulate = Color(0.4305154, 0.6182317, 1, 1)
+texture = ExtResource("2_x44nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255377934]
 position = Vector2(-0.5, -0.5)
