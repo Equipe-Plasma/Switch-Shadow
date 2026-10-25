@@ -7,7 +7,7 @@ extends CharacterBody2D
 # 1. Criamos campos no Inspetor para vocês arrastarem as imagens de cada direção
 @export var textura_frente: Texture2D   # Para quando anda para baixo
 @export var textura_costas: Texture2D   # Para quando anda para cima
-@export var textura_dos_lados: Texture2D  # Para quando anda para os lados
+@export var textura_dos_lados_direta: Texture2D  # Para quando anda para os lados
 
 func _physics_process(_delta: float) -> void:
 	# Pega os botões que configuramos no Input Map
@@ -33,8 +33,8 @@ func _physics_process(_delta: float) -> void:
 				sprite.flip_h = false
 		else:
 			# Movendo para os lados (Esquerda ou Direita)
-			if textura_dos_lados:
-				sprite.texture = textura_dos_lados
+			if textura_dos_lados_direta:
+				sprite.texture = textura_dos_lados_direta
 				
 			if direcao.x > 0:
 				sprite.flip_h = false  # Direita (normal)
