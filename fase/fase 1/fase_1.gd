@@ -6,6 +6,9 @@ extends Node2D
 var total_itens: int = 0
 
 func _ready() -> void:
+	# Salva o caminho desta fase no nosso script global
+	Global.ultima_fase = scene_file_path
+	
 	# Conta quantos itens existem na fase ao iniciar com base no grupo "itens"
 	total_itens = get_tree().get_nodes_in_group("itens").size()
 	print("Itens totais nesta fase: ", total_itens)
@@ -68,10 +71,10 @@ func verificar_progresso() -> void:
 		avancar_para_proxima_fase()
 
 func avancar_para_proxima_fase() -> void:
-	print("Todos os itens coletados! Indo para a próxima fase...")
+	print("Todos os itens coletados!")
 	
-	# Carrega a próxima fase usando o caminho que você já definiu
-	var resultado = get_tree().change_scene_to_file("res://fase/fase 2/fase_2.tscn")
+	# Abrir a Tela de Vitória (Semi-pronta, basta descomentar a linha abaixo)
+	var resultado = get_tree().change_scene_to_file("res://telas/tela_vitoria/tela_vitoria.tscn")
 	
 	if resultado != OK:
-		print("Erro: A fase_2.tscn não foi encontrada ou não pôde ser carregada!")
+		print("Erro ao tentar mudar de cena!")
