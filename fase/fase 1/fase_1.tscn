@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ku2qhciexdrr"]
 
-[ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase_1.gd" id="1_eb6rn"]
+[ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase 1/fase_1.gd" id="1_eb6rn"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_hffw0"]
 [ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra/sombra.tscn" id="3_68bho"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="3_nitit"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="5_8t630"]
 [ext_resource type="Texture2D" uid="uid://bv4a0sa76bqm1" path="res://assets/paradireita.png" id="5_nitit"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="6_h75nb"]
+[ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://sombra_reversa/sombra_reversa.tscn" id="10_13r4u"]
 
 [node name="Fase1" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_eb6rn")
@@ -113,3 +114,6 @@ position = Vector2(774, 540)
 
 [node name="ParedeBloqueiaPlayer3" parent="." unique_id=1437113402 instance=ExtResource("4_ge8mc")]
 position = Vector2(884, 374)
+
+[node name="Sombra2" parent="." unique_id=1175693242 instance=ExtResource("10_13r4u")]
+position = Vector2(599, 322)
