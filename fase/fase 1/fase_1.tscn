@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/paracima.png" id="4_13r4u"]
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://parede/parede_bloqueia_player.tscn" id="4_ge8mc"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="5_8t630"]
-[ext_resource type="Texture2D" uid="uid://bv4a0sa76bqm1" path="res://assets/paradireita.png" id="5_nitit"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="6_h75nb"]
 [ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://sombra_reversa/sombra_reversa.tscn" id="10_13r4u"]
 
@@ -18,7 +17,6 @@ script = ExtResource("1_eb6rn")
 position = Vector2(1030, 538)
 textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")
-textura_dos_lados_direta = ExtResource("5_nitit")
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("3_68bho")]
 modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
@@ -26,94 +24,38 @@ self_modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
 position = Vector2(141, 137)
 textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")
-textura_dos_lados_direta = ExtResource("5_nitit")
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("4_ge8mc")]
-position = Vector2(1043, 267)
+position = Vector2(1030, 329)
+scale = Vector2(3, 1)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=1779242448 instance=ExtResource("5_8t630")]
-position = Vector2(104, 299)
+position = Vector2(189.00002, 314)
+scale = Vector2(3, 1)
 
 [node name="ParedeGeral" parent="." unique_id=306821597 instance=ExtResource("6_h75nb")]
-position = Vector2(1195, 353)
+position = Vector2(638, -67)
+scale = Vector2(10, 1)
 
 [node name="ParedeGeral2" parent="." unique_id=1913367408 instance=ExtResource("6_h75nb")]
-position = Vector2(1195, 527)
-
-[node name="ParedeGeral3" parent="." unique_id=1721428447 instance=ExtResource("6_h75nb")]
-position = Vector2(1087, 693)
-
-[node name="ParedeGeral4" parent="." unique_id=1640026859 instance=ExtResource("6_h75nb")]
-position = Vector2(907, 690)
-
-[node name="ParedeGeral5" parent="." unique_id=503687909 instance=ExtResource("6_h75nb")]
-position = Vector2(740, 691)
-
-[node name="ParedeGeral6" parent="." unique_id=1285541455 instance=ExtResource("6_h75nb")]
-position = Vector2(566, 696)
-
-[node name="ParedeGeral7" parent="." unique_id=1369612992 instance=ExtResource("6_h75nb")]
-position = Vector2(390, 695)
-
-[node name="ParedeGeral8" parent="." unique_id=1537510576 instance=ExtResource("6_h75nb")]
-position = Vector2(221, 693)
-
-[node name="ParedeGeral9" parent="." unique_id=751249896 instance=ExtResource("6_h75nb")]
-position = Vector2(61, 692)
-
-[node name="ParedeGeral10" parent="." unique_id=43323714 instance=ExtResource("6_h75nb")]
-position = Vector2(1202, 194)
-
-[node name="ParedeGeral11" parent="." unique_id=691673154 instance=ExtResource("6_h75nb")]
-position = Vector2(1193, 35)
-
-[node name="ParedeGeral12" parent="." unique_id=861761883 instance=ExtResource("6_h75nb")]
-position = Vector2(1045, -52)
-
-[node name="ParedeGeral13" parent="." unique_id=1996908015 instance=ExtResource("6_h75nb")]
-position = Vector2(901, -49)
-
-[node name="ParedeGeral14" parent="." unique_id=1266320720 instance=ExtResource("6_h75nb")]
-position = Vector2(749, -46)
-
-[node name="ParedeGeral15" parent="." unique_id=1824911818 instance=ExtResource("6_h75nb")]
-position = Vector2(571, -42)
-
-[node name="ParedeGeral16" parent="." unique_id=1570411885 instance=ExtResource("6_h75nb")]
-position = Vector2(410, -48)
-
-[node name="ParedeGeral17" parent="." unique_id=882662667 instance=ExtResource("6_h75nb")]
-position = Vector2(260, -39)
-
-[node name="ParedeGeral18" parent="." unique_id=431155077 instance=ExtResource("6_h75nb")]
-position = Vector2(107, -33)
-
-[node name="ParedeGeral19" parent="." unique_id=2002710575 instance=ExtResource("6_h75nb")]
-position = Vector2(-42, 36)
-
-[node name="ParedeGeral20" parent="." unique_id=809418909 instance=ExtResource("6_h75nb")]
-position = Vector2(-45, 184)
-
-[node name="ParedeGeral21" parent="." unique_id=327313619 instance=ExtResource("6_h75nb")]
-position = Vector2(-42, 328)
-
-[node name="ParedeGeral22" parent="." unique_id=100706162 instance=ExtResource("6_h75nb")]
-position = Vector2(-36, 468)
-
-[node name="ParedeGeral23" parent="." unique_id=1027821969 instance=ExtResource("6_h75nb")]
-position = Vector2(-42, 609)
+position = Vector2(1216, 313)
+scale = Vector2(1, 5)
 
 [node name="ParedeBloqueiaSombra2" parent="." unique_id=440351158 instance=ExtResource("5_8t630")]
-position = Vector2(358, 129)
-
-[node name="ParedeBloqueiaSombra3" parent="." unique_id=1071277746 instance=ExtResource("5_8t630")]
-position = Vector2(303, 290)
+position = Vector2(377, 187)
+scale = Vector2(1, 3)
 
 [node name="ParedeBloqueiaPlayer2" parent="." unique_id=1151557831 instance=ExtResource("4_ge8mc")]
-position = Vector2(774, 540)
+position = Vector2(785, 459)
+scale = Vector2(1, 3)
 
-[node name="ParedeBloqueiaPlayer3" parent="." unique_id=1437113402 instance=ExtResource("4_ge8mc")]
-position = Vector2(884, 374)
-
-[node name="Sombra2" parent="." unique_id=1175693242 instance=ExtResource("10_13r4u")]
+[node name="Sombra_reversa" parent="." unique_id=1175693242 instance=ExtResource("10_13r4u")]
 position = Vector2(599, 322)
+
+[node name="ParedeGeral3" parent="." unique_id=854071087 instance=ExtResource("6_h75nb")]
+position = Vector2(626, 696)
+scale = Vector2(10, 1)
+
+[node name="ParedeGeral4" parent="." unique_id=494659530 instance=ExtResource("6_h75nb")]
+position = Vector2(-50, 316.00003)
+scale = Vector2(1, 5)
