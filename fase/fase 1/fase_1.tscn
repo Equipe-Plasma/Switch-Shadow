@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://parede/parede_bloqueia_player.tscn" id="4_ge8mc"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="5_8t630"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="6_h75nb"]
+[ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://item/item.tscn" id="10_0r7j3"]
 [ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://sombra_reversa/sombra_reversa.tscn" id="10_13r4u"]
 
 [node name="Fase1" type="Node2D" unique_id=1904190499]
@@ -59,3 +60,12 @@ scale = Vector2(10, 1)
 [node name="ParedeGeral4" parent="." unique_id=494659530 instance=ExtResource("6_h75nb")]
 position = Vector2(-50, 316.00003)
 scale = Vector2(1, 5)
+
+[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_0r7j3")]
+position = Vector2(1046, 109)
+
+[node name="Item2" parent="." unique_id=1003667387 groups=["itens"] instance=ExtResource("10_0r7j3")]
+position = Vector2(156, 518)
+
+[node name="Item3" parent="." unique_id=720673298 groups=["itens"] instance=ExtResource("10_0r7j3")]
+position = Vector2(551, 516)

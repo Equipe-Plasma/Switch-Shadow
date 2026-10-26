@@ -3,22 +3,31 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 
+var total_itens: int = 0
+
+func _ready() -> void:
+	# Conta quantos itens existem na fase ao iniciar com base no grupo "itens"
+	total_itens = get_tree().get_nodes_in_group("itens").size()
+	print("Itens totais nesta fase: ", total_itens)
+
+func _process(_delta: float) -> void:
+	verificar_progresso()
+
 func _unhandled_input(event: InputEvent) -> void:
 	# Quando o jogador apertar o botão de troca (ESPAÇO)
 	if event.is_action_pressed("trocar_sombra"):
 		trocar_posicoes()
 		
-	# Atalho para avançar de fase ao apertar Enter (ui_accept)
+	# Atalho para avançar de fase ao apertar Enter (ui_accept) ou a ação configurada
 	if event.is_action_pressed("proxima_fase"):
-		# Substitua pelo caminho real do seu arquivo fase_2.tscn
-		get_tree().change_scene_to_file("res://fase/fase 2/fase_2.tscn")
+		avancar_para_proxima_fase()
 
 func trocar_posicoes() -> void:
 	if player == null or sombra == null:
 		return
 		
 	if not pode_trocar_posicoes():
-		print("Acão bloqueada:Personagem na parede!! ")
+		print("Ação bloqueada: Personagem na parede!! ")
 		return
 
 	# Se estiver tudo certo, executa a troca
@@ -49,3 +58,20 @@ func realizar_troca() -> void:
 	
 	# A Sombra vai para onde o Player estava
 	sombra.global_position = pos_temp_player
+
+func verificar_progresso() -> void:
+	# Olha quantos itens restam no grupo "itens"
+	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
+	
+	# Se a fase tinha itens e todos foram coletados (restam 0)
+	if total_itens > 0 and itens_restantes == 0:
+		avancar_para_proxima_fase()
+
+func avancar_para_proxima_fase() -> void:
+	print("Todos os itens coletados! Indo para a próxima fase...")
+	
+	# Carrega a próxima fase usando o caminho que você já definiu
+	var resultado = get_tree().change_scene_to_file("res://fase/fase 2/fase_2.tscn")
+	
+	if resultado != OK:
+		print("Erro: A fase_2.tscn não foi encontrada ou não pôde ser carregada!")
