@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cdy22u33xic2q"]
+
+[ext_resource type="Script" uid="uid://6sbckhob24r6" path="res://portal_saida/portal_saida.gd" id="1_yuagy"]
+[ext_resource type="Texture2D" uid="uid://b32sp70mwwplv" path="res://assets/Puerta.jpg" id="2_8ydio"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 122.33152
+
+[node name="PortalSaida" type="Area2D" unique_id=1057710737]
+script = ExtResource("1_yuagy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969890592]
+texture = ExtResource("2_8ydio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918540262]
+shape = SubResource("CircleShape2D_g4v7s")

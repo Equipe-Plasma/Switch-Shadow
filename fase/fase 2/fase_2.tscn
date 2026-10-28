@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://dcwen58g24r4d"]
 
-[ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase 1/fase_1.gd" id="1_jmxpb"]
+[ext_resource type="Script" uid="uid://82nd48voiruc" path="res://fase/fase 2/fase_2.gd" id="1_4vcdr"]
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa.tscn" id="2_3ubab"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_s3f3q"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra/sombra.tscn" id="2_wljo7"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="3_jdyb1"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/paracima.png" id="4_783b1"]
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://parede/parede_bloqueia_player.tscn" id="7_67a0w"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="8_iaody"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="9_sx8e5"]
-[ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://sombra_reversa/sombra_reversa.tscn" id="10_1kqf1"]
+[ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://portal_saida/portal_saida.tscn" id="10_h04fk"]
+[ext_resource type="PackedScene" uid="uid://wup3oocdjljp" path="res://mecanica/botao_pressao.tscn" id="12_xq10f"]
+[ext_resource type="PackedScene" uid="uid://ddafxl65xcq5w" path="res://mecanica/porta.tscn" id="13_wvv7m"]
 
 [node name="Fase2" type="Node2D" unique_id=1904190499]
-script = ExtResource("1_jmxpb")
+script = ExtResource("1_4vcdr")
+
+[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("2_wljo7")]
+position = Vector2(939, 111)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("2_3ubab")]
+visible = false
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_s3f3q")]
 position = Vector2(1020, 532)
@@ -44,5 +51,14 @@ scale = Vector2(1, 6)
 position = Vector2(817, 464)
 scale = Vector2(1, 3)
 
-[node name="Sombra_reversa" parent="." unique_id=1175693242 instance=ExtResource("10_1kqf1")]
-position = Vector2(163, 136)
+[node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_h04fk")]
+visibility_layer = 25
+position = Vector2(593, 494)
+
+[node name="BotaoPressao" parent="." unique_id=1175720379 instance=ExtResource("12_xq10f")]
+visibility_layer = 2
+position = Vector2(157, 456)
+collision_mask = 30
+
+[node name="Porta" parent="." unique_id=1687150052 instance=ExtResource("13_wvv7m")]
+position = Vector2(1125, 45)

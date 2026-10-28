@@ -2,13 +2,16 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
+@onready var portal = $PortalSaida
 
 var total_itens: int = 0
+var fase_concluida: bool = false
 
 func _ready() -> void:
 	Global.registrar_fase(scene_file_path)
 	# Salva o caminho desta fase no nosso script global
 	Global.ultima_fase = scene_file_path
+	portal.portal_utilizado.connect(avancar_para_proxima_fase)
 	
 	# Conta quantos itens existem na fase ao iniciar com base no grupo "itens"
 	total_itens = get_tree().get_nodes_in_group("itens").size()
@@ -63,19 +66,25 @@ func realizar_troca() -> void:
 	# A Sombra vai para onde o Player estava
 	sombra.global_position = pos_temp_player
 
+
 func verificar_progresso() -> void:
-	# Olha quantos itens restam no grupo "itens"
+	# Verifica quantos itens ainda existem na fase
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
-	
-	# Se a fase tinha itens e todos foram coletados (restam 0)
+
+	# Quando todos os itens forem coletados
 	if total_itens > 0 and itens_restantes == 0:
-		avancar_para_proxima_fase()
+		portal.ativar()
+		print("Todos os itens coletados! Portal ativado!")
 
 func avancar_para_proxima_fase() -> void:
-	print("Todos os itens coletados!")
-	
-	# Abrir a Tela de Vitória (Semi-pronta, basta descomentar a linha abaixo)
-	var resultado = get_tree().change_scene_to_file("res://telas/tela_vitoria/tela_vitoria.tscn")
-	
-	if resultado != OK:
-		print("Erro ao tentar mudar de cena!")
+	if fase_concluida:
+		return
+
+	fase_concluida = true
+
+	print("Player entrou no portal! Fase concluída!")
+
+	get_tree().call_deferred(
+		"change_scene_to_file",
+        "res://telas/tela_vitoria/tela_vitoria.tscn"
+	)
