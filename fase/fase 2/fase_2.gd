@@ -1,8 +1,11 @@
 extends Node2D
 
 @onready var player: CharacterBody2D = $Player
-@onready var sombra: CharacterBody2D = $Sombra
+@onready var sombra: CharacterBody2D = $SombraReversa
 
+func _ready() -> void:
+	Global.registrar_fase(scene_file_path)
+	
 func _unhandled_input(event: InputEvent) -> void:
 	# Quando o jogador apertar o botão de troca (ESPAÇO)
 	if event.is_action_pressed("trocar_sombra"):

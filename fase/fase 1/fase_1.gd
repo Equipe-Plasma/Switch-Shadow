@@ -6,6 +6,7 @@ extends Node2D
 var total_itens: int = 0
 
 func _ready() -> void:
+	Global.registrar_fase(scene_file_path)
 	# Salva o caminho desta fase no nosso script global
 	Global.ultima_fase = scene_file_path
 	
