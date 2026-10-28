@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://d3nov7xbqfaku"]
+
+[ext_resource type="Script" uid="uid://c1ovxqf4ydx5t" path="res://fase/fase 3/fase_3.gd" id="1_juws0"]
+[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_u8cfy"]
+[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="3_wbtp5"]
+[ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/paracima.png" id="4_mtigs"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra/sombra.tscn" id="5_dpyim"]
+[ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="8_7yw18"]
+[ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://item/item.tscn" id="9_adnbp"]
+[ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://espinho/espinho.tscn" id="10_l300e"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa.tscn" id="11_bc3se"]
+
+[node name="Fase3" type="Node2D" unique_id=1904190499]
+script = ExtResource("1_juws0")
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_u8cfy")]
+position = Vector2(1030, 538)
+textura_frente = ExtResource("3_wbtp5")
+textura_costas = ExtResource("4_mtigs")
+
+[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("5_dpyim")]
+modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
+self_modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
+position = Vector2(141, 137)
+textura_frente = ExtResource("3_wbtp5")
+textura_costas = ExtResource("4_mtigs")
+
+[node name="ParedeGeral" parent="." unique_id=306821597 instance=ExtResource("8_7yw18")]
+position = Vector2(638, -67)
+scale = Vector2(10, 1)
+
+[node name="ParedeGeral2" parent="." unique_id=1913367408 instance=ExtResource("8_7yw18")]
+position = Vector2(1216, 313)
+scale = Vector2(1, 5)
+
+[node name="ParedeGeral3" parent="." unique_id=854071087 instance=ExtResource("8_7yw18")]
+position = Vector2(626, 696)
+scale = Vector2(10, 1)
+
+[node name="ParedeGeral4" parent="." unique_id=494659530 instance=ExtResource("8_7yw18")]
+position = Vector2(-50, 316.00003)
+scale = Vector2(1, 7.000001)
+
+[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("9_adnbp")]
+position = Vector2(1046, 109)
+
+[node name="Item2" parent="." unique_id=1003667387 groups=["itens"] instance=ExtResource("9_adnbp")]
+position = Vector2(156, 518)
+
+[node name="Item3" parent="." unique_id=720673298 groups=["itens"] instance=ExtResource("9_adnbp")]
+position = Vector2(551, 516)
+
+[node name="Espinho" parent="." unique_id=2003562440 instance=ExtResource("10_l300e")]
+position = Vector2(354, 572)
+
+[node name="Espinho2" parent="." unique_id=920199222 instance=ExtResource("10_l300e")]
+position = Vector2(779, 326)
+tipo = 2
+
+[node name="Espinho3" parent="." unique_id=840012010 instance=ExtResource("10_l300e")]
+position = Vector2(808, 64)
+tipo = 1
+
+[node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_bc3se")]
+visible = false

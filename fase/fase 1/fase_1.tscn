@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://parede/parede_bloqueia_sombra.tscn" id="5_8t630"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://parede/parede_geral.tscn" id="6_h75nb"]
 [ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://item/item.tscn" id="10_0r7j3"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa.tscn" id="11_01sd7"]
 [ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://espinho/espinho.tscn" id="11_hgt3u"]
 
 [node name="Fase1" type="Node2D" unique_id=1904190499]
@@ -77,3 +78,5 @@ tipo = 2
 [node name="Espinho3" parent="." unique_id=840012010 instance=ExtResource("11_hgt3u")]
 position = Vector2(808, 64)
 tipo = 1
+
+[node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dq80e6b58tnmu"]
+
+[ext_resource type="Script" uid="uid://cku37fnjfcu0l" path="res://menu/menu_pausa.gd" id="1_o8q7k"]
+
+[node name="MenuPausa" type="CanvasLayer" unique_id=1672884906]
+script = ExtResource("1_o8q7k")
+
+[node name="Fundo" type="ColorRect" parent="." unique_id=1612669019]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02745098, 0.101960786, 0.10980392, 0.8)
+
+[node name="CenterContainer" type="CenterContainer" parent="Fundo" unique_id=1362881522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Fundo/CenterContainer" unique_id=899334802]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Titulo" type="Label" parent="Fundo/CenterContainer/VBoxContainer" unique_id=1070779257]
+layout_mode = 2
+
+[node name="BotaoContinuar" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=2106514685]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "CONTINE"
+
+[node name="BotaoReiniciar" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=769624421]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "RESTART"
+
+[node name="BotaoMenu" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=951675497]
+process_mode = 3
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "BACK TO MENU"
+
+[connection signal="pressed" from="Fundo/CenterContainer/VBoxContainer/BotaoContinuar" to="." method="_on_botao_continuar_pressed"]
+[connection signal="pressed" from="Fundo/CenterContainer/VBoxContainer/BotaoReiniciar" to="." method="_on_botao_reiniciar_pressed"]
+[connection signal="pressed" from="Fundo/CenterContainer/VBoxContainer/BotaoMenu" to="." method="_on_botao_menu_pressed"]

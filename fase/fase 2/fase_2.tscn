@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcwen58g24r4d"]
 
 [ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase 1/fase_1.gd" id="1_jmxpb"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa.tscn" id="2_3ubab"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_s3f3q"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="3_jdyb1"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/paracima.png" id="4_783b1"]
@@ -11,6 +12,8 @@
 
 [node name="Fase2" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_jmxpb")
+
+[node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("2_3ubab")]
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_s3f3q")]
 position = Vector2(1020, 532)

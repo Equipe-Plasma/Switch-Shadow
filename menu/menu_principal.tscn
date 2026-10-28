@@ -2,22 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dlpmtc7rdedku" path="res://menu/menu_principal.gd" id="1_yo6f2"]
 [ext_resource type="Texture2D" uid="uid://btlxuq24vlrsp" path="res://assets/baixados (8).jpg" id="2_cme23"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yf5fn"]
-content_margin_left = 12.0
-content_margin_top = 12.0
-content_margin_right = 12.0
-content_margin_bottom = 12.0
-bg_color = Color(0.0627451, 0.09411765, 0.15294118, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.8509804, 0.6039216, 0.38431373, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
+[ext_resource type="StyleBox" uid="uid://dec4hdaqgkkgt" path="res://menu/new_style_box_flat.tres" id="3_oc0hg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2j2di"]
 bg_color = Color(0.14509805, 0.22352941, 0.2901961, 1)
@@ -39,44 +24,6 @@ corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_33x8s"]
-bg_color = Color(0.14509805, 0.22352941, 0.2901961, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0u6y"]
-content_margin_left = 12.0
-content_margin_top = 12.0
-content_margin_right = 12.0
-content_margin_bottom = 12.0
-bg_color = Color(0.0627451, 0.09411765, 0.15294118, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.8509804, 0.6039216, 0.38431373, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s0fj"]
-bg_color = Color(0.14509805, 0.22352941, 0.2901961, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3gngh"]
-content_margin_left = 12.0
-content_margin_top = 12.0
-content_margin_right = 12.0
-content_margin_bottom = 12.0
-bg_color = Color(0.0627451, 0.09411765, 0.15294118, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.8509804, 0.6039216, 0.38431373, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1u0y"]
 bg_color = Color(0.14509805, 0.22352941, 0.2901961, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fcnqv"]
@@ -134,15 +81,18 @@ theme_override_constants/separation = 20
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1138475736]
 layout_mode = 2
 
-[node name="BotaoJogar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=232172627]
+[node name="MenuBotoes" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=693256316]
+layout_mode = 2
+
+[node name="BotaoJogar" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=232172627]
 custom_minimum_size = Vector2(300, 55)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_yf5fn")
+theme_override_styles/normal = ExtResource("3_oc0hg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2j2di")
 text = "PLAY"
 
-[node name="BotaoSelecionar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1276524468]
+[node name="BotaoSelecionar" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=1276524468]
 custom_minimum_size = Vector2(300, 55)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
@@ -150,26 +100,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_33x8s")
 text = "SELECT FASE"
 
-[node name="SelecaoFases" type="VBoxContainer" parent="CenterContainer/VBoxContainer" unique_id=614763867]
+[node name="BotaoOpcoes" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=1297053230]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("3_oc0hg")
+text = "OPTIONS"
 
-[node name="BotaoFase1" type="Button" parent="CenterContainer/VBoxContainer/SelecaoFases" unique_id=768868041]
-custom_minimum_size = Vector2(300, 55)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_d0u6y")
-theme_override_styles/hover = SubResource("StyleBoxFlat_5s0fj")
-text = "FASE 1"
-
-[node name="BotaoFase2" type="Button" parent="CenterContainer/VBoxContainer/SelecaoFases" unique_id=1837222053]
-custom_minimum_size = Vector2(300, 55)
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_3gngh")
-theme_override_styles/hover = SubResource("StyleBoxFlat_p1u0y")
-text = "FASE 2"
-
-[node name="BotaoSair" type="Button" parent="CenterContainer/VBoxContainer" unique_id=38665993]
+[node name="BotaoSair" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=38665993]
 custom_minimum_size = Vector2(300, 55)
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
@@ -177,8 +113,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_fcnqv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7numd")
 text = "CLOSE"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BotaoSelecionar" to="." method="_on_botao_selecionar_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/SelecaoFases/BotaoFase1" to="." method="_on_botao_fase_1_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/SelecaoFases/BotaoFase2" to="." method="_on_botao_fase_2_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/BotaoSair" to="." method="_on_botao_sair_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoSelecionar" to="." method="_on_botao_selecionar_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoSair" to="." method="_on_botao_sair_pressed"]
