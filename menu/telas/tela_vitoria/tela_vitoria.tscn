@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://drc06yh60ttaj"]
+
+[ext_resource type="Script" uid="uid://bgv0tho60vngc" path="res://menu/telas/tela_vitoria/tela_vitoria.gd" id="1_vetyl"]
+
+[node name="TelaVitoria" type="Control" unique_id=62974723]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vetyl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=597272157]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 1, 0, 0.3882353)
+
+[node name="Label" type="Label" parent="." unique_id=518248372]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -11.5
+offset_right = 60.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Fase Concluída!"
+
+[node name="BotaoProximaFase" type="Button" parent="." unique_id=872082434]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -76.5
+offset_top = -215.0
+offset_right = 76.5
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Próxima Fase"
+
+[connection signal="pressed" from="BotaoProximaFase" to="." method="_on_botao_proxima_fase_pressed"]

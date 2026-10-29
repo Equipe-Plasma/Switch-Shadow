@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://d3nov7xbqfaku"]
 
 [ext_resource type="Script" uid="uid://c1ovxqf4ydx5t" path="res://fase/fase 3/fase_3.gd" id="1_juws0"]
-[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://player/player.tscn" id="2_u8cfy"]
-[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/parabaixo.png" id="3_wbtp5"]
-[ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/paracima.png" id="4_mtigs"]
-[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://sombra/sombra.tscn" id="5_dpyim"]
-[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://parede/parede.tscn" id="7_186fb"]
-[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa.tscn" id="11_bc3se"]
+[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_u8cfy"]
+[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_wbtp5"]
+[ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_mtigs"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombra/sombra.tscn" id="5_dpyim"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/parede/parede/parede.tscn" id="7_186fb"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="11_bc3se"]
 
 [node name="Fase3" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_juws0")

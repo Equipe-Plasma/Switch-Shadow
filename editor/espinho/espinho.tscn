@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cl7s6ng8cubbt"]
+
+[ext_resource type="Script" uid="uid://uovpujwdrvrj" path="res://editor/espinho/espinho.gd" id="1_lvy1w"]
+[ext_resource type="Texture2D" uid="uid://bw5w1ekvl8q6r" path="res://assets/outros/espinho.png" id="2_xvnl2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lvy1w"]
+radius = 62.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_123ki"]
+radius = 64.0
+
+[node name="Espinho" type="StaticBody2D" unique_id=1607689019]
+collision_layer = 4
+script = ExtResource("1_lvy1w")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=471299137]
+texture = ExtResource("2_xvnl2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006966363]
+shape = SubResource("CircleShape2D_lvy1w")
+
+[node name="AreaDano" type="Area2D" parent="." unique_id=282811293]
+position = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=26095840]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_123ki")

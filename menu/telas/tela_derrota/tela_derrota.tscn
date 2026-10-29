@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cgtgr4idie5lh"]
+
+[ext_resource type="Script" uid="uid://dx1wlv0ejh75c" path="res://menu/telas/tela_derrota/tela_derrota.gd" id="1_pm3wf"]
+
+[node name="TelaDerrota" type="Control" unique_id=1428311591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pm3wf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=102563856]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5058824)
+
+[node name="Label" type="Label" parent="." unique_id=608608699]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -11.5
+offset_right = 52.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Você morreu!"
+
+[node name="BotaoTentarNovamente" type="Button" parent="." unique_id=1671200506]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -209.0
+offset_right = 77.0
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Tentar Novamente"
+
+[connection signal="pressed" from="BotaoTentarNovamente" to="." method="_on_botao_tentar_novamente_pressed"]

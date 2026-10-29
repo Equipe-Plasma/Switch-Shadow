@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cv1kaaq84myxc"]
+
+[ext_resource type="Texture2D" uid="uid://sq0ylhhc2fj3" path="res://assets/outros/parede.png" id="1_4i3fs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
+size = Vector2(127, 128)
+
+[node name="ParedeBloqueiaSombra" type="StaticBody2D" unique_id=87217196]
+collision_layer = 16
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=736548034]
+modulate = Color(6.7383053e-06, 0.34562582, 0.83703643, 1)
+texture = ExtResource("1_4i3fs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943126472]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_123ki")
