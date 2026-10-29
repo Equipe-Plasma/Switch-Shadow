@@ -39,5 +39,5 @@ func _on_botao_reiniciar_pressed() -> void:
 func _on_botao_menu_pressed() -> void:
 	get_tree().paused = false
 	get_tree().change_scene_to_file(
-        "res://menu/menu_principal.tscn"
+        "res://menu/menu_principal/menu_principal.tscn"
 	)

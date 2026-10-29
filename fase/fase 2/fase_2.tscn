@@ -95,3 +95,5 @@ position = Vector2(1028, 124)
 position = Vector2(80, 80)
 textura_frente = ExtResource("3_jdyb1")
 textura_costas = ExtResource("4_783b1")
+
+[node name="MenuPausa2" parent="." unique_id=1808991862 instance=ExtResource("2_3ubab")]
