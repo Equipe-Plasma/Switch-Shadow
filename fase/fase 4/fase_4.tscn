@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://dgx2a45jxm0p5"]
+
+[ext_resource type="Script" uid="uid://vlgoa2sbt6lx" path="res://fase/fase 4/fase_4.gd" id="1_pbl0i"]
+[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_gerrx"]
+[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_738o2"]
+[ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_3vegh"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/parede/parede/parede.tscn" id="5_f4jru"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="6_utaux"]
+[ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://editor/sombras/sombra_reversa/sombra_reversa.tscn" id="7_olswn"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_player.tscn" id="9_k1xjg"]
+[ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="10_c6pif"]
+[ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="11_1j6hm"]
+[ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="11_m8htq"]
+[ext_resource type="PackedScene" uid="uid://drc06yh60ttaj" path="res://menu/telas/tela_vitoria/tela_vitoria.tscn" id="12_yh2do"]
+
+[node name="Fase4" type="Node2D" unique_id=1904190499]
+script = ExtResource("1_pbl0i")
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_gerrx")]
+position = Vector2(568, 330)
+textura_frente = ExtResource("3_738o2")
+textura_costas = ExtResource("4_3vegh")
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_f4jru")]
+position = Vector2(576, 16)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeInferior" parent="." unique_id=1291424496 instance=ExtResource("5_f4jru")]
+position = Vector2(576, 632)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=1606992427 instance=ExtResource("5_f4jru")]
+position = Vector2(16, 324)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(32, 584)
+
+[node name="ParedeDireita" parent="." unique_id=1324156465 instance=ExtResource("5_f4jru")]
+position = Vector2(1136, 324)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(32, 584)
+
+[node name="Parede1" parent="." unique_id=568618381 instance=ExtResource("5_f4jru")]
+position = Vector2(569, 218)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(304, 64)
+
+[node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("6_utaux")]
+
+[node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_olswn")]
+position = Vector2(568, 330)
+collision_layer = 130
+collision_mask = 277
+
+[node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("5_f4jru")]
+position = Vector2(449, 298)
+collision_mask = 256
+tamanho = Vector2(64, 224)
+
+[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_c6pif")]
+position = Vector2(90, 558)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Item2" parent="." unique_id=1207616730 groups=["itens"] instance=ExtResource("10_c6pif")]
+position = Vector2(1042, 164)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Item3" parent="." unique_id=374578047 groups=["itens"] instance=ExtResource("10_c6pif")]
+position = Vector2(1044, 497)
+collision_layer = 3
+collision_mask = 3
+
+[node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_1j6hm")]
+z_index = -1
+position = Vector2(88, 85)
+collision_mask = 3
+
+[node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("12_yh2do")]
+visible = false
+
+[node name="Espinho2" parent="." unique_id=1445958395 instance=ExtResource("11_m8htq")]
+position = Vector2(885, 225)
+tipo = 2
+
+[node name="Espinho3" parent="." unique_id=1822530800 instance=ExtResource("11_m8htq")]
+position = Vector2(885, 424)
+tipo = 1
+
+[node name="Espinho4" parent="." unique_id=517094697 instance=ExtResource("11_m8htq")]
+position = Vector2(885, 552)
+tipo = 1
+
+[node name="Espinho5" parent="." unique_id=834081665 instance=ExtResource("11_m8htq")]
+position = Vector2(885, 97)
+tipo = 2
+
+[node name="Parede2" parent="." unique_id=1532077451 instance=ExtResource("5_f4jru")]
+position = Vector2(689, 298)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(64, 224)
+
+[node name="Espinho6" parent="." unique_id=1189106357 instance=ExtResource("11_m8htq")]
+position = Vector2(96, 424)
+tipo = 1
+
+[node name="Espinho7" parent="." unique_id=1838901400 instance=ExtResource("11_m8htq")]
+position = Vector2(224, 424)
+tipo = 1
+
+[node name="Espinho8" parent="." unique_id=1873589119 instance=ExtResource("11_m8htq")]
+position = Vector2(224, 552)
+tipo = 1
+
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]
+position = Vector2(569, 440)
+scale = Vector2(2.38, 0.5)
+
+[node name="Parede3" parent="." unique_id=823078784 instance=ExtResource("5_f4jru")]
+position = Vector2(920, 324)
+collision_layer = 129
+collision_mask = 256
+tamanho = Vector2(399, 71)
+
+[connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]

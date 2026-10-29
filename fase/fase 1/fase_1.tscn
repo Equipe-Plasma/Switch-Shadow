@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_sombra.tscn" id="5_8t630"]
 [ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://editor/parede/parede_geral/parede_geral.tscn" id="6_h75nb"]
 [ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="10_0r7j3"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/parede/parede/parede.tscn" id="10_01sd7"]
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="11_01sd7"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="12_01sd7"]
 
@@ -27,31 +28,15 @@ textura_costas = ExtResource("4_13r4u")
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("4_ge8mc")]
 position = Vector2(291, 317)
-scale = Vector2(1, 7)
+scale = Vector2(1, 5)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=1779242448 instance=ExtResource("5_8t630")]
 position = Vector2(638, 318)
-scale = Vector2(1, 7)
-
-[node name="ParedeGeral" parent="." unique_id=306821597 instance=ExtResource("6_h75nb")]
-position = Vector2(638, -67)
-scale = Vector2(10, 1)
-
-[node name="ParedeGeral2" parent="." unique_id=1913367408 instance=ExtResource("6_h75nb")]
-position = Vector2(1216, 313)
 scale = Vector2(1, 5)
 
 [node name="ParedeBloqueiaPlayer2" parent="." unique_id=1151557831 instance=ExtResource("4_ge8mc")]
 position = Vector2(934, 504)
 scale = Vector2(1, 2)
-
-[node name="ParedeGeral3" parent="." unique_id=854071087 instance=ExtResource("6_h75nb")]
-position = Vector2(626, 696)
-scale = Vector2(10, 1)
-
-[node name="ParedeGeral4" parent="." unique_id=494659530 instance=ExtResource("6_h75nb")]
-position = Vector2(-50, 316.00003)
-scale = Vector2(1, 7.000001)
 
 [node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_0r7j3")]
 position = Vector2(456, 320)
@@ -73,3 +58,23 @@ position = Vector2(934, 314)
 [node name="ParedeBloqueiaSombra2" parent="." unique_id=1022167895 instance=ExtResource("5_8t630")]
 position = Vector2(934, 125)
 scale = Vector2(1, 2)
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("10_01sd7")]
+position = Vector2(576, 16)
+collision_mask = 257
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeInferior" parent="." unique_id=798641860 instance=ExtResource("10_01sd7")]
+position = Vector2(576, 632)
+collision_mask = 257
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=2053857815 instance=ExtResource("10_01sd7")]
+position = Vector2(16, 324)
+collision_mask = 257
+tamanho = Vector2(32, 584)
+
+[node name="ParedeDireita" parent="." unique_id=908784397 instance=ExtResource("10_01sd7")]
+position = Vector2(1136, 324)
+collision_mask = 257
+tamanho = Vector2(32, 584)
