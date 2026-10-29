@@ -3,7 +3,7 @@ extends Control
 const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 
 const TOTAL_FASES = 10
-const FASES_PRONTAS = 3
+const FASES_PRONTAS = 4
 
 @onready var grid_fases: GridContainer = $CenterContainer/VBoxContainer/GridFases
 @onready var overlay_popup: ColorRect = $OverlayPopup

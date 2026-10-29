@@ -22,7 +22,6 @@ script = ExtResource("1_4vcdr")
 visible = false
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("2_3ubab")]
-visible = false
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_s3f3q")]
 position = Vector2(103, 103)
@@ -31,78 +30,72 @@ textura_costas = ExtResource("4_783b1")
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_h04fk")]
 visibility_layer = 25
-position = Vector2(1025, 599)
+position = Vector2(1006, 599)
 
 [node name="Espinho" parent="." unique_id=1607689019 instance=ExtResource("12_xq10f")]
-position = Vector2(321, 64)
+position = Vector2(321, 96)
 tipo = 1
 
 [node name="Espinho2" parent="." unique_id=383088380 instance=ExtResource("12_xq10f")]
-position = Vector2(321, 192)
+position = Vector2(321, 224)
 tipo = 1
 
 [node name="Espinho3" parent="." unique_id=1267501935 instance=ExtResource("12_xq10f")]
-position = Vector2(321, 320)
+position = Vector2(321, 352)
 
 [node name="Espinho4" parent="." unique_id=1117738981 instance=ExtResource("12_xq10f")]
-position = Vector2(833, 64)
+position = Vector2(829, 96)
 tipo = 2
 
 [node name="Espinho5" parent="." unique_id=1799746374 instance=ExtResource("12_xq10f")]
-position = Vector2(833, 192)
+position = Vector2(829, 224)
 tipo = 2
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("8_iaody")]
-position = Vector2(129, 320)
-scale = Vector2(2, 1)
+position = Vector2(145, 352)
+scale = Vector2(1.75, 1)
 
 [node name="ParedeGeral5" parent="." unique_id=1712056793 instance=ExtResource("9_sx8e5")]
-position = Vector2(833, 521)
-scale = Vector2(1, 2.5)
+position = Vector2(829, 518)
+scale = Vector2(1, 1.6)
 
 [node name="Espinho6" parent="." unique_id=590456572 instance=ExtResource("12_xq10f")]
-position = Vector2(833, 320)
+position = Vector2(829, 352)
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=2114099946 instance=ExtResource("7_67a0w")]
-position = Vector2(577, 320)
-scale = Vector2(3, 1)
+position = Vector2(575.00006, 352.00003)
+scale = Vector2(2.97, 1)
 
 [node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("12_wvv7m")]
-position = Vector2(126, 519)
+position = Vector2(145, 526)
 
 [node name="Item2" parent="." unique_id=1139266663 groups=["itens"] instance=ExtResource("12_wvv7m")]
-position = Vector2(580, 122)
+position = Vector2(580, 165)
 
 [node name="Item3" parent="." unique_id=105084357 groups=["itens"] instance=ExtResource("12_wvv7m")]
-position = Vector2(1028, 124)
+position = Vector2(1010, 94)
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("2_wljo7")]
 position = Vector2(103, 103)
 textura_frente = ExtResource("3_jdyb1")
 textura_costas = ExtResource("4_783b1")
 
-[node name="MenuPausa2" parent="." unique_id=1808991862 instance=ExtResource("2_3ubab")]
-
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("14_wvv7m")]
 position = Vector2(576, 16)
-collision_layer = 129
-collision_mask = 256
+collision_mask = 257
 tamanho = Vector2(1152, 32)
 
 [node name="ParedeInferior" parent="." unique_id=308745309 instance=ExtResource("14_wvv7m")]
 position = Vector2(576, 632)
-collision_layer = 129
-collision_mask = 256
+collision_mask = 257
 tamanho = Vector2(1152, 32)
 
 [node name="ParedeEsquerda" parent="." unique_id=1132105718 instance=ExtResource("14_wvv7m")]
 position = Vector2(16, 324)
-collision_layer = 129
-collision_mask = 256
+collision_mask = 257
 tamanho = Vector2(32, 584)
 
 [node name="ParedeDireita" parent="." unique_id=434508186 instance=ExtResource("14_wvv7m")]
 position = Vector2(1136, 324)
-collision_layer = 129
-collision_mask = 256
+collision_mask = 257
 tamanho = Vector2(32, 584)
