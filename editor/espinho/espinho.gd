@@ -49,4 +49,4 @@ func derrota() -> void:
 	call_deferred("_executar_derrota")
 
 func _executar_derrota() -> void:
-	get_tree().change_scene_to_file("res://telas/tela_derrota/tela_derrota.tscn")
+	get_tree().change_scene_to_file("res://menu/telas/tela_derrota/tela_derrota.tscn")

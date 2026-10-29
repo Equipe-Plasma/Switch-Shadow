@@ -28,6 +28,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Atalho para avançar de fase ao apertar Enter (ui_accept) ou a ação configurada
 	if event.is_action_pressed("proxima_fase"):
 		avancar_para_proxima_fase()
+	# TEm q apagar isso dps ^
 
 func trocar_posicoes() -> void:
 	if player == null or sombra == null:
@@ -86,5 +87,5 @@ func avancar_para_proxima_fase() -> void:
 
 	get_tree().call_deferred(
 		"change_scene_to_file",
-        "res://telas/tela_vitoria/tela_vitoria.tscn"
+        "res://menu/telas/tela_vitoria/tela_vitoria.tscn"
 	)
