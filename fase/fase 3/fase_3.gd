@@ -7,8 +7,20 @@ extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra_reversa
+@onready var portal_saida: Area2D = $PortalSaida
+var portal_liberado: bool = false
+var fase_concluida: bool = false
+
+@onready var itens: Array[Node] = [
+	$Item,
+	$Item2,
+	$Item3
+]
 
 var troca_em_andamento: bool = false
+
+var itens_coletados: int = 0
+var total_itens: int = 0
 
 
 # ==========================================
@@ -19,9 +31,57 @@ func _ready() -> void:
 	Global.registrar_fase(scene_file_path)
 	Global.ultima_fase = scene_file_path
 
+	configurar_itens()
+
+	if not portal_saida.portal_utilizado.is_connected(avancar_para_proxima_fase):
+		portal_saida.portal_utilizado.connect(avancar_para_proxima_fase)
+
 	print("=== FASE 3 INICIADA ===")
 
+# ==========================================
+# SISTEMA DE ITENS E PORTAL
+# ==========================================
 
+func configurar_itens() -> void:
+	itens_coletados = 0
+	total_itens = itens.size()
+
+	for item in itens:
+		item.tree_exiting.connect(_on_item_coletado)
+
+	print("Total de itens: ", total_itens)
+
+
+func _on_item_coletado() -> void:
+	itens_coletados += 1
+
+	print(
+		"Itens coletados: ",
+		itens_coletados,
+		"/",
+		total_itens
+	)
+
+	if itens_coletados == total_itens:
+		ativar_portal()
+
+
+func ativar_portal() -> void:
+	if portal_liberado:
+		return
+
+	if not is_instance_valid(portal_saida):
+		push_error("PortalSaida não encontrado!")
+		return
+
+	if portal_saida.has_method("ativar"):
+		portal_saida.ativar()
+		portal_liberado = true
+
+		print("Todos os itens foram coletados!")
+		print("Portal da Fase 3 liberado!")
+	else:
+		push_error("PortalSaida não possui o método ativar()!")
 # ==========================================
 # CONTROLE DO TECLADO
 # ==========================================
@@ -50,8 +110,8 @@ func trocar_posicoes() -> void:
 
 	troca_em_andamento = true
 
-	# Aguarda o próximo ciclo físico para
-	# verificar colisões e trocar posições.
+	# Aguarda o próximo momento seguro
+	# para verificar colisões e trocar posições.
 	realizar_troca_segura.call_deferred()
 
 
@@ -96,18 +156,19 @@ func realizar_troca_segura() -> void:
 # ==========================================
 # VERIFICAR SE A TROCA É POSSÍVEL
 # ==========================================
+
 func pode_trocar_posicoes() -> bool:
 	var pos_player: Vector2 = player.global_position
 	var pos_sombra: Vector2 = sombra.global_position
 
 	# Verifica se o Player cabe na posição da Sombra
-	var player_bate = destino_bloqueado(
+	var player_bate: bool = destino_bloqueado(
 		player,
 		pos_sombra
 	)
 
 	# Verifica se a Sombra cabe na posição do Player
-	var sombra_bate = destino_bloqueado(
+	var sombra_bate: bool = destino_bloqueado(
 		sombra,
 		pos_player
 	)
@@ -116,16 +177,20 @@ func pode_trocar_posicoes() -> bool:
 	print("Colisão Sombra: ", sombra_bate)
 
 	return not player_bate and not sombra_bate
-	
+
+
 # ==========================================
 # VERIFICAR COLISÃO NO DESTINO
 # ==========================================
+
 func destino_bloqueado(
 	personagem: CharacterBody2D,
 	destino: Vector2
 ) -> bool:
 
-	var colisao = personagem.get_node("CollisionShape2D")
+	var colisao: CollisionShape2D = personagem.get_node(
+        "CollisionShape2D"
+	)
 
 	if colisao.shape == null:
 		return true
@@ -135,7 +200,7 @@ func destino_bloqueado(
 	parametros.shape = colisao.shape
 
 	# Usa a transformação real da colisão no destino
-	var transform_destino = personagem.global_transform
+	var transform_destino: Transform2D = personagem.global_transform
 	transform_destino.origin = destino
 
 	parametros.transform = (
@@ -161,3 +226,46 @@ func destino_bloqueado(
 	)
 
 	return not resultados.is_empty()
+
+
+func _on_portal_saida_body_entered(body: Node2D) -> void:
+	if body != player:
+		return
+
+	if itens_coletados < total_itens:
+		print("Portal bloqueado: faltam itens!")
+		return
+
+	print("Player entrou no portal!")
+	print("Todos os itens coletados!")
+
+
+# ==========================================
+# CONCLUSÃO DA FASE 3
+# ==========================================
+
+func avancar_para_proxima_fase() -> void:
+	if fase_concluida:
+		return
+
+	if not portal_liberado:
+		print("Portal bloqueado: faltam itens!")
+		return
+
+	fase_concluida = true
+
+	print("Player entrou no portal!")
+	print("Fase 3 concluída!")
+	print("Abrindo tela de vitória...")
+
+	var caminho_vitoria := "res://menu/telas/tela_vitoria/tela_vitoria.tscn"
+
+	if not ResourceLoader.exists(caminho_vitoria):
+		push_error("Tela de vitória não encontrada: " + caminho_vitoria)
+		fase_concluida = false
+		return
+
+	get_tree().call_deferred(
+		"change_scene_to_file",
+		caminho_vitoria
+	)

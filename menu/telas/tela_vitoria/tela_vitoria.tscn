@@ -50,4 +50,20 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Próxima Fase"
 
+[node name="BotaoMenu" type="Button" parent="." unique_id=1328869449]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 155.0
+offset_right = 80.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "BACK TO MENU"
+
 [connection signal="pressed" from="BotaoProximaFase" to="." method="_on_botao_proxima_fase_pressed"]
+[connection signal="pressed" from="BotaoMenu" to="." method="_on_botao_menu_pressed"]

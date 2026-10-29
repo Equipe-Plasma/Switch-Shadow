@@ -5,3 +5,9 @@ extends Control
 
 func _on_botao_proxima_fase_pressed() -> void:
 	Global.proxima_fase()
+
+
+func _on_botao_menu_pressed() -> void:
+	get_tree().change_scene_to_file(
+		"res://menu/menu_principal/menu_principal.tscn"
+		)

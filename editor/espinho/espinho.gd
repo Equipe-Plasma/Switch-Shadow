@@ -43,7 +43,13 @@ func _on_body_entered(body: Node2D) -> void:
 
 func derrota() -> void:
 	print("Derrota! Mudando para a tela de derrota...")
-	call_deferred("_executar_derrota")
 
-func _executar_derrota() -> void:
-	get_tree().change_scene_to_file("res://menu/telas/tela_derrota/tela_derrota.tscn")
+	var arvore := get_tree()
+
+	if arvore == null:
+		return
+
+	arvore.call_deferred(
+		"change_scene_to_file",
+        "res://menu/telas/tela_derrota/tela_derrota.tscn"
+	)
