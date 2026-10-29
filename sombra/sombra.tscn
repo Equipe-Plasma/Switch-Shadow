@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bv4a0sa76bqm1" path="res://assets/paradireita.png" id="4_koliu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
-size = Vector2(127, 127)
+size = Vector2(128, 128)
 
 [node name="Sombra" type="CharacterBody2D" unique_id=1092208446]
 collision_layer = 2
@@ -21,5 +21,4 @@ modulate = Color(0.4305154, 0.6182317, 1, 1)
 texture = ExtResource("2_x44nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255377934]
-position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_onrkg")

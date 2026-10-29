@@ -4,7 +4,7 @@ extends Control
 const MENU_PRINCIPAL = "res://menu/menu_principal.tscn"
 
 const TOTAL_FASES = 10
-const FASES_PRONTAS = 2
+const FASES_PRONTAS = 3
 
 @onready var grid_fases: GridContainer = $CenterContainer/VBoxContainer/GridFases
 
