@@ -6,7 +6,7 @@ extends Node2D
 # ==========================================
 
 @onready var player: CharacterBody2D = $Player
-@onready var sombra: CharacterBody2D = $Sombra
+@onready var sombra: CharacterBody2D = $Sombra_reversa
 
 var troca_em_andamento: bool = false
 

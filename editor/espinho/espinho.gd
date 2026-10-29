@@ -47,4 +47,3 @@ func derrota() -> void:
 
 func _executar_derrota() -> void:
 	get_tree().change_scene_to_file("res://menu/telas/tela_derrota/tela_derrota.tscn")
-	

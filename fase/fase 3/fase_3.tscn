@@ -4,31 +4,23 @@
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_u8cfy"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_wbtp5"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_mtigs"]
-[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombra/sombra.tscn" id="5_dpyim"]
 [ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/parede/parede/parede.tscn" id="7_186fb"]
+[ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://editor/sombras/sombra_reversa/sombra_reversa.tscn" id="7_jt35t"]
+[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_sombra.tscn" id="8_rnj18"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_player.tscn" id="9_xrg14"]
+[ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="10_cckmw"]
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="11_bc3se"]
+[ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="11_ivr6t"]
 
 [node name="Fase3" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_juws0")
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_u8cfy")]
-position = Vector2(1030, 538)
+position = Vector2(568, 320)
 collision_layer = 2
 collision_mask = 1
 textura_frente = ExtResource("3_wbtp5")
 textura_costas = ExtResource("4_mtigs")
-
-[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("5_dpyim")]
-modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
-self_modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
-position = Vector2(141, 137)
-collision_layer = 4
-collision_mask = 1
-textura_frente = ExtResource("3_wbtp5")
-textura_costas = ExtResource("4_mtigs")
-
-[node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_bc3se")]
-visible = false
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("7_186fb")]
 position = Vector2(576, 16)
@@ -47,7 +39,40 @@ position = Vector2(1136, 324)
 tamanho = Vector2(32, 584)
 
 [node name="Parede1" parent="." unique_id=568618381 instance=ExtResource("7_186fb")]
-position = Vector2(377, 392)
-tamanho = Vector2(128, 458)
+position = Vector2(820, 388)
+tamanho = Vector2(128, 455)
 
-[node name="MenuPausa2" parent="." unique_id=1997559192 instance=ExtResource("11_bc3se")]
+[node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("11_bc3se")]
+
+[node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_jt35t")]
+position = Vector2(568, 320)
+
+[node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("7_186fb")]
+position = Vector2(330, 260)
+tamanho = Vector2(128, 455)
+
+[node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("8_rnj18")]
+position = Vector2(330, 552)
+
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=789711005 instance=ExtResource("9_xrg14")]
+position = Vector2(820, 96)
+
+[node name="ParedeBloqueiaSombra2" parent="." unique_id=1931084029 instance=ExtResource("8_rnj18")]
+position = Vector2(1004, 324)
+scale = Vector2(2, 1)
+
+[node name="ParedeBloqueiaPlayer2" parent="." unique_id=351291704 instance=ExtResource("9_xrg14")]
+position = Vector2(151, 324)
+scale = Vector2(2, 1)
+
+[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_cckmw")]
+position = Vector2(151, 506)
+
+[node name="Item2" parent="." unique_id=1207616730 groups=["itens"] instance=ExtResource("10_cckmw")]
+position = Vector2(1004, 126)
+
+[node name="Item3" parent="." unique_id=374578047 groups=["itens"] instance=ExtResource("10_cckmw")]
+position = Vector2(1004, 513)
+
+[node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_ivr6t")]
+position = Vector2(147, 40)

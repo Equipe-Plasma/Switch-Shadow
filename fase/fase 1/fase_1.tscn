@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://db4gyi5v7kac3" path="res://fase/fase 1/fase_1.gd" id="1_eb6rn"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_hffw0"]
-[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombra/sombra.tscn" id="3_68bho"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombras/sombra/sombra.tscn" id="3_68bho"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_nitit"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_13r4u"]
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_player.tscn" id="4_ge8mc"]
@@ -63,8 +63,6 @@ position = Vector2(774, 557)
 position = Vector2(774, 62)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
-offset = Vector2(10000, 0)
-transform = Transform2D(1, 0, 0, 1, 10000, 0)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("12_01sd7")]
 position = Vector2(1154, 302)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c38q4f7g50dtq"]
 
-[ext_resource type="Script" uid="uid://clkwhmlcwm8a8" path="res://editor/sombra/sombra.gd" id="1_5qid6"]
+[ext_resource type="Script" uid="uid://clkwhmlcwm8a8" path="res://editor/sombras/sombra/sombra.gd" id="1_5qid6"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="2_x44nn"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="2_xsx3n"]
 [ext_resource type="Texture2D" uid="uid://bv4a0sa76bqm1" path="res://assets/player/paradireita.png" id="4_koliu"]
