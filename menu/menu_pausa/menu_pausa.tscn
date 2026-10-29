@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cku37fnjfcu0l" path="res://menu/menu_pausa/menu_pausa.gd" id="1_o8q7k"]
 
-[node name="MenuPausa" type="CanvasLayer" unique_id=1672884906]
+[node name="MenuPausa" type="CanvasLayer" unique_id=1672884906 node_paths=PackedStringArray("botao_continuar", "botao_reiniciar", "botao_menu")]
 script = ExtResource("1_o8q7k")
+botao_continuar = NodePath("Fundo/CenterContainer/VBoxContainer/BotaoContinuar")
+botao_reiniciar = NodePath("Fundo/CenterContainer/VBoxContainer/BotaoReiniciar")
+botao_menu = NodePath("Fundo/CenterContainer/VBoxContainer/BotaoMenu")
 
 [node name="Fundo" type="ColorRect" parent="." unique_id=1612669019]
 anchors_preset = 15

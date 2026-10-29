@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://b3804r5u7qo5x"]
+
+[ext_resource type="Script" uid="uid://kc2yau0lytx5" path="res://menu/opcoes/menu_opcoes.gd" id="1_nvynx"]
+[ext_resource type="Texture2D" uid="uid://bn6b35dqjxspg" path="res://assets/outros/temp_back2.jpg" id="2_cp615"]
+
+[node name="MenuOpcoes" type="Control" unique_id=1533226383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvynx")
+
+[node name="Background" type="TextureRect" parent="." unique_id=498330086]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = 716.0
+offset_right = -616.0
+offset_bottom = 1673.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5707964
+mouse_filter = 2
+texture = ExtResource("2_cp615")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1771378601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1088439113]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=433938574]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "OPTIONS"
+horizontal_alignment = 1
+
+[node name="BotaoJanela" type="Button" parent="CenterContainer/VBoxContainer" unique_id=827707290]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "WINDOWED"
+
+[node name="BotaoTelaCheia" type="Button" parent="CenterContainer/VBoxContainer" unique_id=952040378]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "FULLSCREEN"
+
+[node name="BotaoVoltar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1727289189]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+text = "BACK TO MENU"

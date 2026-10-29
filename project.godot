@@ -18,11 +18,11 @@ config/icon="res://assets/outros/icon.svg"
 [autoload]
 
 Global="*uid://cktdv83vlcx8"
+ConfiguracaoTela="*uid://dvy4qmm8aqxvl"
 
 [display]
 
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
 
 [input]
 

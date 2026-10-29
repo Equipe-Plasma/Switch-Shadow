@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dx1wlv0ejh75c" path="res://menu/telas/tela_derrota/tela_derrota.gd" id="1_pm3wf"]
 
-[node name="TelaDerrota" type="Control" unique_id=1428311591]
+[node name="TelaDerrota" type="Control" unique_id=1428311591 node_paths=PackedStringArray("botao_tentar_novamente", "botao_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pm3wf")
+botao_tentar_novamente = NodePath("BotaoTentarNovamente")
+botao_menu = NodePath("BotaoMenu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=102563856]
 layout_mode = 1
@@ -42,12 +44,23 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -77.0
-offset_top = -209.0
-offset_right = 77.0
-offset_bottom = -178.0
+offset_left = -125.0
+offset_top = -256.0
+offset_right = 104.0
+offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "Tentar Novamente"
 
+[node name="BotaoMenu" type="Button" parent="." unique_id=1799909220]
+process_mode = 3
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 0
+offset_left = 429.0
+offset_top = 499.0
+offset_right = 709.0
+offset_bottom = 554.0
+text = "BACK TO MENU"
+
 [connection signal="pressed" from="BotaoTentarNovamente" to="." method="_on_botao_tentar_novamente_pressed"]
+[connection signal="pressed" from="BotaoMenu" to="." method="_on_botao_menu_pressed"]

@@ -42,7 +42,6 @@ position = Vector2(576, 213)
 tamanho = Vector2(285, 64)
 
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("6_utaux")]
-visible = false
 
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_olswn")]
 position = Vector2(576, 324)

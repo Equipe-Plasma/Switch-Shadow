@@ -45,7 +45,7 @@ corner_radius_bottom_left = 6
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7numd"]
 bg_color = Color(0.14509805, 0.22352941, 0.2901961, 1)
 
-[node name="MenuPrincipal" type="Control" unique_id=1052038873]
+[node name="MenuPrincipal" type="Control" unique_id=1052038873 node_paths=PackedStringArray("botao_jogar", "botao_selecionar", "botao_options", "botao_sair")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,14 +53,23 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yo6f2")
+botao_jogar = NodePath("CenterContainer/VBoxContainer/MenuBotoes/BotaoJogar")
+botao_selecionar = NodePath("CenterContainer/VBoxContainer/MenuBotoes/BotaoSelecionar")
+botao_options = NodePath("CenterContainer/VBoxContainer/MenuBotoes/BotaoOpcoes")
+botao_sair = NodePath("CenterContainer/VBoxContainer/MenuBotoes/BotaoSair")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1285196239]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1168.4084
+offset_top = -415.13666
+offset_right = 1476.5452
+offset_bottom = 105.27179
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 1.5707964
 mouse_filter = 2
 texture = ExtResource("2_cme23")
 expand_mode = 1
@@ -102,6 +111,7 @@ text = "SELECT FASE"
 
 [node name="BotaoOpcoes" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=1297053230]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
 theme_override_styles/normal = ExtResource("3_oc0hg")
 text = "OPTIONS"
 
@@ -115,4 +125,5 @@ text = "CLOSE"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoSelecionar" to="." method="_on_botao_selecionar_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoOpcoes" to="." method="_on_botao_opcoes_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoSair" to="." method="_on_botao_sair_pressed"]

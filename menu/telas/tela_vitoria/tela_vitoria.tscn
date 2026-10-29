@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bgv0tho60vngc" path="res://menu/telas/tela_vitoria/tela_vitoria.gd" id="1_vetyl"]
 
-[node name="TelaVitoria" type="Control" unique_id=62974723]
+[node name="TelaVitoria" type="Control" unique_id=62974723 node_paths=PackedStringArray("botao_proxima_fase", "botao_menu")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +10,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vetyl")
+botao_proxima_fase = NodePath("BotaoProximaFase")
+botao_menu = NodePath("BotaoMenu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=597272157]
 layout_mode = 1

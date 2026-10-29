@@ -47,7 +47,6 @@ position = Vector2(772, 532)
 position = Vector2(772, 109)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
-visible = false
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("12_01sd7")]
 position = Vector2(1108, 324)
