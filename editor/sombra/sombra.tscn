@@ -17,7 +17,7 @@ textura_costas = ExtResource("2_x44nn")
 textura_dos_lados_direta = ExtResource("4_koliu")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460049725]
-modulate = Color(0.4305154, 0.6182317, 1, 1)
+modulate = Color(0.37617254, 0.001805577, 0.72027785, 1)
 texture = ExtResource("2_x44nn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255377934]

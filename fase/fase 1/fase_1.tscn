@@ -21,8 +21,6 @@ textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("3_68bho")]
-modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
-self_modulate = Color(0.31431612, 0.31431612, 0.3143161, 1)
 position = Vector2(98, 316)
 textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")

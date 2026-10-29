@@ -3,7 +3,6 @@ extends CharacterBody2D
 @export var velocidade: float = 200.0
 @onready var sprite: Sprite2D = $Sprite2D
 
-
 @export var textura_frente: Texture2D   # Para quando anda para baixo
 @export var textura_costas: Texture2D   # Para quando anda para cima
 @export var textura_dos_lados_direta: Texture2D  # Para quando anda para os lados

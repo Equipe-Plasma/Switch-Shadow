@@ -6,10 +6,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvy1w"]
 radius = 62.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_123ki"]
-radius = 64.0
-
-[node name="Espinho" type="StaticBody2D" unique_id=1607689019]
+[node name="Espinho" type="Area2D" unique_id=1268178226]
 collision_layer = 4
 script = ExtResource("1_lvy1w")
 
@@ -18,10 +15,3 @@ texture = ExtResource("2_xvnl2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006966363]
 shape = SubResource("CircleShape2D_lvy1w")
-
-[node name="AreaDano" type="Area2D" parent="." unique_id=282811293]
-position = Vector2(1, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDano" unique_id=26095840]
-position = Vector2(-1, 0)
-shape = SubResource("CircleShape2D_123ki")

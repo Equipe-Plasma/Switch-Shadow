@@ -1,9 +1,7 @@
-
 extends Node2D
 
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
-@onready var botao_pressao = $BotaoPressao
 @onready var portal = $PortalSaida
 
 var portal_liberado: bool = false
@@ -15,18 +13,6 @@ func _ready() -> void:
 	print("=== INICIANDO FASE 2 ===")
 
 	Global.registrar_fase(scene_file_path)
-
-	print("Botão encontrado: ", botao_pressao)
-	print("Portal encontrado: ", portal)
-
-	portal.desativar()
-
-	if not botao_pressao.estado_alterado.is_connected(_on_estado_botao_alterado):
-		botao_pressao.estado_alterado.connect(_on_estado_botao_alterado)
-
-	print("Sinal conectado: ",
-		botao_pressao.estado_alterado.is_connected(_on_estado_botao_alterado)
-	)
 
 	if not portal.portal_utilizado.is_connected(avancar_para_proxima_fase):
 		portal.portal_utilizado.connect(avancar_para_proxima_fase)

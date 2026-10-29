@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://sq0ylhhc2fj3" path="res://assets/outros/parede.png" id="1_wjy07"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
-size = Vector2(128, 126)
+size = Vector2(128, 128)
 
 [node name="ParedeGeral" type="StaticBody2D" unique_id=87217196]
 collision_layer = 4
