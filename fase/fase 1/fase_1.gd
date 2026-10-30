@@ -66,6 +66,9 @@ func realizar_troca() -> void:
 	
 	# A Sombra vai para onde o Player estava
 	sombra.global_position = pos_temp_player
+	
+	# 2. NOVO: Pede para todas as paredes do grupo "paredes_alternadas" mudarem de estado!
+	get_tree().call_group("paredes_alternadas", "alternar_estado")
 
 
 func verificar_progresso() -> void:

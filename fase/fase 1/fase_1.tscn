@@ -37,13 +37,13 @@ tamanho = Vector2(128, 584)
 position = Vector2(908, 520)
 tamanho = Vector2(128, 192)
 
-[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_0r7j3")]
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_0r7j3")]
 position = Vector2(455, 320)
 
-[node name="Item2" parent="." unique_id=1003667387 groups=["itens"] instance=ExtResource("10_0r7j3")]
+[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
 position = Vector2(756, 532)
 
-[node name="Item3" parent="." unique_id=720673298 groups=["itens"] instance=ExtResource("10_0r7j3")]
+[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("10_0r7j3")]
 position = Vector2(756, 109)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]

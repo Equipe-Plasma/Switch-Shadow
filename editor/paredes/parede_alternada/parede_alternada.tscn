@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://02o86sq42eyk"]
+
+[ext_resource type="Script" uid="uid://hg8ept6cpdtu" path="res://editor/paredes/parede_alternada/parede_alternada.gd" id="1_32u8d"]
+[ext_resource type="Texture2D" uid="uid://sq0ylhhc2fj3" path="res://assets/outros/parede.png" id="1_tcs4e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_isiyx"]
+size = Vector2(128, 128)
+
+[node name="ParedeAlternada" type="Area2D" unique_id=1392753472 groups=["paredes_alternadas"]]
+script = ExtResource("1_32u8d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1480294548]
+texture = ExtResource("1_tcs4e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1385884709]
+shape = SubResource("RectangleShape2D_isiyx")
