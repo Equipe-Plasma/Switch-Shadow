@@ -7,7 +7,8 @@ var fases: Array[String] = [
 	"res://fase/fase 1/fase_1.tscn",
 	"res://fase/fase 2/fase_2.tscn",
 	"res://fase/fase 3/fase_3.tscn",
-	"res://fase/fase 4/fase_4.tscn"
+	"res://fase/fase 4/fase_4.tscn",
+	"res://fase/fase 5/fase_5.tscn"
 ]
 
 var fase_atual: int = 0
