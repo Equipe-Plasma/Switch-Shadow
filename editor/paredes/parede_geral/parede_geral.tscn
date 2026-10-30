@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://eqcm6t2rdyc8" path="res://editor/paredes/parede_geral/parede_geral.gd" id="1_a2w5h"]
 [ext_resource type="Texture2D" uid="uid://bhixlgprnc2pn" path="res://assets/outros/pixel art grass.jpg" id="2_jkr6k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_yoo1p"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ms5vp"]
 size = Vector2(128, 128)
 
 [node name="Parede" type="StaticBody2D" unique_id=925734375]
@@ -28,4 +28,4 @@ expand_mode = 1
 stretch_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=769796173]
-shape = SubResource("RectangleShape2D_yoo1p")
+shape = SubResource("RectangleShape2D_ms5vp")
