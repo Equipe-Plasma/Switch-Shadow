@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b0nugb86ufv0r"]
+
+[ext_resource type="Texture2D" uid="uid://sq0ylhhc2fj3" path="res://assets/outros/parede.png" id="1_ct658"]
+[ext_resource type="Script" uid="uid://dijdedvg0nww0" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.gd" id="1_paqf2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paqf2"]
+size = Vector2(128, 128)
+
+[node name="ParedeBloqueiaPlayer" type="StaticBody2D" unique_id=87217196]
+collision_layer = 8
+script = ExtResource("1_paqf2")
+
+[node name="Textura" type="TextureRect" parent="." unique_id=534987568]
+modulate = Color(0.48101532, 0.4932552, 1, 1)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ct658")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943126472]
+shape = SubResource("RectangleShape2D_paqf2")

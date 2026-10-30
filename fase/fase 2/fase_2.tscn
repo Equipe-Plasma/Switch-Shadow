@@ -7,13 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://drc06yh60ttaj" path="res://menu/telas/tela_vitoria/tela_vitoria.tscn" id="2_xq10f"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_jdyb1"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_783b1"]
-[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_player.tscn" id="7_67a0w"]
-[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/parede/parede_bloqueia_/parede_bloqueia_sombra.tscn" id="8_iaody"]
-[ext_resource type="PackedScene" uid="uid://dxxyiof204lp2" path="res://editor/parede/parede_geral/parede_geral.tscn" id="9_sx8e5"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.tscn" id="7_67a0w"]
+[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="8_iaody"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="9_sx8e5"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="10_h04fk"]
 [ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="12_wvv7m"]
 [ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="12_xq10f"]
-[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/parede/parede/parede.tscn" id="14_wvv7m"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="14_wvv7m"]
 
 [node name="Fase2" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_4vcdr")
