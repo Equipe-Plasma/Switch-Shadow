@@ -34,17 +34,17 @@ position = Vector2(605, 318)
 tamanho = Vector2(128, 584)
 
 [node name="ParedeBloqueiaPlayer2" parent="." unique_id=1151557831 instance=ExtResource("4_ge8mc")]
-position = Vector2(908, 532)
-tamanho = Vector2(128, 158)
+position = Vector2(908, 520)
+tamanho = Vector2(128, 192)
 
 [node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_0r7j3")]
 position = Vector2(455, 320)
 
 [node name="Item2" parent="." unique_id=1003667387 groups=["itens"] instance=ExtResource("10_0r7j3")]
-position = Vector2(772, 532)
+position = Vector2(756, 532)
 
 [node name="Item3" parent="." unique_id=720673298 groups=["itens"] instance=ExtResource("10_0r7j3")]
-position = Vector2(772, 109)
+position = Vector2(756, 109)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
 visible = false
@@ -53,8 +53,8 @@ visible = false
 position = Vector2(1108, 324)
 
 [node name="ParedeBloqueiaSombra2" parent="." unique_id=1022167895 instance=ExtResource("5_8t630")]
-position = Vector2(908, 111)
-tamanho = Vector2(128, 158)
+position = Vector2(908, 128)
+tamanho = Vector2(128, 192)
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("10_01sd7")]
 position = Vector2(576, 16)
@@ -77,5 +77,5 @@ collision_mask = 257
 tamanho = Vector2(32, 584)
 
 [node name="Parede" parent="." unique_id=867730286 instance=ExtResource("10_01sd7")]
-position = Vector2(908, 318)
-tamanho = Vector2(128, 256)
+position = Vector2(908, 324)
+tamanho = Vector2(128, 200)

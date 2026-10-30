@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_783b1"]
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.tscn" id="7_67a0w"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="8_iaody"]
-[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="9_sx8e5"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="10_h04fk"]
 [ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="12_wvv7m"]
 [ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="12_xq10f"]
@@ -30,7 +29,7 @@ textura_costas = ExtResource("4_783b1")
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_h04fk")]
 visibility_layer = 25
-position = Vector2(1006, 599)
+position = Vector2(1009, 599)
 
 [node name="Espinho" parent="." unique_id=1607689019 instance=ExtResource("12_xq10f")]
 position = Vector2(321, 96)
@@ -44,27 +43,27 @@ tipo = 1
 position = Vector2(321, 352)
 
 [node name="Espinho4" parent="." unique_id=1117738981 instance=ExtResource("12_xq10f")]
-position = Vector2(829, 96)
+position = Vector2(833, 96)
 tipo = 2
 
 [node name="Espinho5" parent="." unique_id=1799746374 instance=ExtResource("12_xq10f")]
-position = Vector2(829, 224)
+position = Vector2(833, 224)
 tipo = 2
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("8_iaody")]
 position = Vector2(145, 352)
-scale = Vector2(1.75, 1)
+tamanho = Vector2(224, 128)
 
-[node name="ParedeGeral5" parent="." unique_id=1712056793 instance=ExtResource("9_sx8e5")]
-position = Vector2(829, 518)
-scale = Vector2(1, 1.6)
+[node name="ParedeGeral5" parent="." unique_id=1712056793 instance=ExtResource("14_wvv7m")]
+position = Vector2(833, 516)
+tamanho = Vector2(128, 200)
 
 [node name="Espinho6" parent="." unique_id=590456572 instance=ExtResource("12_xq10f")]
-position = Vector2(829, 352)
+position = Vector2(833, 352)
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=2114099946 instance=ExtResource("7_67a0w")]
-position = Vector2(575.00006, 352.00003)
-scale = Vector2(2.97, 1)
+position = Vector2(577.00006, 352.00003)
+tamanho = Vector2(384, 128)
 
 [node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("12_wvv7m")]
 position = Vector2(145, 526)

@@ -42,7 +42,7 @@ collision_mask = 257
 tamanho = Vector2(32, 584)
 
 [node name="Parede1" parent="." unique_id=568618381 instance=ExtResource("7_186fb")]
-position = Vector2(828, 388)
+position = Vector2(800, 388)
 collision_mask = 257
 tamanho = Vector2(128, 455)
 
@@ -52,38 +52,38 @@ tamanho = Vector2(128, 455)
 position = Vector2(576, 324)
 
 [node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("7_186fb")]
-position = Vector2(325, 260)
+position = Vector2(352, 260)
 tamanho = Vector2(128, 455)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("8_rnj18")]
-position = Vector2(325, 552)
+position = Vector2(352, 552)
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=789711005 instance=ExtResource("9_xrg14")]
-position = Vector2(828, 96)
+position = Vector2(800, 96)
 
 [node name="ParedeBloqueiaSombra2" parent="." unique_id=1931084029 instance=ExtResource("8_rnj18")]
-position = Vector2(1006, 324.00003)
-scale = Vector2(1.78, 1)
+position = Vector2(992, 324.00003)
+tamanho = Vector2(256, 128)
 
 [node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_cckmw")]
-position = Vector2(147, 552)
+position = Vector2(160, 552)
 
 [node name="Item2" parent="." unique_id=1207616730 groups=["itens"] instance=ExtResource("10_cckmw")]
 position = Vector2(1006, 96)
 
 [node name="Item3" parent="." unique_id=374578047 groups=["itens"] instance=ExtResource("10_cckmw")]
-position = Vector2(1006, 513)
+position = Vector2(992, 513)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_ivr6t")]
 z_index = -1
-position = Vector2(147, 61)
+position = Vector2(160, 61)
 collision_mask = 3
 
 [node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("12_rnj18")]
 visible = false
 
 [node name="ParedeBloqueiaSombra3" parent="." unique_id=110927228 instance=ExtResource("8_rnj18")]
-position = Vector2(147, 324)
-scale = Vector2(1.78, 1)
+position = Vector2(160, 324)
+tamanho = Vector2(256, 128)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]

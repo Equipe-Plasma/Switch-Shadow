@@ -101,7 +101,7 @@ tipo = 1
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]
 position = Vector2(577, 434)
-scale = Vector2(2.23, 0.5)
+tamanho = Vector2(285, 64)
 
 [node name="Parede3" parent="." unique_id=823078784 instance=ExtResource("5_f4jru")]
 position = Vector2(920, 324)
