@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_isiyx"]
 size = Vector2(128, 128)
 
-[node name="ParedeAlternada" type="Area2D" unique_id=1392753472 groups=["paredes_alternadas"]]
+[node name="ParedeAlternada" type="StaticBody2D" unique_id=1462242306 groups=["paredes_alternadas"]]
 script = ExtResource("1_32u8d")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1480294548]
