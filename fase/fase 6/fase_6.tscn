@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://u6pbk4tqbuhi"]
+
+[ext_resource type="Script" uid="uid://bbiwrobqe5woe" path="res://fase/fase 6/fase_6.gd" id="1_3isel"]
+[ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_1rmr3"]
+[ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_6ftr1"]
+[ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_0lev4"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombras/sombra/sombra.tscn" id="5_eekpi"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.tscn" id="6_5dasr"]
+[ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="7_gagox"]
+[ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="8_gkdwm"]
+[ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="9_rtdl4"]
+[ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="10_cpu0a"]
+[ext_resource type="PackedScene" uid="uid://02o86sq42eyk" path="res://editor/paredes/parede_alternada/parede_alternada.tscn" id="10_djctm"]
+[ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="11_r8jtf"]
+
+[node name="Fase1" type="Node2D" unique_id=1904190499]
+script = ExtResource("1_3isel")
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_1rmr3")]
+position = Vector2(158, 487)
+textura_frente = ExtResource("3_6ftr1")
+textura_costas = ExtResource("4_0lev4")
+
+[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("5_eekpi")]
+position = Vector2(158, 487)
+textura_frente = ExtResource("3_6ftr1")
+textura_costas = ExtResource("4_0lev4")
+
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_gkdwm")]
+position = Vector2(576, 160)
+
+[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("8_gkdwm")]
+position = Vector2(444, 486)
+
+[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("8_gkdwm")]
+position = Vector2(714, 486)
+
+[node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("9_rtdl4")]
+
+[node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_cpu0a")]
+position = Vector2(1108, 324)
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("11_r8jtf")]
+position = Vector2(576, 16)
+collision_mask = 257
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeInferior" parent="." unique_id=798641860 instance=ExtResource("11_r8jtf")]
+position = Vector2(576, 632)
+collision_mask = 257
+tamanho = Vector2(1152, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=2053857815 instance=ExtResource("11_r8jtf")]
+position = Vector2(16, 324)
+collision_mask = 257
+tamanho = Vector2(32, 584)
+
+[node name="ParedeDireita" parent="." unique_id=908784397 instance=ExtResource("11_r8jtf")]
+position = Vector2(1136, 324)
+collision_mask = 257
+tamanho = Vector2(32, 584)
+
+[node name="ParedeAlternada" parent="." unique_id=1392753472 instance=ExtResource("10_djctm")]
+position = Vector2(316, 486)
+estado_atual = 1
+tamanho = Vector2(64, 260)
+
+[node name="ParedeAlternada2" parent="." unique_id=1462242306 instance=ExtResource("10_djctm")]
+position = Vector2(316, 162)
+tamanho = Vector2(64, 260)
+
+[node name="ParedeAlternada3" parent="." unique_id=1073762129 instance=ExtResource("10_djctm")]
+position = Vector2(706, 324)
+tamanho = Vector2(196, 64)
+
+[node name="Parede" parent="." unique_id=1293675822 instance=ExtResource("11_r8jtf")]
+position = Vector2(446, 324)
+tamanho = Vector2(324, 64)
+
+[node name="ParedeAlternada4" parent="." unique_id=1418259290 instance=ExtResource("10_djctm")]
+position = Vector2(836, 470)
+tamanho = Vector2(64, 292)
+
+[node name="ParedeAlternada5" parent="." unique_id=1583242484 instance=ExtResource("10_djctm")]
+position = Vector2(836, 178)
+estado_atual = 1
+tamanho = Vector2(64, 292)
+
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("6_5dasr")]
+position = Vector2(576, 486)
+tamanho = Vector2(64, 260)
+
+[node name="ParedeBloqueiaSombra" parent="." unique_id=915563410 instance=ExtResource("7_gagox")]
+position = Vector2(158, 324)
+tamanho = Vector2(252, 64)
