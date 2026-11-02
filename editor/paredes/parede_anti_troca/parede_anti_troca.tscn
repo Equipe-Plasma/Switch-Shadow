@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://do7u25nau3eb0"]
 
 [ext_resource type="Script" uid="uid://bq1mvnu1rusv0" path="res://editor/paredes/parede_anti_troca/parede_anti_troca.gd" id="1_oqikr"]
-[ext_resource type="Texture2D" uid="uid://bp08yhpr36gvb" path="res://assets/outros/sem_troca.png" id="1_whjpq"]
+[ext_resource type="Texture2D" uid="uid://bp08yhpr36gvb" path="res://assets/paredes/parede_anti_troca.png" id="1_whjpq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqikr"]
 size = Vector2(128, 128)

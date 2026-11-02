@@ -13,27 +13,29 @@
 [ext_resource type="PackedScene" uid="uid://02o86sq42eyk" path="res://editor/paredes/parede_alternada/parede_alternada.tscn" id="10_djctm"]
 [ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="11_r8jtf"]
 
-[node name="Fase1" type="Node2D" unique_id=1904190499]
+[node name="Fase6" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_3isel")
 
-[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_1rmr3")]
-position = Vector2(158, 487)
-textura_frente = ExtResource("3_6ftr1")
-textura_costas = ExtResource("4_0lev4")
+[node name="ParedeAlternada" parent="." unique_id=1392753472 instance=ExtResource("10_djctm")]
+position = Vector2(316, 486)
+collision_layer = 17
+estado_atual = 1
+tamanho = Vector2(64, 260)
+
+[node name="ParedeAlternada5" parent="." unique_id=1583242484 instance=ExtResource("10_djctm")]
+position = Vector2(836, 178)
+collision_layer = 17
+estado_atual = 1
+tamanho = Vector2(64, 292)
+
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("6_5dasr")]
+position = Vector2(576, 486)
+tamanho = Vector2(64, 260)
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("5_eekpi")]
 position = Vector2(158, 487)
 textura_frente = ExtResource("3_6ftr1")
 textura_costas = ExtResource("4_0lev4")
-
-[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_gkdwm")]
-position = Vector2(576, 160)
-
-[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("8_gkdwm")]
-position = Vector2(444, 486)
-
-[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("8_gkdwm")]
-position = Vector2(714, 486)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("9_rtdl4")]
 
@@ -55,16 +57,15 @@ position = Vector2(16, 324)
 collision_mask = 257
 tamanho = Vector2(32, 584)
 
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_1rmr3")]
+position = Vector2(158, 487)
+textura_frente = ExtResource("3_6ftr1")
+textura_costas = ExtResource("4_0lev4")
+
 [node name="ParedeDireita" parent="." unique_id=908784397 instance=ExtResource("11_r8jtf")]
 position = Vector2(1136, 324)
 collision_mask = 257
 tamanho = Vector2(32, 584)
-
-[node name="ParedeAlternada" parent="." unique_id=1392753472 instance=ExtResource("10_djctm")]
-position = Vector2(316, 486)
-collision_layer = 17
-estado_atual = 1
-tamanho = Vector2(64, 260)
 
 [node name="ParedeAlternada2" parent="." unique_id=1462242306 instance=ExtResource("10_djctm")]
 position = Vector2(316, 162)
@@ -82,16 +83,15 @@ tamanho = Vector2(324, 64)
 position = Vector2(836, 470)
 tamanho = Vector2(64, 292)
 
-[node name="ParedeAlternada5" parent="." unique_id=1583242484 instance=ExtResource("10_djctm")]
-position = Vector2(836, 178)
-collision_layer = 17
-estado_atual = 1
-tamanho = Vector2(64, 292)
-
-[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("6_5dasr")]
-position = Vector2(576, 486)
-tamanho = Vector2(64, 260)
-
 [node name="ParedeBloqueiaSombra" parent="." unique_id=915563410 instance=ExtResource("7_gagox")]
 position = Vector2(158, 324)
 tamanho = Vector2(252, 64)
+
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_gkdwm")]
+position = Vector2(576, 160)
+
+[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("8_gkdwm")]
+position = Vector2(444, 486)
+
+[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("8_gkdwm")]
+position = Vector2(714, 486)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp08yhpr36gvb"
-path="res://.godot/imported/sem_troca.png-0841e34cb1eb1c4729cf90f734a1b004.ctex"
+uid="uid://sq0ylhhc2fj3"
+path="res://.godot/imported/parede_alternada.png-8352520fdd589e3fb3ea038c70564bb8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/outros/sem_troca.png"
-dest_files=["res://.godot/imported/sem_troca.png-0841e34cb1eb1c4729cf90f734a1b004.ctex"]
+source_file="res://assets/paredes/parede_alternada.png"
+dest_files=["res://.godot/imported/parede_alternada.png-8352520fdd589e3fb3ea038c70564bb8.ctex"]
 
 [params]
 

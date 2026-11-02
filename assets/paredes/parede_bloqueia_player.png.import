@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sq0ylhhc2fj3"
-path="res://.godot/imported/parede.png-e8404a97632081557bda9d21c82b2610.ctex"
+uid="uid://bfpxgevsjekfe"
+path="res://.godot/imported/parede_bloqueia_player.png-155e8ca66ad7212bb5b40e33678a0771.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/outros/parede.png"
-dest_files=["res://.godot/imported/parede.png-e8404a97632081557bda9d21c82b2610.ctex"]
+source_file="res://assets/paredes/parede_bloqueia_player.png"
+dest_files=["res://.godot/imported/parede_bloqueia_player.png-155e8ca66ad7212bb5b40e33678a0771.ctex"]
 
 [params]
 

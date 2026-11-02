@@ -16,45 +16,18 @@
 [node name="Fase1" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_eb6rn")
 
-[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_hffw0")]
-position = Vector2(99, 316)
-textura_frente = ExtResource("3_nitit")
-textura_costas = ExtResource("4_13r4u")
-
-[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("3_68bho")]
-position = Vector2(99, 316)
-textura_frente = ExtResource("3_nitit")
-textura_costas = ExtResource("4_13r4u")
-
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("4_ge8mc")]
 position = Vector2(291, 324)
-tamanho = Vector2(128, 584)
-
-[node name="ParedeBloqueiaSombra" parent="." unique_id=1779242448 instance=ExtResource("5_8t630")]
-position = Vector2(605, 324)
 tamanho = Vector2(128, 584)
 
 [node name="ParedeBloqueiaPlayer2" parent="." unique_id=1151557831 instance=ExtResource("4_ge8mc")]
 position = Vector2(908, 520)
 tamanho = Vector2(128, 192)
 
-[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_0r7j3")]
-position = Vector2(455, 320)
-
-[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
-position = Vector2(759, 520)
-
-[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("10_0r7j3")]
-position = Vector2(762, 128)
-
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("12_01sd7")]
 position = Vector2(1048, 324)
-
-[node name="ParedeBloqueiaSombra2" parent="." unique_id=1022167895 instance=ExtResource("5_8t630")]
-position = Vector2(908, 128)
-tamanho = Vector2(128, 192)
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("10_01sd7")]
 position = Vector2(576, 16)
@@ -79,6 +52,33 @@ tamanho = Vector2(32, 584)
 [node name="Parede" parent="." unique_id=867730286 instance=ExtResource("10_01sd7")]
 position = Vector2(908, 324)
 tamanho = Vector2(128, 200)
+
+[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("3_68bho")]
+position = Vector2(99, 316)
+textura_frente = ExtResource("3_nitit")
+textura_costas = ExtResource("4_13r4u")
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_hffw0")]
+position = Vector2(99, 316)
+textura_frente = ExtResource("3_nitit")
+textura_costas = ExtResource("4_13r4u")
+
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_0r7j3")]
+position = Vector2(455, 320)
+
+[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
+position = Vector2(759, 520)
+
+[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("10_0r7j3")]
+position = Vector2(762, 128)
+
+[node name="ParedeBloqueiaSombra" parent="." unique_id=1779242448 instance=ExtResource("5_8t630")]
+position = Vector2(605, 324)
+tamanho = Vector2(128, 584)
+
+[node name="ParedeBloqueiaSombra2" parent="." unique_id=1022167895 instance=ExtResource("5_8t630")]
+position = Vector2(908, 128)
+tamanho = Vector2(128, 192)
 
 [node name="TutorialInterativo" type="CanvasLayer" parent="." unique_id=521553675]
 script = ExtResource("12_ub1qc")

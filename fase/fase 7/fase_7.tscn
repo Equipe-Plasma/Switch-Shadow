@@ -13,22 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="11_ijp16"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="12_0pwnx"]
 
-[node name="Fase1" type="Node2D" unique_id=1904190499]
+[node name="Fase7" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_fj8f5")
+
+[node name="ParedeAlternada3" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
+position = Vector2(448, 132)
+tamanho = Vector2(32, 200)
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_d5gv1")]
 position = Vector2(358, 358)
 textura_frente = ExtResource("3_thqe0")
 textura_costas = ExtResource("4_85moy")
-
-[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("6_1n14e")]
-position = Vector2(115, 541)
-
-[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("6_1n14e")]
-position = Vector2(138, 138)
-
-[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("6_1n14e")]
-position = Vector2(773, 341)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("7_mb6o6")]
 
@@ -63,10 +58,6 @@ position = Vector2(-16, 240)
 
 [node name="Espinho2" parent="." unique_id=196923540 instance=ExtResource("11_ijp16")]
 position = Vector2(112, -16)
-
-[node name="ParedeAlternada3" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
-position = Vector2(448, 132)
-tamanho = Vector2(32, 200)
 
 [node name="Parede" parent="." unique_id=16774898 instance=ExtResource("9_mglbt")]
 position = Vector2(232, 448)
@@ -119,6 +110,15 @@ tamanho = Vector2(32, 152)
 [node name="ParedeBloqueiaSombra4" parent="." unique_id=634432890 instance=ExtResource("12_0pwnx")]
 position = Vector2(624, 540)
 tamanho = Vector2(32, 152)
+
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("6_1n14e")]
+position = Vector2(115, 541)
+
+[node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("6_1n14e")]
+position = Vector2(138, 138)
+
+[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("6_1n14e")]
+position = Vector2(773, 341)
 
 [node name="ParedeBloqueiaSombra5" parent="." unique_id=1457875701 instance=ExtResource("12_0pwnx")]
 position = Vector2(832, 540)

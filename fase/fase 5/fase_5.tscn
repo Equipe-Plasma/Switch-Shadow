@@ -14,13 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="12_s47ta"]
 [ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.tscn" id="13_s0d1o"]
 
-[node name="Fase4" type="Node2D" unique_id=1904190499]
+[node name="Fase5" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_t14bc")
-
-[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_2p3ym")]
-position = Vector2(161, 462)
-textura_frente = ExtResource("3_g8wi1")
-textura_costas = ExtResource("4_w6oym")
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_3rfw7")]
 position = Vector2(576, 16)
@@ -38,19 +33,23 @@ tamanho = Vector2(32, 584)
 position = Vector2(1136, 324)
 tamanho = Vector2(32, 584)
 
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=1680933943 instance=ExtResource("13_s0d1o")]
+position = Vector2(673, 324)
+tamanho = Vector2(256, 64)
+
+[node name="ParedeBloqueiaPlayer2" parent="." unique_id=2026018675 instance=ExtResource("13_s0d1o")]
+position = Vector2(832, 486)
+tamanho = Vector2(63, 260)
+
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("6_0rael")]
 
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_f6h7u")]
 position = Vector2(161, 462)
 
-[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_honrr")]
-position = Vector2(161, 233)
-
-[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("8_honrr")]
-position = Vector2(673, 156)
-
-[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("8_honrr")]
-position = Vector2(1028, 156)
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_2p3ym")]
+position = Vector2(161, 462)
+textura_frente = ExtResource("3_g8wi1")
+textura_costas = ExtResource("4_w6oym")
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("9_r1gxp")]
 z_index = -1
@@ -80,10 +79,6 @@ position = Vector2(609, 632)
 [node name="Espinho4" parent="." unique_id=1505972011 instance=ExtResource("11_esoi2")]
 position = Vector2(737, 632)
 
-[node name="ParedeBloqueiaPlayer" parent="." unique_id=1680933943 instance=ExtResource("13_s0d1o")]
-position = Vector2(673, 324)
-tamanho = Vector2(256, 64)
-
 [node name="Parede2" parent="." unique_id=162618303 instance=ExtResource("5_3rfw7")]
 position = Vector2(865, 194)
 tamanho = Vector2(128, 324)
@@ -94,8 +89,13 @@ position = Vector2(1056, 632)
 [node name="Espinho6" parent="." unique_id=971277980 instance=ExtResource("11_esoi2")]
 position = Vector2(928, 632)
 
-[node name="ParedeBloqueiaPlayer2" parent="." unique_id=2026018675 instance=ExtResource("13_s0d1o")]
-position = Vector2(832, 486)
-tamanho = Vector2(63, 260)
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_honrr")]
+position = Vector2(161, 233)
+
+[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("8_honrr")]
+position = Vector2(673, 156)
+
+[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("8_honrr")]
+position = Vector2(1028, 156)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]

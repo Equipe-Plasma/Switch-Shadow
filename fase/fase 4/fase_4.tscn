@@ -16,11 +16,6 @@
 [node name="Fase4" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_pbl0i")
 
-[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_gerrx")]
-position = Vector2(576, 324)
-textura_frente = ExtResource("3_738o2")
-textura_costas = ExtResource("4_3vegh")
-
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_f4jru")]
 position = Vector2(576, 16)
 tamanho = Vector2(1152, 32)
@@ -33,6 +28,10 @@ tamanho = Vector2(1152, 32)
 position = Vector2(16, 324)
 tamanho = Vector2(32, 584)
 
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]
+position = Vector2(577, 434)
+tamanho = Vector2(285, 64)
+
 [node name="ParedeDireita" parent="." unique_id=1324156465 instance=ExtResource("5_f4jru")]
 position = Vector2(1136, 324)
 tamanho = Vector2(32, 584)
@@ -43,21 +42,9 @@ tamanho = Vector2(285, 64)
 
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("6_utaux")]
 
-[node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_olswn")]
-position = Vector2(576, 324)
-
 [node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("5_f4jru")]
 position = Vector2(466, 295)
 tamanho = Vector2(64, 228)
-
-[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_c6pif")]
-position = Vector2(96, 552)
-
-[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_c6pif")]
-position = Vector2(1042, 159)
-
-[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_c6pif")]
-position = Vector2(1044, 487)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_1j6hm")]
 z_index = -1
@@ -99,12 +86,25 @@ tipo = 1
 position = Vector2(277, 552)
 tipo = 1
 
-[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]
-position = Vector2(577, 434)
-tamanho = Vector2(285, 64)
+[node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_olswn")]
+position = Vector2(576, 324)
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_gerrx")]
+position = Vector2(576, 324)
+textura_frente = ExtResource("3_738o2")
+textura_costas = ExtResource("4_3vegh")
 
 [node name="Parede3" parent="." unique_id=823078784 instance=ExtResource("5_f4jru")]
 position = Vector2(920, 324)
 tamanho = Vector2(399, 71)
+
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_c6pif")]
+position = Vector2(96, 552)
+
+[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_c6pif")]
+position = Vector2(1042, 159)
+
+[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_c6pif")]
+position = Vector2(1044, 487)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]
