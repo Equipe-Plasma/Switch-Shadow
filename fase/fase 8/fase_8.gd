@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var player: CharacterBody2D = $Player
-@onready var sombra: CharacterBody2D = $Sombra_reversa
+@onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
 
 var total_itens: int = 0
