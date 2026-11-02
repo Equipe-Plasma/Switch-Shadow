@@ -31,7 +31,7 @@ position = Vector2(291, 324)
 tamanho = Vector2(128, 584)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=1779242448 instance=ExtResource("5_8t630")]
-position = Vector2(605, 318)
+position = Vector2(605, 324)
 tamanho = Vector2(128, 584)
 
 [node name="ParedeBloqueiaPlayer2" parent="." unique_id=1151557831 instance=ExtResource("4_ge8mc")]
@@ -42,15 +42,15 @@ tamanho = Vector2(128, 192)
 position = Vector2(455, 320)
 
 [node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
-position = Vector2(759, 428)
+position = Vector2(759, 520)
 
 [node name="Item3" parent="." unique_id=720673298 instance=ExtResource("10_0r7j3")]
-position = Vector2(762, 200)
+position = Vector2(762, 128)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("12_01sd7")]
-position = Vector2(1108, 324)
+position = Vector2(1048, 324)
 
 [node name="ParedeBloqueiaSombra2" parent="." unique_id=1022167895 instance=ExtResource("5_8t630")]
 position = Vector2(908, 128)

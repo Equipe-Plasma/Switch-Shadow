@@ -38,7 +38,7 @@ position = Vector2(714, 486)
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("9_rtdl4")]
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_cpu0a")]
-position = Vector2(1108, 324)
+position = Vector2(1056, 324)
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("11_r8jtf")]
 position = Vector2(576, 16)
@@ -62,6 +62,7 @@ tamanho = Vector2(32, 584)
 
 [node name="ParedeAlternada" parent="." unique_id=1392753472 instance=ExtResource("10_djctm")]
 position = Vector2(316, 486)
+collision_layer = 17
 estado_atual = 1
 tamanho = Vector2(64, 260)
 
@@ -83,6 +84,7 @@ tamanho = Vector2(64, 292)
 
 [node name="ParedeAlternada5" parent="." unique_id=1583242484 instance=ExtResource("10_djctm")]
 position = Vector2(836, 178)
+collision_layer = 17
 estado_atual = 1
 tamanho = Vector2(64, 292)
 

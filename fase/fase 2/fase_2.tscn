@@ -29,7 +29,7 @@ textura_costas = ExtResource("4_783b1")
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_h04fk")]
 visibility_layer = 25
-position = Vector2(1009, 599)
+position = Vector2(1009, 552)
 
 [node name="Espinho" parent="." unique_id=1607689019 instance=ExtResource("12_xq10f")]
 position = Vector2(321, 96)
@@ -65,13 +65,13 @@ position = Vector2(833, 352)
 position = Vector2(577.00006, 352.00003)
 tamanho = Vector2(384, 128)
 
-[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("12_wvv7m")]
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("12_wvv7m")]
 position = Vector2(145, 526)
 
-[node name="Item2" parent="." unique_id=1139266663 groups=["itens"] instance=ExtResource("12_wvv7m")]
+[node name="Item2" parent="." unique_id=1139266663 instance=ExtResource("12_wvv7m")]
 position = Vector2(580, 165)
 
-[node name="Item3" parent="." unique_id=105084357 groups=["itens"] instance=ExtResource("12_wvv7m")]
+[node name="Item3" parent="." unique_id=105084357 instance=ExtResource("12_wvv7m")]
 position = Vector2(1010, 94)
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("2_wljo7")]

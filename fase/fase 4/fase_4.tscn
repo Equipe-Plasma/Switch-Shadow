@@ -48,20 +48,20 @@ position = Vector2(576, 324)
 
 [node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("5_f4jru")]
 position = Vector2(466, 295)
-tamanho = Vector2(64, 229)
+tamanho = Vector2(64, 228)
 
-[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("10_c6pif")]
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_c6pif")]
 position = Vector2(96, 552)
 
-[node name="Item2" parent="." unique_id=1207616730 groups=["itens"] instance=ExtResource("10_c6pif")]
+[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_c6pif")]
 position = Vector2(1042, 159)
 
-[node name="Item3" parent="." unique_id=374578047 groups=["itens"] instance=ExtResource("10_c6pif")]
+[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_c6pif")]
 position = Vector2(1044, 487)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_1j6hm")]
 z_index = -1
-position = Vector2(88, 85)
+position = Vector2(96, 96)
 collision_mask = 3
 
 [node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("12_yh2do")]
@@ -85,18 +85,18 @@ tipo = 2
 
 [node name="Parede2" parent="." unique_id=1532077451 instance=ExtResource("5_f4jru")]
 position = Vector2(687, 295)
-tamanho = Vector2(64, 229)
+tamanho = Vector2(64, 228)
 
 [node name="Espinho6" parent="." unique_id=1189106357 instance=ExtResource("11_m8htq")]
-position = Vector2(96, 419)
+position = Vector2(96, 371)
 tipo = 1
 
 [node name="Espinho7" parent="." unique_id=1838901400 instance=ExtResource("11_m8htq")]
-position = Vector2(229, 419)
+position = Vector2(277, 371)
 tipo = 1
 
 [node name="Espinho8" parent="." unique_id=1873589119 instance=ExtResource("11_m8htq")]
-position = Vector2(229, 552)
+position = Vector2(277, 552)
 tipo = 1
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]

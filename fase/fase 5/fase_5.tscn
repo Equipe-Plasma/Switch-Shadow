@@ -43,18 +43,18 @@ tamanho = Vector2(32, 584)
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_f6h7u")]
 position = Vector2(161, 462)
 
-[node name="Item" parent="." unique_id=1168481889 groups=["itens"] instance=ExtResource("8_honrr")]
+[node name="Item" parent="." unique_id=1168481889 instance=ExtResource("8_honrr")]
 position = Vector2(161, 233)
 
-[node name="Item2" parent="." unique_id=1207616730 groups=["itens"] instance=ExtResource("8_honrr")]
+[node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("8_honrr")]
 position = Vector2(673, 156)
 
-[node name="Item3" parent="." unique_id=374578047 groups=["itens"] instance=ExtResource("8_honrr")]
+[node name="Item3" parent="." unique_id=374578047 instance=ExtResource("8_honrr")]
 position = Vector2(1028, 156)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("9_r1gxp")]
 z_index = -1
-position = Vector2(160, 21)
+position = Vector2(160, 96)
 collision_mask = 3
 
 [node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("10_hg4oe")]
