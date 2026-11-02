@@ -78,7 +78,10 @@ func verificar_progresso() -> void:
 	# Quando todos os itens forem coletados
 	if total_itens > 0 and itens_restantes == 0:
 		portal.ativar()
-		print("Todos os itens coletados! Portal ativado!")
+		var mostrar
+		if mostrar:
+			print("Todos os itens coletados! Portal ativado!")
+			mostrar = false # Bloqueia o if para sempre
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:

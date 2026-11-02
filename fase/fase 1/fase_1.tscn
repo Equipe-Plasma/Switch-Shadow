@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="10_01sd7"]
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="11_01sd7"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="12_01sd7"]
+[ext_resource type="Script" uid="uid://bagr16mfjhbpc" path="res://Sistema/Tutorial/tutorial_interativo.gd" id="12_ub1qc"]
 
 [node name="Fase1" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_eb6rn")
@@ -41,10 +42,10 @@ tamanho = Vector2(128, 192)
 position = Vector2(455, 320)
 
 [node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
-position = Vector2(756, 532)
+position = Vector2(759, 428)
 
 [node name="Item3" parent="." unique_id=720673298 instance=ExtResource("10_0r7j3")]
-position = Vector2(756, 109)
+position = Vector2(762, 200)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("11_01sd7")]
 
@@ -78,3 +79,6 @@ tamanho = Vector2(32, 584)
 [node name="Parede" parent="." unique_id=867730286 instance=ExtResource("10_01sd7")]
 position = Vector2(908, 324)
 tamanho = Vector2(128, 200)
+
+[node name="TutorialInterativo" type="CanvasLayer" parent="." unique_id=521553675]
+script = ExtResource("12_ub1qc")

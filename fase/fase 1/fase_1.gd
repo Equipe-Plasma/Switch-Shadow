@@ -1,4 +1,5 @@
 extends Node2D
+signal troca_realizada
 
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
@@ -69,7 +70,9 @@ func realizar_troca() -> void:
 	
 	# 2. NOVO: Pede para todas as paredes do grupo "paredes_alternadas" mudarem de estado!
 	get_tree().call_group("paredes_alternadas", "alternar_estado")
-
+	# Avisa o tutorial que uma troca foi realizada
+	# Avisa ao tutorial que a troca aconteceu
+	troca_realizada.emit()
 
 func verificar_progresso() -> void:
 	# Verifica quantos itens ainda existem na fase
@@ -78,7 +81,14 @@ func verificar_progresso() -> void:
 	# Quando todos os itens forem coletados
 	if total_itens > 0 and itens_restantes == 0:
 		portal.ativar()
-		print("Todos os itens coletados! Portal ativado!")
+		var mostrar
+		if mostrar:
+			print("Todos os itens coletados! Portal ativado!")
+			mostrar = false # Bloqueia o if para sempre
+
+
+
+	
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:
