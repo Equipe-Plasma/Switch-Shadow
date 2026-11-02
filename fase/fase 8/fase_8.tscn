@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="7_mb6o6"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="8_2ew01"]
 [ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="9_mglbt"]
+[ext_resource type="PackedScene" uid="uid://do7u25nau3eb0" path="res://editor/paredes/parede_anti_troca/parede_anti_troca.tscn" id="10_t8rpf"]
 [ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://editor/sombras/sombra_reversa/sombra_reversa.tscn" id="10_vgkgr"]
 
 [node name="Fase8" type="Node2D" unique_id=800180011]
@@ -55,3 +56,6 @@ tamanho = Vector2(32, 584)
 position = Vector2(1136, 324)
 collision_mask = 257
 tamanho = Vector2(32, 584)
+
+[node name="ParedeAntiTroca" parent="." unique_id=651491399 instance=ExtResource("10_t8rpf")]
+position = Vector2(471, 308)

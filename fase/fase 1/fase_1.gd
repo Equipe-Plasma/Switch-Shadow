@@ -87,9 +87,6 @@ func verificar_progresso() -> void:
 			mostrar = false # Bloqueia o if para sempre
 
 
-
-	
-
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:
 		return
