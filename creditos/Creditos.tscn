@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cckxkvu1uujl2"]
+
+[ext_resource type="Script" uid="uid://cp7aw453i587b" path="res://Creditos/Creditos.gd" id="1_kwuv3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfvq6"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Scroll" type="ScrollContainer" unique_id=65385732 node_paths=PackedStringArray("text_node")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nfvq6")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_kwuv3")
+text_node = NodePath("Margin/Label")
+credits_time = 35.0
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=1461202817]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="RichTextLabel" parent="Margin" unique_id=579110548]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[center]
+[b][u]CRÉDITOS[/u][/b]
+
+[b]Programação:[/b]
+Giovani
+Gustavo
+Rubens
+Ghabriel
+
+[b]Artes:[/b]
+Ghabriel  
+
+[b]Músicas e Sons:[/b]  
+TBA
+
+[b]E obrigado você por jogar![/b]
+[/center]"
+fit_content = true
