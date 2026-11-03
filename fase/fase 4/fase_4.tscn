@@ -16,35 +16,19 @@
 [node name="Fase4" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_pbl0i")
 
-[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_f4jru")]
-position = Vector2(576, 16)
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeInferior" parent="." unique_id=1291424496 instance=ExtResource("5_f4jru")]
-position = Vector2(576, 632)
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeEsquerda" parent="." unique_id=1606992427 instance=ExtResource("5_f4jru")]
-position = Vector2(16, 324)
-tamanho = Vector2(32, 584)
-
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("9_k1xjg")]
-position = Vector2(577, 434)
-tamanho = Vector2(285, 64)
-
-[node name="ParedeDireita" parent="." unique_id=1324156465 instance=ExtResource("5_f4jru")]
-position = Vector2(1136, 324)
-tamanho = Vector2(32, 584)
+position = Vector2(576, 512)
+tamanho = Vector2(320, 64)
 
 [node name="Parede1" parent="." unique_id=568618381 instance=ExtResource("5_f4jru")]
-position = Vector2(576, 213)
-tamanho = Vector2(285, 64)
+position = Vector2(576, 256)
+tamanho = Vector2(320, 64)
 
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("6_utaux")]
 
 [node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("5_f4jru")]
-position = Vector2(466, 295)
-tamanho = Vector2(64, 228)
+position = Vector2(448, 384)
+tamanho = Vector2(64, 192)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_1j6hm")]
 z_index = -1
@@ -55,56 +39,76 @@ collision_mask = 3
 visible = false
 
 [node name="Espinho2" parent="." unique_id=1445958395 instance=ExtResource("11_m8htq")]
-position = Vector2(885, 225)
+position = Vector2(864, 224)
 tipo = 2
 
 [node name="Espinho3" parent="." unique_id=1822530800 instance=ExtResource("11_m8htq")]
-position = Vector2(885, 424)
+position = Vector2(864, 480)
 tipo = 1
 
 [node name="Espinho4" parent="." unique_id=517094697 instance=ExtResource("11_m8htq")]
-position = Vector2(885, 552)
+position = Vector2(864, 608)
 tipo = 1
 
 [node name="Espinho5" parent="." unique_id=834081665 instance=ExtResource("11_m8htq")]
-position = Vector2(885, 97)
+position = Vector2(864, 96)
 tipo = 2
 
 [node name="Parede2" parent="." unique_id=1532077451 instance=ExtResource("5_f4jru")]
-position = Vector2(687, 295)
-tamanho = Vector2(64, 228)
+position = Vector2(704, 384)
+tamanho = Vector2(64, 192)
 
 [node name="Espinho6" parent="." unique_id=1189106357 instance=ExtResource("11_m8htq")]
-position = Vector2(96, 371)
+position = Vector2(96, 416)
 tipo = 1
 
 [node name="Espinho7" parent="." unique_id=1838901400 instance=ExtResource("11_m8htq")]
-position = Vector2(277, 371)
+position = Vector2(288, 416)
 tipo = 1
 
 [node name="Espinho8" parent="." unique_id=1873589119 instance=ExtResource("11_m8htq")]
-position = Vector2(277, 552)
+position = Vector2(288, 608)
 tipo = 1
 
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_olswn")]
-position = Vector2(576, 324)
+position = Vector2(577, 384)
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_gerrx")]
-position = Vector2(576, 324)
+position = Vector2(577, 384)
 textura_frente = ExtResource("3_738o2")
 textura_costas = ExtResource("4_3vegh")
 
 [node name="Parede3" parent="." unique_id=823078784 instance=ExtResource("5_f4jru")]
-position = Vector2(920, 324)
-tamanho = Vector2(399, 71)
+position = Vector2(992, 352)
+tamanho = Vector2(512, 128)
 
 [node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_c6pif")]
-position = Vector2(96, 552)
+position = Vector2(128, 576)
 
 [node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_c6pif")]
-position = Vector2(1042, 159)
+position = Vector2(1088, 192)
 
 [node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_c6pif")]
-position = Vector2(1044, 487)
+position = Vector2(1094, 512)
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_f4jru")]
+position = Vector2(640, 16)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeInferior" parent="." unique_id=1733833003 instance=ExtResource("5_f4jru")]
+position = Vector2(640, 688)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=2035400977 instance=ExtResource("5_f4jru")]
+position = Vector2(16, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
+
+[node name="ParedeDireita" parent="." unique_id=2062946021 instance=ExtResource("5_f4jru")]
+position = Vector2(1264, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]

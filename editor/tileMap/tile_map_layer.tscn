@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dog8wvs0dxq3f"]
+
+[ext_resource type="Texture2D" uid="uid://bvnjxjr2krpva" path="res://assets/tileSets/chao.png" id="1_848ot"]
+
+[node name="TileMapLayer" type="TileMapLayer" unique_id=1673341342]
+
+[node name="Chao" type="Sprite2D" parent="." unique_id=1753853530]
+position = Vector2(32, 32)
+texture = ExtResource("1_848ot")

@@ -17,22 +17,6 @@
 [node name="Fase5" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_t14bc")
 
-[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_3rfw7")]
-position = Vector2(576, 16)
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeInferior" parent="." unique_id=1291424496 instance=ExtResource("5_3rfw7")]
-position = Vector2(576, 632)
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeEsquerda" parent="." unique_id=1606992427 instance=ExtResource("5_3rfw7")]
-position = Vector2(16, 324)
-tamanho = Vector2(32, 584)
-
-[node name="ParedeDireita" parent="." unique_id=1324156465 instance=ExtResource("5_3rfw7")]
-position = Vector2(1136, 324)
-tamanho = Vector2(32, 584)
-
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=1680933943 instance=ExtResource("13_s0d1o")]
 position = Vector2(673, 324)
 tamanho = Vector2(256, 64)
@@ -97,5 +81,25 @@ position = Vector2(673, 156)
 
 [node name="Item3" parent="." unique_id=374578047 instance=ExtResource("8_honrr")]
 position = Vector2(1028, 156)
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_3rfw7")]
+position = Vector2(640, 16)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeInferior" parent="." unique_id=1342310839 instance=ExtResource("5_3rfw7")]
+position = Vector2(640, 688)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=2100002147 instance=ExtResource("5_3rfw7")]
+position = Vector2(16, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
+
+[node name="ParedeDireita" parent="." unique_id=1965936030 instance=ExtResource("5_3rfw7")]
+position = Vector2(1264, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]

@@ -42,30 +42,10 @@ textura_costas = ExtResource("4_0lev4")
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("10_cpu0a")]
 position = Vector2(1056, 324)
 
-[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("11_r8jtf")]
-position = Vector2(576, 16)
-collision_mask = 257
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeInferior" parent="." unique_id=798641860 instance=ExtResource("11_r8jtf")]
-position = Vector2(576, 632)
-collision_mask = 257
-tamanho = Vector2(1152, 32)
-
-[node name="ParedeEsquerda" parent="." unique_id=2053857815 instance=ExtResource("11_r8jtf")]
-position = Vector2(16, 324)
-collision_mask = 257
-tamanho = Vector2(32, 584)
-
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_1rmr3")]
 position = Vector2(158, 487)
 textura_frente = ExtResource("3_6ftr1")
 textura_costas = ExtResource("4_0lev4")
-
-[node name="ParedeDireita" parent="." unique_id=908784397 instance=ExtResource("11_r8jtf")]
-position = Vector2(1136, 324)
-collision_mask = 257
-tamanho = Vector2(32, 584)
 
 [node name="ParedeAlternada2" parent="." unique_id=1462242306 instance=ExtResource("10_djctm")]
 position = Vector2(316, 162)
@@ -95,3 +75,23 @@ position = Vector2(444, 486)
 
 [node name="Item3" parent="." unique_id=720673298 instance=ExtResource("8_gkdwm")]
 position = Vector2(714, 486)
+
+[node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("11_r8jtf")]
+position = Vector2(640, 16)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeInferior" parent="." unique_id=904340802 instance=ExtResource("11_r8jtf")]
+position = Vector2(640, 688)
+collision_mask = 257
+tamanho = Vector2(1280, 32)
+
+[node name="ParedeEsquerda" parent="." unique_id=1429603257 instance=ExtResource("11_r8jtf")]
+position = Vector2(16, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
+
+[node name="ParedeDireita" parent="." unique_id=1060773460 instance=ExtResource("11_r8jtf")]
+position = Vector2(1264, 352)
+collision_mask = 257
+tamanho = Vector2(32, 704)
