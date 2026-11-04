@@ -30,10 +30,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -174.0
-offset_top = 1644.0
-offset_right = 1268.1211
-offset_bottom = 2645.1848
+offset_left = -165.0
+offset_top = 1717.0
+offset_right = 1277.1211
+offset_bottom = 2718.1848
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5707964
@@ -55,6 +55,7 @@ layout_mode = 2
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1875737845]
 layout_mode = 2
+text = "SELECAO_TITULO"
 
 [node name="GridFases" type="GridContainer" parent="CenterContainer/VBoxContainer" unique_id=1521672264]
 layout_mode = 2
@@ -104,7 +105,7 @@ text = "This phase is still under development!"
 
 [node name="BotaoEntendi" type="Button" parent="OverlayPopup/CenterContainer/PanelContainer/VBoxContainer" unique_id=229334138]
 layout_mode = 2
-text = "return"
+text = "ENTENDI"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BotaoVoltar" to="." method="_on_botao_voltar_pressed"]
 [connection signal="pressed" from="OverlayPopup/CenterContainer/PanelContainer/VBoxContainer/BotaoEntendi" to="." method="_on_botao_entendi_pressed"]

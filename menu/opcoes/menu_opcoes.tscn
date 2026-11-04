@@ -17,10 +17,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -200.0
-offset_top = 716.0
-offset_right = -616.0
-offset_bottom = 1673.0
+offset_left = -145.0
+offset_top = 796.0
+offset_right = -561.0
+offset_bottom = 1753.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5707964
@@ -48,32 +48,32 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 tooltip_auto_translate_mode = 1
-text = "CONFIGURACOES"
+text = "OPCOES_TITULO"
 horizontal_alignment = 1
 
 [node name="BotaoJanela" type="Button" parent="CenterContainer/VBoxContainer" unique_id=827707290]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
 tooltip_auto_translate_mode = 1
-text = "MODO_JANELA"
+text = "OPCOES_JANELA"
 
 [node name="BotaoTelaCheia" type="Button" parent="CenterContainer/VBoxContainer" unique_id=952040378]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
 tooltip_auto_translate_mode = 1
-text = "TELA_CHEIA"
+text = "OPCOES_TELA_CHEIA"
 
 [node name="BotaoIngles" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1493392680]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
 tooltip_auto_translate_mode = 1
-text = "ENGLISH"
+text = "OPCOES_INGLES"
 
 [node name="BotaoPortugues" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1683342587]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
 tooltip_auto_translate_mode = 1
-text = "PORTUGUÊS"
+text = "OPCOES_PORTUGUES"
 
 [node name="BotaoVoltar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1727289189]
 custom_minimum_size = Vector2(280, 55)

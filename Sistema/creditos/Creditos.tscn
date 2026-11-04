@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://cckxkvu1uujl2"]
 
-[ext_resource type="Script" path="res://Creditos/Creditos.gd" id="1_kwuv3"]
+[ext_resource type="Script" uid="uid://cp7aw453i587b" path="res://Sistema/creditos/Creditos.gd" id="1_0oxxb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfvq6"]
 bg_color = Color(0, 0, 0, 1)
 
-[node name="Scroll" type="ScrollContainer" unique_id=65385732 node_paths=PackedStringArray("text_node")]
+[node name="Scroll" type="ScrollContainer" unique_id=65385732]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,9 +14,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nfvq6")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
-script = ExtResource("1_kwuv3")
-text_node = NodePath("Margin/Label")
-credits_time = 35.0
+script = ExtResource("1_0oxxb")
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1461202817]
 layout_mode = 2

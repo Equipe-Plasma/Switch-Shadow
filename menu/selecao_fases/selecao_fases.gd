@@ -23,24 +23,22 @@ var fase_popup: int = 0
 # INICIALIZAÇÃO
 # ==========================================
 
+
 func _ready() -> void:
 	get_tree().paused = false
 
 	overlay_popup.hide()
+
 	criar_botoes()
 	configurar_vizinhos()
-
-	get_tree().node_configuration_warning_changed.connect(
-	atualizar_traducoes
-	)
 
 	atualizar_traducoes()
 	selecionar_botao(0)
 
-
 # ==========================================
 # ATUALIZAÇÃO DAS TRADUÇÕES
 # ==========================================
+
 
 func atualizar_traducoes() -> void:
 	for i in range(botoes_fases.size()):
@@ -67,7 +65,6 @@ func atualizar_texto_popup() -> void:
 		"\n\n" +
 		tr("AGUARDE_ATUALIZACOES")
 	)
-
 
 # ==========================================
 # CONFIGURAR VIZINHOS

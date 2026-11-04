@@ -30,22 +30,23 @@ theme_override_constants/separation = 16
 
 [node name="Titulo" type="Label" parent="Fundo/CenterContainer/VBoxContainer" unique_id=1070779257]
 layout_mode = 2
+text = "PAUSA_TITULO"
 
 [node name="BotaoContinuar" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=2106514685]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "CONTINE"
+text = "PAUSA_CONTINUAR"
 
 [node name="BotaoReiniciar" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=769624421]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "RESTART"
+text = "PAUSA_REINICIAR"
 
 [node name="BotaoMenu" type="Button" parent="Fundo/CenterContainer/VBoxContainer" unique_id=951675497]
 process_mode = 3
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "BACK TO MENU"
+text = "VOLTAR_MENU"
 
 [connection signal="pressed" from="Fundo/CenterContainer/VBoxContainer/BotaoContinuar" to="." method="_on_botao_continuar_pressed"]
 [connection signal="pressed" from="Fundo/CenterContainer/VBoxContainer/BotaoReiniciar" to="." method="_on_botao_reiniciar_pressed"]

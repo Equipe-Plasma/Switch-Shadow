@@ -2,11 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
-uid="uid://d3epsv4hxh6ty"
+uid="uid://dw6jw7fkbywwe"
 
 [deps]
 
+files=["res://Sistema/idiomas/traducoes.pt_BR.translation", "res://Sistema/idiomas/traducoes.en.translation"]
+
 source_file="res://Sistema/idiomas/traducoes.csv"
+dest_files=["res://Sistema/idiomas/traducoes.pt_BR.translation", "res://Sistema/idiomas/traducoes.en.translation"]
 
 [params]
 

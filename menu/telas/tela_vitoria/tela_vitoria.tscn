@@ -30,12 +30,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -60.0
-offset_top = -11.5
+offset_top = -97.5
 offset_right = 60.0
-offset_bottom = 11.5
+offset_bottom = -74.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Fase Concluída!"
+text = "VITORIA_TITULO"
 
 [node name="BotaoProximaFase" type="Button" parent="." unique_id=872082434]
 layout_mode = 1
@@ -45,12 +45,12 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -76.5
-offset_top = -215.0
+offset_top = -324.0
 offset_right = 76.5
-offset_bottom = -184.0
+offset_bottom = -293.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Próxima Fase"
+text = "PROXIMA_FASE"
 
 [node name="BotaoMenu" type="Button" parent="." unique_id=1328869449]
 layout_mode = 1
@@ -60,12 +60,12 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -80.0
-offset_top = 185.0
+offset_top = 99.0
 offset_right = 80.0
-offset_bottom = 225.0
+offset_bottom = 139.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "BACK TO MENU"
+text = "VOLTAR_MENU"
 
 [connection signal="pressed" from="BotaoProximaFase" to="." method="_on_botao_proxima_fase_pressed"]
 [connection signal="pressed" from="BotaoMenu" to="." method="_on_botao_menu_pressed"]

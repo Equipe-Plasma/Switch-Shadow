@@ -3,6 +3,7 @@ var portal_liberado: bool = false
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
+@onready var botao = get_node_or_null("Botao")
 
 var total_itens: int = 0
 var fase_concluida: bool = false
@@ -84,15 +85,26 @@ func realizar_troca() -> void:
 	get_tree().call_group("paredes_alternadas", "alternar_estado")
 
 
+
 func verificar_progresso() -> void:
-	# Verifica quantos itens ainda existem na fase
+	if portal_liberado:
+		return
+
+	# Verifica se todos os itens foram coletados.
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
 
-	# Quando todos os itens forem coletados
-	if total_itens > 0 and itens_restantes == 0 and not portal_liberado:
-		portal_liberado = true
-		portal.ativar()
-		print("Todos os itens coletados! Portal ativado!")
+	if total_itens <= 0 or itens_restantes > 0:
+		return
+
+	# Se a fase possui botão, ele precisa estar pressionado.
+	if botao != null and not botao.pressionado:
+		return
+
+	# Libera o portal permanentemente.
+	portal_liberado = true
+	portal.ativar()
+
+	print("Todas as condições cumpridas! Portal ativado!")
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:

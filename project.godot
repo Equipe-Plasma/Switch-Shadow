@@ -73,7 +73,7 @@ pausar={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://idiomas/traducoes.en.translation", "res://idiomas/traducoes.pt_BR.translation")
+locale/translations=PackedStringArray("res://Sistema/idiomas/traducoes.en.translation", "res://Sistema/idiomas/traducoes.pt_BR.translation")
 
 [layer_names]
 
