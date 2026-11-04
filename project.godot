@@ -20,6 +20,7 @@ config/icon="res://assets/outros/icon.svg"
 Global="*uid://cktdv83vlcx8"
 ConfiguracaoTela="*uid://dvy4qmm8aqxvl"
 GerenciadorIdioma="*uid://d3s7f8lnnfhrj"
+GlobalMusic="*uid://dkxt2v1brrh2j"
 
 [display]
 

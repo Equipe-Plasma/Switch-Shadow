@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="2_rkbax"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="2_yw30f"]
 [ext_resource type="Texture2D" uid="uid://bv4a0sa76bqm1" path="res://assets/player/paradireita.png" id="4_qjkh3"]
+[ext_resource type="AudioStream" uid="uid://2dhl54j0jnjr" path="res://sons/trocar.mp3" id="5_k2x83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_123ki"]
 size = Vector2(128, 128)
@@ -20,3 +21,8 @@ texture = ExtResource("2_rkbax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1151693474]
 shape = SubResource("RectangleShape2D_123ki")
+
+[node name="Trocar" type="AudioStreamPlayer" parent="." unique_id=1254786610]
+stream = ExtResource("5_k2x83")
+volume_db = 20.07
+pitch_scale = 0.65

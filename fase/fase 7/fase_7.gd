@@ -3,6 +3,7 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra_reversa
 @onready var portal = $PortalSaida
+@onready var trocar: AudioStreamPlayer = $Player/Trocar
 
 var total_itens: int = 0
 var fase_concluida: bool = false
@@ -40,6 +41,8 @@ func trocar_posicoes() -> void:
 
 	# Se estiver tudo certo, executa a troca
 	realizar_troca()
+	if trocar:
+		trocar.play()
 	
 func pode_trocar_posicoes() -> bool:
 	# 1. Simula a posição de destino do Player

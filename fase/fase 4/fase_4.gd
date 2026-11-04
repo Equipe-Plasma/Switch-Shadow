@@ -8,6 +8,8 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra_reversa
 @onready var portal_saida: Area2D = $PortalSaida
+@onready var trocar: AudioStreamPlayer = $Player/Trocar
+
 var portal_liberado: bool = false
 var fase_concluida: bool = false
 
@@ -89,6 +91,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 
 		trocar_posicoes()
+		if trocar:
+			trocar.play()
 
 
 # ==========================================
