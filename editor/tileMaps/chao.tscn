@@ -13,4 +13,5 @@ sources/0 = SubResource("TileSetAtlasSource_31u0n")
 
 [node name="Chao" type="TileMapLayer" unique_id=428155436]
 modulate = Color(0.69641376, 0.69301105, 0.7101547, 1)
+z_index = -1
 tile_set = SubResource("TileSet_123ki")

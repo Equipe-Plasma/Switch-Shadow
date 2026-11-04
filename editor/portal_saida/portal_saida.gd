@@ -15,7 +15,6 @@ func _ready() -> void:
 	desativar()
 
 
-
 func ativar() -> void:
 	if ativo:
 		return

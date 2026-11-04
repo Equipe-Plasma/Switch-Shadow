@@ -18,7 +18,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	print("Entrou na área: ", body.name)
 
-	if body.name == "Player" or body.name == "Sombra":
+	if body.name == "Player" or body.name == "Sombra" or body.name == "Sombra_reversa":
 		if not corpos_no_botao.has(body):
 			corpos_no_botao.append(body)
 
@@ -28,7 +28,7 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
 	print("Saiu da área: ", body.name)
 
-	if body.name == "Player" or body.name == "Sombra":
+	if body.name == "Player" or body.name == "Sombra" or body.name == "Sombra_reversa":
 		corpos_no_botao.erase(body)
 		atualizar_estado()
 
