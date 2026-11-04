@@ -29,4 +29,5 @@ func _ready() -> void:
 	tween.play()
 
 func _acabou() -> void:
-	print("acabou!")
+	print("batata!")
+	get_tree().change_scene_to_file("res://menu/menu_principal/menu_principal.tscn")
