@@ -77,12 +77,12 @@ collision_mask = 257
 tamanho = Vector2(32, 704)
 
 [node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("2_wljo7")]
-position = Vector2(96, 96)
+position = Vector2(192, 160)
 textura_frente = ExtResource("3_jdyb1")
 textura_costas = ExtResource("4_783b1")
 
 [node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_s3f3q")]
-position = Vector2(96, 96)
+position = Vector2(192, 160)
 textura_frente = ExtResource("3_jdyb1")
 textura_costas = ExtResource("4_783b1")
 
@@ -91,10 +91,10 @@ position = Vector2(192, 352)
 tamanho = Vector2(320, 128)
 
 [node name="Item" parent="." unique_id=1168481889 instance=ExtResource("12_wvv7m")]
-position = Vector2(128, 512)
+position = Vector2(192, 544)
 
 [node name="Item2" parent="." unique_id=1139266663 instance=ExtResource("12_wvv7m")]
-position = Vector2(704, 128)
+position = Vector2(672, 160)
 
 [node name="Item3" parent="." unique_id=105084357 instance=ExtResource("12_wvv7m")]
-position = Vector2(1088, 64)
+position = Vector2(1120, 160)

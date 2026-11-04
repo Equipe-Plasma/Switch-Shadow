@@ -22,6 +22,8 @@ ConfiguracaoTela="*uid://dvy4qmm8aqxvl"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=704
 window/stretch/mode="canvas_items"
 
 [input]

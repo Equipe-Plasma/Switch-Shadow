@@ -44,7 +44,7 @@ textura_frente = ExtResource("3_nitit")
 textura_costas = ExtResource("4_13r4u")
 
 [node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_0r7j3")]
-position = Vector2(448, 384)
+position = Vector2(448, 352)
 
 [node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("10_0r7j3")]
 position = Vector2(766, 578)

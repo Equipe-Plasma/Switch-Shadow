@@ -17,36 +17,36 @@
 script = ExtResource("1_juws0")
 
 [node name="Parede1" parent="." unique_id=568618381 instance=ExtResource("7_186fb")]
-position = Vector2(928, 448)
+position = Vector2(928, 480)
 collision_mask = 257
-tamanho = Vector2(128, 448)
+tamanho = Vector2(128, 384)
 
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("11_bc3se")]
 
 [node name="Parede" parent="." unique_id=2073804678 instance=ExtResource("7_186fb")]
-position = Vector2(352, 256)
-tamanho = Vector2(128, 448)
+position = Vector2(352, 224)
+tamanho = Vector2(128, 384)
 
 [node name="ParedeBloqueiaPlayer" parent="." unique_id=789711005 instance=ExtResource("9_xrg14")]
-position = Vector2(928, 128)
-tamanho = Vector2(128, 192)
+position = Vector2(928, 160)
+tamanho = Vector2(128, 256)
 
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("7_jt35t")]
 position = Vector2(640, 352)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_ivr6t")]
 z_index = -1
-position = Vector2(160, 96)
+position = Vector2(160, 160)
 collision_mask = 3
 
 [node name="Item" parent="." unique_id=1168481889 instance=ExtResource("10_cckmw")]
-position = Vector2(128, 576)
+position = Vector2(160, 544)
 
 [node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_cckmw")]
-position = Vector2(1088, 64)
+position = Vector2(1120, 152)
 
 [node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_cckmw")]
-position = Vector2(1088, 512)
+position = Vector2(1120, 544)
 
 [node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("12_rnj18")]
 visible = false
@@ -57,8 +57,8 @@ textura_frente = ExtResource("3_wbtp5")
 textura_costas = ExtResource("4_mtigs")
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("8_rnj18")]
-position = Vector2(352, 578)
-tamanho = Vector2(128, 196)
+position = Vector2(352, 544)
+tamanho = Vector2(128, 256)
 
 [node name="ParedeBloqueiaSombra3" parent="." unique_id=110927228 instance=ExtResource("8_rnj18")]
 position = Vector2(160, 352)

@@ -32,7 +32,7 @@ tamanho = Vector2(64, 192)
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_1j6hm")]
 z_index = -1
-position = Vector2(96, 96)
+position = Vector2(160, 160)
 collision_mask = 3
 
 [node name="TelaVitoria" parent="." unique_id=62974723 instance=ExtResource("12_yh2do")]
@@ -86,10 +86,10 @@ tamanho = Vector2(512, 128)
 position = Vector2(128, 576)
 
 [node name="Item2" parent="." unique_id=1207616730 instance=ExtResource("10_c6pif")]
-position = Vector2(1088, 192)
+position = Vector2(1056, 160)
 
 [node name="Item3" parent="." unique_id=374578047 instance=ExtResource("10_c6pif")]
-position = Vector2(1094, 512)
+position = Vector2(1056, 544)
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("5_f4jru")]
 position = Vector2(640, 16)
@@ -110,5 +110,9 @@ tamanho = Vector2(32, 704)
 position = Vector2(1264, 352)
 collision_mask = 257
 tamanho = Vector2(32, 704)
+
+[node name="Parede4" parent="." unique_id=2009423982 instance=ExtResource("5_f4jru")]
+position = Vector2(1216, 352)
+tamanho = Vector2(64, 640)
 
 [connection signal="body_entered" from="PortalSaida" to="." method="_on_portal_saida_body_entered"]
