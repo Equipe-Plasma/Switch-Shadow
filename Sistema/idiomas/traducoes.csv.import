@@ -6,7 +6,7 @@ uid="uid://d3epsv4hxh6ty"
 
 [deps]
 
-source_file="res://idiomas/traducoes.csv"
+source_file="res://Sistema/idiomas/traducoes.csv"
 
 [params]
 

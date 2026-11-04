@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wup3oocdjljp"]
 
-[ext_resource type="Script" uid="uid://pvfxwwsgony0" path="res://editor/mecanica/botao_pressao/botao_pressao.gd" id="1_4r8hv"]
-[ext_resource type="Texture2D" uid="uid://cyyx32eujjx7a" path="res://assets/outros/temp_botao.jpg" id="2_dlfof"]
+[ext_resource type="Script" uid="uid://pvfxwwsgony0" path="res://editor/porta_botao/botao_pressao/botao_pressao.gd" id="1_4r8hv"]
+[ext_resource type="Texture2D" path="res://assets/outros/temp_botao.jpg" id="2_dlfof"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(200, 72)
