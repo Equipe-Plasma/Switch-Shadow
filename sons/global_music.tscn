@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dkxt2v1brrh2j"]
+
+[ext_resource type="AudioStream" uid="uid://cqr3x3505nwe4" path="res://sons/musica_tema.mp3" id="1_wsj5q"]
+
+[node name="GlobalMusic" type="AudioStreamPlayer" unique_id=166330772]
+stream = ExtResource("1_wsj5q")
+autoplay = true
+parameters/looping = false

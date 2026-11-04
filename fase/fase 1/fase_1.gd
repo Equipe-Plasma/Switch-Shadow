@@ -5,6 +5,8 @@ var portal_liberado: bool = false
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
+@onready var trocar: AudioStreamPlayer = $Player/Trocar
+
 var total_itens: int = 0
 var fase_concluida: bool = false
 
@@ -25,6 +27,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Quando o jogador apertar o botão de troca (ESPAÇO)
 	if event.is_action_pressed("trocar_sombra"):
 		trocar_posicoes()
+		if trocar:
+			trocar.play()
+		else:
+			print("Aviso: O AudioStreamPlayer 'change' não foi encontrado nesta cena.")
 		
 	# Atalho para avançar de fase ao apertar Enter (ui_accept) ou a ação configurada
 	if event.is_action_pressed("proxima_fase"):

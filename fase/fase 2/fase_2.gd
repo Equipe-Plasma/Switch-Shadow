@@ -8,6 +8,7 @@ extends Node2D
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
+@onready var trocar: AudioStreamPlayer = $Player/Trocar
 
 var portal_liberado: bool = false
 var fase_concluida: bool = false
@@ -108,6 +109,10 @@ func trocar_posicoes() -> void:
 		return
 
 	realizar_troca()
+	if trocar:
+		trocar.play()
+	else:
+		print("Aviso: O AudioStreamPlayer 'change' não foi encontrado nesta cena.")
 
 
 func pode_trocar_posicoes() -> bool:
