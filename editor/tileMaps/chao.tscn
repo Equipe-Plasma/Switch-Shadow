@@ -1,15 +1,25 @@
 [gd_scene format=3 uid="uid://b6l1l4y28ofp6"]
 
 [ext_resource type="Texture2D" uid="uid://bvnjxjr2krpva" path="res://assets/tileSets/chao.png" id="1_dej0y"]
+[ext_resource type="Texture2D" uid="uid://lmm5gl8ajfqq" path="res://assets/tileSets/arvore.png" id="2_wfvnv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_31u0n"]
 texture = ExtResource("1_dej0y")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fln37"]
+texture = ExtResource("2_wfvnv")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_123ki"]
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_31u0n")
+sources/3 = SubResource("TileSetAtlasSource_fln37")
 
 [node name="Chao" type="TileMapLayer" unique_id=428155436]
 modulate = Color(0.69641376, 0.69301105, 0.7101547, 1)
