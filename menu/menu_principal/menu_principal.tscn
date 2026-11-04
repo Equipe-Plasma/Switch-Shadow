@@ -99,7 +99,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
 theme_override_styles/normal = ExtResource("3_oc0hg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2j2di")
-text = "PLAY"
+text = "JOGAR"
 
 [node name="BotaoSelecionar" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=1276524468]
 custom_minimum_size = Vector2(300, 55)
@@ -107,13 +107,13 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_57qmd")
 theme_override_styles/hover = SubResource("StyleBoxFlat_33x8s")
-text = "SELECT FASE"
+text = "SELECIONAR_FASE"
 
 [node name="BotaoOpcoes" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=1297053230]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
 theme_override_styles/normal = ExtResource("3_oc0hg")
-text = "OPTIONS"
+text = "CONFIGURACOES"
 
 [node name="BotaoSair" type="Button" parent="CenterContainer/VBoxContainer/MenuBotoes" unique_id=38665993]
 custom_minimum_size = Vector2(300, 55)
@@ -121,7 +121,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.8980392, 0.7411765, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_fcnqv")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7numd")
-text = "CLOSE"
+text = "SAIR"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoJogar" to="." method="_on_botao_jogar_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/MenuBotoes/BotaoSelecionar" to="." method="_on_botao_selecionar_pressed"]

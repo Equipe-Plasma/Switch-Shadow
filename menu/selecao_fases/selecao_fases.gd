@@ -16,11 +16,13 @@ const COLUNAS = 5
 var botoes_fases: Array[Button] = []
 var indice_selecionado: int = 0
 var menu_selecionado: bool = false
+var fase_popup: int = 0
 
 
 # ==========================================
 # INICIALIZAÇÃO
 # ==========================================
+
 func _ready() -> void:
 	get_tree().paused = false
 
@@ -28,7 +30,48 @@ func _ready() -> void:
 	criar_botoes()
 	configurar_vizinhos()
 
+	get_tree().node_configuration_warning_changed.connect(
+	atualizar_traducoes
+	)
+
+	atualizar_traducoes()
 	selecionar_botao(0)
+
+
+# ==========================================
+# ATUALIZAÇÃO DAS TRADUÇÕES
+# ==========================================
+
+func atualizar_traducoes() -> void:
+	for i in range(botoes_fases.size()):
+		var numero = i + 1
+		var botao = botoes_fases[i]
+
+		botao.text = tr("FASE") + " " + str(numero)
+
+		if numero <= FASES_PRONTAS:
+			botao.text += " ✓"
+		else:
+			botao.text += " 🔒"
+
+	botao_entendi.text = tr("ENTENDI")
+
+	if overlay_popup.visible and fase_popup > 0:
+		atualizar_texto_popup()
+
+
+func atualizar_texto_popup() -> void:
+	texto_popup.text = (
+		tr("FASE") + " " + str(fase_popup) + " " +
+		tr("FASE_DESENVOLVIMENTO") +
+		"\n\n" +
+		tr("AGUARDE_ATUALIZACOES")
+	)
+
+
+# ==========================================
+# CONFIGURAR VIZINHOS
+# ==========================================
 
 func configurar_vizinhos() -> void:
 	botao_voltar.focus_mode = Control.FOCUS_ALL
@@ -46,23 +89,34 @@ func configurar_vizinhos() -> void:
 		if coluna < COLUNAS - 1:
 			direita = i + 1
 
-		botao.focus_neighbor_left = botao.get_path_to(botoes_fases[esquerda])
-		botao.focus_neighbor_right = botao.get_path_to(botoes_fases[direita])
+		botao.focus_neighbor_left = botao.get_path_to(
+			botoes_fases[esquerda]
+		)
+
+		botao.focus_neighbor_right = botao.get_path_to(
+			botoes_fases[direita]
+		)
 
 		if i >= COLUNAS:
-			botao.focus_neighbor_top = botao.get_path_to(botoes_fases[i - COLUNAS])
+			botao.focus_neighbor_top = botao.get_path_to(
+				botoes_fases[i - COLUNAS]
+			)
 
 		if i + COLUNAS < botoes_fases.size():
-			botao.focus_neighbor_bottom = botao.get_path_to(botoes_fases[i + COLUNAS])
+			botao.focus_neighbor_bottom = botao.get_path_to(
+				botoes_fases[i + COLUNAS]
+			)
 		else:
-			botao.focus_neighbor_bottom = botao.get_path_to(botao_voltar)
+			botao.focus_neighbor_bottom = botao.get_path_to(
+				botao_voltar
+			)
 
-	# Impede a navegação horizontal de sair do botão voltar
 	botao_voltar.focus_neighbor_left = botao_voltar.get_path()
 	botao_voltar.focus_neighbor_right = botao_voltar.get_path()
 
-	# Ao subir do botão voltar, retorna à fase correspondente
-	botao_voltar.focus_neighbor_top = botao_voltar.get_path_to(botoes_fases[5])
+	botao_voltar.focus_neighbor_top = botao_voltar.get_path_to(
+		botoes_fases[5]
+	)
 
 
 # ==========================================
@@ -73,9 +127,12 @@ func criar_botoes() -> void:
 	for numero in range(1, TOTAL_FASES + 1):
 		var botao = Button.new()
 
-		botao.text = "Fase " + str(numero)
+		botao.text = tr("FASE") + " " + str(numero)
 		botao.custom_minimum_size = Vector2(110, 65)
 		botao.focus_mode = Control.FOCUS_ALL
+
+		# Texto já traduzido pelo script
+		botao.auto_translate_mode = Node.AUTO_TRANSLATE_MODE_DISABLED
 
 		var estilo = StyleBoxFlat.new()
 		estilo.bg_color = Color("#101827")
@@ -131,7 +188,6 @@ func criar_botoes() -> void:
 # ==========================================
 # NAVEGAÇÃO PELO TECLADO
 # ==========================================
-
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if not event is InputEventKey:
@@ -194,9 +250,11 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		selecionar_botao(novo_indice)
 		get_viewport().set_input_as_handled()
 
+
 # ==========================================
 # SELEÇÃO VISUAL
 # ==========================================
+
 func selecionar_botao(indice: int) -> void:
 	if indice < 0 or indice >= botoes_fases.size():
 		return
@@ -204,20 +262,21 @@ func selecionar_botao(indice: int) -> void:
 	menu_selecionado = false
 	indice_selecionado = indice
 	botoes_fases[indice_selecionado].grab_focus()
+
+
 func selecionar_menu_voltar() -> void:
 	menu_selecionado = true
 	botao_voltar.grab_focus()
+
+
 # ==========================================
 # ABRIR FASE
 # ==========================================
 
 func selecionar_fase(numero: int) -> void:
 	if numero > FASES_PRONTAS:
-		texto_popup.text = (
-			"Fase " + str(numero) +
-			" it's still in development!\n\n" +
-			"Wait for the next updates."
-		)
+		fase_popup = numero
+		atualizar_texto_popup()
 
 		overlay_popup.show()
 		botao_entendi.grab_focus()
@@ -232,6 +291,7 @@ func selecionar_fase(numero: int) -> void:
 
 func fechar_popup() -> void:
 	overlay_popup.hide()
+	fase_popup = 0
 	selecionar_botao(indice_selecionado)
 
 

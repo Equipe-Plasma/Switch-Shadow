@@ -1,10 +1,10 @@
 extends Node2D
 signal troca_realizada
+var portal_liberado: bool = false
 
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
-
 var total_itens: int = 0
 var fase_concluida: bool = false
 
@@ -79,12 +79,11 @@ func verificar_progresso() -> void:
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
 
 	# Quando todos os itens forem coletados
-	if total_itens > 0 and itens_restantes == 0:
+	if total_itens > 0 and itens_restantes == 0 and not portal_liberado:
+		portal_liberado = true
+		print("Todos os itens coletados! Portal ativado!")
 		portal.ativar()
-		var mostrar
-		if mostrar:
-			print("Todos os itens coletados! Portal ativado!")
-			mostrar = false # Bloqueia o if para sempre
+		
 
 
 func avancar_para_proxima_fase() -> void:

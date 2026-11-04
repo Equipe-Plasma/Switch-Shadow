@@ -27,6 +27,7 @@ position = Vector2(1152, 352)
 tamanho = Vector2(192, 256)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("7_mb6o6")]
+visible = false
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("8_2ew01")]
 position = Vector2(608, 352)

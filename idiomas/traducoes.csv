@@ -1,0 +1,23 @@
+
+keys,pt_BR,en
+MENU_JOGAR,JOGAR,PLAY
+MENU_SELECIONAR,SELECIONAR FASE,SELECT LEVEL
+MENU_OPCOES,OPÇÕES,OPTIONS
+MENU_SAIR,SAIR,EXIT
+MENU_TITULO,THAT GAME JAM,THAT GAME JAM
+OPCOES_TITULO,CONFIGURAÇÕES,SETTINGS
+OPCOES_JANELA,MODO JANELA,WINDOWED
+OPCOES_TELA_CHEIA,TELA CHEIA,FULLSCREEN
+OPCOES_INGLES,INGLÊS,ENGLISH
+OPCOES_PORTUGUES,PORTUGUÊS,PORTUGUESE
+VOLTAR_MENU,VOLTAR AO MENU,BACK TO MENU
+SELECAO_TITULO,SELECIONAR FASE,SELECT LEVEL
+FASE_NOME,Fase,Level
+FASE_DESENVOLVIMENTO,"A Fase {numero} ainda está em desenvolvimento!\n\nAguarde as próximas atualizações.","Level {numero} is still in development!\n\nWait for the next updates."
+POPUP_ENTENDI,ENTENDI,GOT IT
+TUTORIAL_MOVIMENTACAO,"MOVIMENTAÇÃO\nUse W, A, S, D ou as SETAS DIRECIONAIS para movimentar os personagens. Observe que apenas a sombra consegue atravessar esta parede.","MOVEMENT\nUse W, A, S, D or the ARROW KEYS to move the characters. Notice that only the shadow can pass through this wall."
+TUTORIAL_TROCA,"TROCA DE POSIÇÕES\nAgora pressione ESPAÇO para trocar de posição com sua sombra e conseguir atravessar a parede.","POSITION SWAP\nNow press SPACE to swap positions with your shadow and get past the wall."
+TUTORIAL_COLETA,"COLETA DE ITENS\nColete TODOS os itens espalhados pela fase. Você precisará de todos para desbloquear o portal.","ITEM COLLECTION\nCollect ALL the items scattered throughout the level. You will need every item to unlock the portal."
+TUTORIAL_PORTAL,"OBJETIVO FINAL\nMuito bem! Todos os itens foram coletados. O portal está desbloqueado. Encontre-o para concluir a fase.","FINAL OBJECTIVE\nWell done! All items have been collected. The portal is now unlocked. Find it to complete the level."
+TUTORIAL_FINALIZADO,Tutorial concluído!,Tutorial completed!
+TUTORIAL_PULAR,Pular tutorial,Skip tutorial

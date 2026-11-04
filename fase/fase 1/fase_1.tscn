@@ -67,6 +67,7 @@ scale = Vector2(1, 0.9504766)
 tamanho = Vector2(128, 202)
 
 [node name="TutorialInterativo" type="CanvasLayer" parent="." unique_id=521553675]
+auto_translate_mode = 1
 script = ExtResource("12_ub1qc")
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("10_01sd7")]

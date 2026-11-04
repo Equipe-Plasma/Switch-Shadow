@@ -50,16 +50,17 @@ offset_right = 104.0
 offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Tentar Novamente"
+text = "TRY AGAIN
+"
 
 [node name="BotaoMenu" type="Button" parent="." unique_id=1799909220]
 process_mode = 3
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 0
-offset_left = 429.0
-offset_top = 499.0
-offset_right = 709.0
-offset_bottom = 554.0
+offset_left = 424.0
+offset_top = 491.0
+offset_right = 704.0
+offset_bottom = 546.0
 text = "BACK TO MENU"
 
 [connection signal="pressed" from="BotaoTentarNovamente" to="." method="_on_botao_tentar_novamente_pressed"]

@@ -5,6 +5,8 @@ const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 
 @onready var botao_janela: Button = $CenterContainer/VBoxContainer/BotaoJanela
 @onready var botao_tela_cheia: Button = $CenterContainer/VBoxContainer/BotaoTelaCheia
+@onready var botao_portugues: Button = $CenterContainer/VBoxContainer/BotaoPortugues
+@onready var botao_ingles: Button = $CenterContainer/VBoxContainer/BotaoIngles
 @onready var botao_voltar: Button = $CenterContainer/VBoxContainer/BotaoVoltar
 
 var botoes: Array[Button] = []
@@ -17,6 +19,8 @@ func _ready() -> void:
 	botoes = [
 		botao_janela,
 		botao_tela_cheia,
+		botao_portugues,
+		botao_ingles,
 		botao_voltar
 	]
 
@@ -39,9 +43,14 @@ func _ready() -> void:
 
 	botao_janela.pressed.connect(_on_botao_janela_pressed)
 	botao_tela_cheia.pressed.connect(_on_botao_tela_cheia_pressed)
+	botao_portugues.pressed.connect(_on_botao_portugues_pressed)
+	botao_ingles.pressed.connect(_on_botao_ingles_pressed)
 	botao_voltar.pressed.connect(_on_botao_voltar_pressed)
 
 	selecionar_botao(0)
+	print("Idioma atual: ", TranslationServer.get_locale())
+	print("Teste janela: ", tr("MODO_JANELA"))
+	print("Teste tela cheia: ", tr("TELA_CHEIA"))
 
 
 func _input(event: InputEvent) -> void:
@@ -97,6 +106,16 @@ func _on_botao_janela_pressed() -> void:
 
 func _on_botao_tela_cheia_pressed() -> void:
 	ConfiguracaoTela.ativar_tela_cheia()
+
+
+func _on_botao_portugues_pressed() -> void:
+	GerenciadorIdioma.alterar_idioma("pt_BR")
+	print("Idioma alterado para Português")
+
+
+func _on_botao_ingles_pressed() -> void:
+	GerenciadorIdioma.alterar_idioma("en")
+	print("Language changed to English")
 
 
 func _on_botao_voltar_pressed() -> void:

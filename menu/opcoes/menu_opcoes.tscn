@@ -36,29 +36,47 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+tooltip_auto_translate_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1088439113]
 layout_mode = 2
+tooltip_auto_translate_mode = 1
 theme_override_constants/separation = 20
 alignment = 1
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer" unique_id=433938574]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "OPTIONS"
+tooltip_auto_translate_mode = 1
+text = "CONFIGURACOES"
 horizontal_alignment = 1
 
 [node name="BotaoJanela" type="Button" parent="CenterContainer/VBoxContainer" unique_id=827707290]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "WINDOWED"
+tooltip_auto_translate_mode = 1
+text = "MODO_JANELA"
 
 [node name="BotaoTelaCheia" type="Button" parent="CenterContainer/VBoxContainer" unique_id=952040378]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "FULLSCREEN"
+tooltip_auto_translate_mode = 1
+text = "TELA_CHEIA"
+
+[node name="BotaoIngles" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1493392680]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+tooltip_auto_translate_mode = 1
+text = "ENGLISH"
+
+[node name="BotaoPortugues" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1683342587]
+custom_minimum_size = Vector2(280, 55)
+layout_mode = 2
+tooltip_auto_translate_mode = 1
+text = "PORTUGUÊS"
 
 [node name="BotaoVoltar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1727289189]
 custom_minimum_size = Vector2(280, 55)
 layout_mode = 2
-text = "BACK TO MENU"
+tooltip_auto_translate_mode = 1
+text = "VOLTAR_MENU"

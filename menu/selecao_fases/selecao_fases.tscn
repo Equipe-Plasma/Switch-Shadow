@@ -64,8 +64,9 @@ columns = 5
 
 [node name="BotaoVoltar" type="Button" parent="CenterContainer/VBoxContainer" unique_id=104350761]
 layout_mode = 2
+tooltip_auto_translate_mode = 1
 theme_override_styles/normal = ExtResource("3_ndwa0")
-text = "BACK TO MENU"
+text = "VOLTAR_MENU"
 
 [node name="OverlayPopup" type="ColorRect" parent="." unique_id=1097379124]
 layout_mode = 1

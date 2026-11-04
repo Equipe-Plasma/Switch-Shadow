@@ -1,5 +1,5 @@
 extends Node2D
-
+var portal_liberado: bool = false
 @onready var player: CharacterBody2D = $Player
 @onready var sombra: CharacterBody2D = $Sombra
 @onready var portal = $PortalSaida
@@ -89,7 +89,8 @@ func verificar_progresso() -> void:
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
 
 	# Quando todos os itens forem coletados
-	if total_itens > 0 and itens_restantes == 0:
+	if total_itens > 0 and itens_restantes == 0 and not portal_liberado:
+		portal_liberado = true
 		portal.ativar()
 		print("Todos os itens coletados! Portal ativado!")
 
