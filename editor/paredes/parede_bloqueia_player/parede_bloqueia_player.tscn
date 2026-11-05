@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dijdedvg0nww0" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.gd" id="1_paqf2"]
 [ext_resource type="Texture2D" uid="uid://bfpxgevsjekfe" path="res://assets/paredes/parede_bloqueia_player.png" id="2_gldph"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4c8s"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm0pt"]
 size = Vector2(128, 128)
 
 [node name="ParedeBloqueiaPlayer" type="StaticBody2D" unique_id=87217196]
@@ -27,4 +27,4 @@ expand_mode = 1
 stretch_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=943126472]
-shape = SubResource("RectangleShape2D_t4c8s")
+shape = SubResource("RectangleShape2D_gm0pt")
