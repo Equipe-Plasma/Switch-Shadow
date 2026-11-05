@@ -1,9 +1,0 @@
-[gd_scene format=3 uid="uid://c4xobs7kqwh00"]
-
-[ext_resource type="Texture2D" uid="uid://lmm5gl8ajfqq" path="res://assets/tileSets/arvore.png" id="1_my5g2"]
-
-[node name="TileMapLayer" type="TileMapLayer" unique_id=1637732541]
-
-[node name="Arvore" type="Sprite2D" parent="." unique_id=161155426]
-position = Vector2(64, 65)
-texture = ExtResource("1_my5g2")
