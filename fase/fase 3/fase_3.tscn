@@ -18,6 +18,7 @@
 script = ExtResource("1_juws0")
 
 [node name="MenuPausa" parent="." unique_id=1997559192 instance=ExtResource("11_bc3se")]
+visible = false
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("11_ivr6t")]
 position = Vector2(160, 160)
