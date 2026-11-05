@@ -50,7 +50,7 @@ horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 script = SubResource("GDScript_fo2fk")
 text_node = NodePath("Margin/Label")
-credits_time = 12.0
+credits_time = 30.0
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1461202817]
 layout_mode = 2
@@ -61,20 +61,23 @@ layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
 text = "[center]
-[b][u]CRÉDITOS[/u][/b]
+[b][u]CREDITS[/u][/b]
 
-[b]Programação:[/b]
+[b]Programming:[/b]
 Giovani
 Gustavo
 Rubens
 Ghabriel
 
-[b]Artes:[/b]
+[b]Level Design:[/b]
+Giovani  
+
+[b]Arts:[/b]
 Ghabriel  
 
-[b]Músicas e Sons:[/b]  
-TBA
+[b]Sound Design:[/b]  
+Rubens
 
-[b]E obrigado você por jogar![/b]
+[b]Thank you for playing![/b]
 [/center]"
 fit_content = true
