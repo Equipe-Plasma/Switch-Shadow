@@ -21,6 +21,7 @@
 script = ExtResource("1_glk0d")
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("4_e3283")]
+visible = false
 
 [node name="ParedeAntiTroca" parent="." unique_id=651491399 instance=ExtResource("6_1bont")]
 position = Vector2(544, 544)
@@ -90,7 +91,8 @@ position = Vector2(192, 608)
 
 [node name="Parede3" parent="." unique_id=1988952142 instance=ExtResource("7_6p8wd")]
 position = Vector2(736, 352)
-tamanho = Vector2(640, 128)
+rotation = 1.5707964
+tamanho = Vector2(128, 640)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=415283634 instance=ExtResource("13_tgls7")]
 position = Vector2(1152, 352)
