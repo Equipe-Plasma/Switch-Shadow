@@ -19,7 +19,6 @@ script = ExtResource("1_fj8f5")
 
 [node name="ParedeAlternada3" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
 position = Vector2(576, 160)
-textura_sombra = null
 tamanho = Vector2(64, 256)
 
 [node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("10_vgkgr")]

@@ -20,14 +20,12 @@ script = ExtResource("1_3isel")
 [node name="ParedeAlternada" parent="." unique_id=1392753472 instance=ExtResource("10_djctm")]
 position = Vector2(320, 544)
 collision_layer = 17
-textura_sombra = null
 estado_atual = 1
 tamanho = Vector2(64, 256)
 
 [node name="ParedeAlternada5" parent="." unique_id=1583242484 instance=ExtResource("10_djctm")]
 position = Vector2(960, 192)
 collision_layer = 17
-textura_sombra = null
 estado_atual = 1
 tamanho = Vector2(64, 320)
 
@@ -53,12 +51,10 @@ textura_costas = ExtResource("4_0lev4")
 
 [node name="ParedeAlternada2" parent="." unique_id=1462242306 instance=ExtResource("10_djctm")]
 position = Vector2(320, 160)
-textura_sombra = null
 tamanho = Vector2(64, 256)
 
 [node name="ParedeAlternada3" parent="." unique_id=1073762129 instance=ExtResource("10_djctm")]
 position = Vector2(768, 352)
-textura_sombra = null
 tamanho = Vector2(320, 128)
 
 [node name="Parede" parent="." unique_id=1293675822 instance=ExtResource("11_r8jtf")]
@@ -67,7 +63,6 @@ tamanho = Vector2(320, 128)
 
 [node name="ParedeAlternada4" parent="." unique_id=1418259290 instance=ExtResource("10_djctm")]
 position = Vector2(960, 512)
-textura_sombra = null
 tamanho = Vector2(64, 320)
 
 [node name="ParedeBloqueiaSombra" parent="." unique_id=915563410 instance=ExtResource("7_gagox")]

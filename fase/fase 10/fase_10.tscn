@@ -67,13 +67,11 @@ position = Vector2(960, 128)
 [node name="ParedeAlternada" parent="." unique_id=1462242306 instance=ExtResource("16_xjrua")]
 position = Vector2(160, 256)
 collision_layer = 17
-textura_sombra = null
 estado_atual = 1
 tamanho = Vector2(256, 64)
 
 [node name="ParedeAlternada2" parent="." unique_id=308349429 instance=ExtResource("16_xjrua")]
 position = Vector2(160, 448)
-textura_sombra = null
 tamanho = Vector2(256, 64)
 
 [node name="Parede" parent="." unique_id=1527129207 instance=ExtResource("11_s0eif")]
@@ -86,13 +84,11 @@ tamanho = Vector2(384, 256)
 
 [node name="ParedeAlternada3" parent="." unique_id=45492037 instance=ExtResource("16_xjrua")]
 position = Vector2(736, 448)
-textura_sombra = null
 tamanho = Vector2(256, 64)
 
 [node name="ParedeAlternada4" parent="." unique_id=1355861270 instance=ExtResource("16_xjrua")]
 position = Vector2(736, 256)
 collision_layer = 17
-textura_sombra = null
 estado_atual = 1
 tamanho = Vector2(256, 64)
 

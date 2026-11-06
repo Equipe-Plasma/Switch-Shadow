@@ -119,7 +119,6 @@ tipo = 2
 [node name="ParedeAlternada" parent="." unique_id=1462242306 instance=ExtResource("8_3ye0o")]
 position = Vector2(704, 160)
 collision_layer = 17
-textura_sombra = null
 estado_atual = 1
 tamanho = Vector2(64, 256)
 
