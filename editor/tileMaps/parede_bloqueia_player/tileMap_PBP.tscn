@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c08xdriyi328g"]
+
+[ext_resource type="TileSet" uid="uid://cy0j08mnvwsmf" path="res://editor/tileMaps/parede_bloqueia_player/new_tile_set.tres" id="1_ex182"]
+
+[node name="tileMap_PBP" type="TileMapLayer" unique_id=75164792]
+tile_set = ExtResource("1_ex182")

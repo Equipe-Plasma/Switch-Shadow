@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0nugb86ufv0r"]
 
 [ext_resource type="Script" uid="uid://dijdedvg0nww0" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.gd" id="1_paqf2"]
-[ext_resource type="Texture2D" uid="uid://ct0k3vydn4lv7" path="res://assets/paredes/novos_sprites/parede_bloqueia_player.png" id="2_gldph"]
+[ext_resource type="Texture2D" uid="uid://ct0k3vydn4lv7" path="res://assets/paredes/parede_bloqueia_player.png" id="2_gldph"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4c8s"]
 size = Vector2(128, 128)

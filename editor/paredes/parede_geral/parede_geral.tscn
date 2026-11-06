@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://g6bshavfposa"]
 
 [ext_resource type="Script" uid="uid://eqcm6t2rdyc8" path="res://editor/paredes/parede_geral/parede_geral.gd" id="1_a2w5h"]
-[ext_resource type="Texture2D" uid="uid://b05liypuucp8q" path="res://assets/paredes/novos_sprites/parede_geral.png" id="2_ms5vp"]
+[ext_resource type="Texture2D" uid="uid://b05liypuucp8q" path="res://assets/paredes/parede_geral.png" id="2_ms5vp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b51nr"]
 size = Vector2(64, 64)
