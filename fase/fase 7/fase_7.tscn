@@ -136,3 +136,7 @@ position = Vector2(16, 16)
 tamanho = Vector2(32, 32)
 
 [node name="tileMap_chao" parent="." unique_id=75164792 instance=ExtResource("13_585da")]
+
+[node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("12_0pwnx")]
+position = Vector2(768, 576)
+tamanho = Vector2(64, 192)
