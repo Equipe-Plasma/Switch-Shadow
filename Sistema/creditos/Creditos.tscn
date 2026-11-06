@@ -1,45 +1,11 @@
 [gd_scene format=3 uid="uid://cckxkvu1uujl2"]
 
+[ext_resource type="Script" uid="uid://bu6aiyvd8r0t6" path="res://Sistema/creditos/Creditos.gd" id="1_0oxxb"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nfvq6"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="GDScript" id="GDScript_fo2fk"]
-script/source = "extends ScrollContainer
-
-@export var text_node : Control
-@export_range(1,10000,0.1) var credits_time : float = 1
-@export_range(0,10000,0.1) var margin_increment : float = 0
-
-@onready var margin : MarginContainer = $Margin
-
-func _ready() -> void:
-	var tween = create_tween()
-	
-	await get_tree().create_timer(0.01).timeout
-	
-	var text_box_size = text_node.size.y
-	
-	var window_size = DisplayServer.window_get_size().y
-	margin.add_theme_constant_override(\"margin_top\", window_size + margin_increment)
-	margin.add_theme_constant_override(\"margin_bottom\", window_size + margin_increment)
-
-	var scroll_amount : int = ceil(text_box_size * 3/4 + window_size * 2 + margin_increment)
-	
-	tween.tween_property(
-		self,
-		\"scroll_vertical\",
-		scroll_amount,
-		credits_time
-	)
-	tween.finished.connect(_acabou)
-	tween.play()
-
-func _acabou() -> void:
-	print(\"batata!\")
-	get_tree().change_scene_to_file(\"res://menu/menu_principal/menu_principal.tscn\")
-"
-
-[node name="Scroll" type="ScrollContainer" unique_id=65385732 node_paths=PackedStringArray("text_node")]
+[node name="Scroll" type="ScrollContainer" unique_id=65385732]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -48,9 +14,8 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nfvq6")
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
-script = SubResource("GDScript_fo2fk")
-text_node = NodePath("Margin/Label")
-credits_time = 30.0
+script = ExtResource("1_0oxxb")
+velocidade_creditos = 80.0
 
 [node name="Margin" type="MarginContainer" parent="." unique_id=1461202817]
 layout_mode = 2

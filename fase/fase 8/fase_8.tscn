@@ -85,19 +85,35 @@ position = Vector2(896, 352)
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("9_mglbt")]
 position = Vector2(640, 16)
 collision_mask = 257
-tamanho = Vector2(1280, 32)
+tamanho = Vector2(1216, 32)
 
 [node name="ParedeInferior" parent="." unique_id=2030951774 instance=ExtResource("9_mglbt")]
 position = Vector2(640, 688)
 collision_mask = 257
-tamanho = Vector2(1280, 32)
+tamanho = Vector2(1216, 32)
 
 [node name="ParedeEsquerda" parent="." unique_id=1519121802 instance=ExtResource("9_mglbt")]
 position = Vector2(16, 352)
 collision_mask = 257
-tamanho = Vector2(32, 704)
+tamanho = Vector2(32, 640)
 
 [node name="ParedeDireita" parent="." unique_id=115548886 instance=ExtResource("9_mglbt")]
 position = Vector2(1264, 352)
 collision_mask = 257
-tamanho = Vector2(32, 704)
+tamanho = Vector2(32, 640)
+
+[node name="Parede5" parent="." unique_id=1767614013 instance=ExtResource("9_mglbt")]
+position = Vector2(1264, 16)
+tamanho = Vector2(32, 32)
+
+[node name="Parede6" parent="." unique_id=1553327498 instance=ExtResource("9_mglbt")]
+position = Vector2(1264, 688)
+tamanho = Vector2(32, 32)
+
+[node name="Parede7" parent="." unique_id=1182373311 instance=ExtResource("9_mglbt")]
+position = Vector2(16, 688)
+tamanho = Vector2(32, 32)
+
+[node name="Parede8" parent="." unique_id=816963456 instance=ExtResource("9_mglbt")]
+position = Vector2(16, 16)
+tamanho = Vector2(32, 32)

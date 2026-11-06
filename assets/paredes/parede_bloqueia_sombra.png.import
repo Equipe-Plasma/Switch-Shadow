@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b88blml41s1om"
-path="res://.godot/imported/parede_bloqueia_sombra1.png-63b549643c2ced21642006dcc1348e0f.ctex"
+path="res://.godot/imported/parede_bloqueia_sombra.png-5d087cb02b0e3d7160f51d57f5414705.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/paredes/parede_bloqueia_sombra1.png"
-dest_files=["res://.godot/imported/parede_bloqueia_sombra1.png-63b549643c2ced21642006dcc1348e0f.ctex"]
+source_file="res://assets/paredes/parede_bloqueia_sombra.png"
+dest_files=["res://.godot/imported/parede_bloqueia_sombra.png-5d087cb02b0e3d7160f51d57f5414705.ctex"]
 
 [params]
 

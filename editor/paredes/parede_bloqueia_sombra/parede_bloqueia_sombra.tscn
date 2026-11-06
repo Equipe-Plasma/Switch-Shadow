@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cv1kaaq84myxc"]
 
 [ext_resource type="Script" uid="uid://crgq1qimuwhb1" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.gd" id="1_dwtcx"]
-[ext_resource type="Texture2D" uid="uid://b88blml41s1om" path="res://assets/paredes/parede_bloqueia_sombra1.png" id="2_sc6yq"]
+[ext_resource type="Texture2D" uid="uid://b88blml41s1om" path="res://assets/paredes/parede_bloqueia_sombra.png" id="2_sc6yq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sc6yq"]
 size = Vector2(128, 128)

@@ -1,6 +1,9 @@
+
 extends Node
 
-const CAMINHO_CONFIG = "user://idioma.cfg"
+const CAMINHO_CONFIG: String = "user://idioma.cfg"
+const IDIOMA_PADRAO: String = "en"
+
 
 func _ready() -> void:
 	carregar_idioma()
@@ -13,19 +16,36 @@ func alterar_idioma(codigo: String) -> void:
 
 func salvar_idioma(codigo: String) -> void:
 	var config = ConfigFile.new()
+
 	config.set_value("idioma", "atual", codigo)
-	config.save(CAMINHO_CONFIG)
+
+	var erro = config.save(CAMINHO_CONFIG)
+
+	if erro != OK:
+		push_error("Erro ao salvar idioma: " + str(erro))
 
 
 func carregar_idioma() -> void:
 	var config = ConfigFile.new()
 
-	if config.load(CAMINHO_CONFIG) == OK:
-		var idioma = config.get_value(
+	var erro = config.load(CAMINHO_CONFIG)
+
+	if erro == OK:
+		var idioma: String = config.get_value(
 			"idioma",
 			"atual",
-            "pt_BR"
+			IDIOMA_PADRAO
 		)
+
+		if idioma != "en" and idioma != "pt_BR":
+			idioma = IDIOMA_PADRAO
+
 		TranslationServer.set_locale(idioma)
 	else:
-		TranslationServer.set_locale("pt_BR")
+		# Primeira execução: inglês.
+		TranslationServer.set_locale(IDIOMA_PADRAO)
+
+	print(
+		"Idioma carregado: ",
+		TranslationServer.get_locale()
+	)

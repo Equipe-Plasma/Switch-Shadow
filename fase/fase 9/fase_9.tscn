@@ -55,22 +55,22 @@ position = Vector2(192, 448)
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("7_6p8wd")]
 position = Vector2(640, 16)
 collision_mask = 257
-tamanho = Vector2(1280, 32)
+tamanho = Vector2(1216, 32)
 
 [node name="ParedeInferior" parent="." unique_id=2030951774 instance=ExtResource("7_6p8wd")]
 position = Vector2(640, 688)
 collision_mask = 257
-tamanho = Vector2(1280, 32)
+tamanho = Vector2(1216, 32)
 
 [node name="ParedeEsquerda" parent="." unique_id=1519121802 instance=ExtResource("7_6p8wd")]
 position = Vector2(16, 352)
 collision_mask = 257
-tamanho = Vector2(32, 704)
+tamanho = Vector2(32, 640)
 
 [node name="ParedeDireita" parent="." unique_id=115548886 instance=ExtResource("7_6p8wd")]
 position = Vector2(1264, 352)
 collision_mask = 257
-tamanho = Vector2(32, 704)
+tamanho = Vector2(32, 640)
 
 [node name="Espinho" parent="." unique_id=1268178226 instance=ExtResource("11_qjrmy")]
 position = Vector2(352, 608)
@@ -129,3 +129,19 @@ tamanho = Vector2(192, 256)
 [node name="tileMap_PBP" parent="." unique_id=75164792 instance=ExtResource("16_torh0")]
 position = Vector2(32, 32)
 tile_map_data = PackedByteArray("AAAoAAwAAAAAAAAAAAAoAA0AAAAAAAEAAAAoAA4AAAAAAAIAAAAoAA8AAAAAAAMAAAApAAwAAAABAAAAAAApAA0AAAABAAEAAAApAA4AAAABAAIAAAApAA8AAAABAAMAAAAoAAgAAAAAAAAAAAAoAAkAAAAAAAEAAAAoAAoAAAAAAAIAAAAoAAsAAAAAAAMAAAApAAgAAAABAAAAAAApAAkAAAABAAEAAAApAAoAAAABAAIAAAApAAsAAAABAAMAAAAoAAQAAAAAAAAAAAAoAAUAAAAAAAEAAAAoAAYAAAAAAAIAAAAoAAcAAAAAAAMAAAApAAQAAAABAAAAAAApAAUAAAABAAEAAAApAAYAAAABAAIAAAApAAcAAAABAAMAAAAoAAAAAAAAAAAAAAAoAAEAAAAAAAEAAAAoAAIAAAAAAAIAAAAoAAMAAAAAAAMAAAApAAAAAAABAAAAAAApAAEAAAABAAEAAAApAAIAAAABAAIAAAApAAMAAAABAAMAAAAqAAwAAAAKAAAAAAAqAA0AAAAKAAEAAAAqAA4AAAAKAAIAAAAqAA8AAAAKAAMAAAArAAwAAAALAAAAAAArAA0AAAALAAEAAAArAA4AAAALAAIAAAArAA8AAAALAAMAAAAqAAgAAAAKAAAAAAAqAAkAAAAKAAEAAAAqAAoAAAAKAAIAAAAqAAsAAAAKAAMAAAArAAgAAAALAAAAAAArAAkAAAALAAEAAAArAAoAAAALAAIAAAArAAsAAAALAAMAAAAqAAQAAAAKAAAAAAAqAAUAAAAKAAEAAAAqAAYAAAAKAAIAAAAqAAcAAAAKAAMAAAArAAQAAAALAAAAAAArAAUAAAALAAEAAAArAAYAAAALAAIAAAArAAcAAAALAAMAAAAqAAAAAAAKAAAAAAAqAAEAAAAKAAEAAAAqAAIAAAAKAAIAAAAqAAMAAAAKAAMAAAArAAAAAAALAAAAAAArAAEAAAALAAEAAAArAAIAAAALAAIAAAArAAMAAAALAAMAAAA=")
+
+[node name="Parede5" parent="." unique_id=1490376403 instance=ExtResource("7_6p8wd")]
+position = Vector2(1264, 16)
+tamanho = Vector2(32, 32)
+
+[node name="Parede6" parent="." unique_id=1077752972 instance=ExtResource("7_6p8wd")]
+position = Vector2(1264, 688)
+tamanho = Vector2(32, 32)
+
+[node name="Parede7" parent="." unique_id=1753064882 instance=ExtResource("7_6p8wd")]
+position = Vector2(16, 688)
+tamanho = Vector2(32, 32)
+
+[node name="Parede8" parent="." unique_id=54430927 instance=ExtResource("7_6p8wd")]
+position = Vector2(16, 16)
+tamanho = Vector2(32, 32)
