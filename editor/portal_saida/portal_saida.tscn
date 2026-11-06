@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://cdy22u33xic2q"]
 
 [ext_resource type="Script" uid="uid://6sbckhob24r6" path="res://editor/portal_saida/portal_saida.gd" id="1_yuagy"]
-[ext_resource type="Texture2D" uid="uid://bwtdvowg3y60u" path="res://assets/outros/saida.png" id="2_uu304"]
-[ext_resource type="Texture2D" uid="uid://bdb7l4kshft0k" path="res://assets/paredes/novos_sprites/portal.png" id="4_e0tly"]
+[ext_resource type="Texture2D" uid="uid://bdb7l4kshft0k" path="res://assets/outros/portal.png" id="4_e0tly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_574sw"]
 size = Vector2(128, 128)
@@ -10,11 +9,8 @@ size = Vector2(128, 128)
 [node name="PortalSaida" type="Area2D" unique_id=1057710737]
 script = ExtResource("1_yuagy")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=969890592]
-texture = ExtResource("2_uu304")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1318309167]
+texture = ExtResource("4_e0tly")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=918540262]
 shape = SubResource("RectangleShape2D_574sw")
-
-[node name="Portal" type="Sprite2D" parent="." unique_id=1318309167]
-texture = ExtResource("4_e0tly")

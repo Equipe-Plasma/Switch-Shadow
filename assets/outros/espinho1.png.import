@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bw5w1ekvl8q6r"
-path="res://.godot/imported/espinho.png-4809820efcda1713af94159749ab4a0b.ctex"
+path="res://.godot/imported/espinho1.png-9a9311440ed03059e0ef810e017e77a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/outros/espinho.png"
-dest_files=["res://.godot/imported/espinho.png-4809820efcda1713af94159749ab4a0b.ctex"]
+source_file="res://assets/outros/espinho1.png"
+dest_files=["res://.godot/imported/espinho1.png-9a9311440ed03059e0ef810e017e77a7.ctex"]
 
 [params]
 

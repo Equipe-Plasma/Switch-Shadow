@@ -9,6 +9,7 @@
 size = Vector2(128, 128)
 
 [node name="Sombra_reversa" type="CharacterBody2D" unique_id=1092208446]
+z_index = 2
 collision_layer = 2
 collision_mask = 20
 script = ExtResource("1_t31gh")

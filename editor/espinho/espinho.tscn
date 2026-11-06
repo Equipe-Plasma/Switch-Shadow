@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cl7s6ng8cubbt"]
 
 [ext_resource type="Script" uid="uid://uovpujwdrvrj" path="res://editor/espinho/espinho.gd" id="1_lvy1w"]
-[ext_resource type="Texture2D" uid="uid://wm7etjmch00" path="res://assets/paredes/novos_sprites/espinhos.png" id="2_vg5ju"]
+[ext_resource type="Texture2D" uid="uid://wm7etjmch00" path="res://assets/outros/espinho2.png" id="2_vg5ju"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvy1w"]
 radius = 66.0
