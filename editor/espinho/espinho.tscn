@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://cl7s6ng8cubbt"]
 
 [ext_resource type="Script" uid="uid://uovpujwdrvrj" path="res://editor/espinho/espinho.gd" id="1_lvy1w"]
+[ext_resource type="Texture2D" uid="uid://wm7etjmch00" path="res://assets/paredes/novos_sprites/espinhos.png" id="2_vg5ju"]
 [ext_resource type="Texture2D" uid="uid://bw5w1ekvl8q6r" path="res://assets/outros/espinho.png" id="2_xvnl2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvy1w"]
-radius = 62.0
+radius = 66.0
 
 [node name="Espinho" type="Area2D" unique_id=1268178226]
 collision_layer = 4
@@ -15,3 +16,6 @@ texture = ExtResource("2_xvnl2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1006966363]
 shape = SubResource("CircleShape2D_lvy1w")
+
+[node name="Espinhos" type="Sprite2D" parent="." unique_id=311671327]
+texture = ExtResource("2_vg5ju")
