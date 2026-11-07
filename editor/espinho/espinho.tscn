@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wm7etjmch00" path="res://assets/outros/espinho2.png" id="2_vg5ju"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lvy1w"]
-radius = 66.0
+radius = 63.0
 
 [node name="Espinho" type="Area2D" unique_id=1268178226]
 collision_layer = 4
