@@ -76,10 +76,6 @@ func _input(event: InputEvent) -> void:
 			mover_selecao(1)
 			get_viewport().set_input_as_handled()
 
-		KEY_ENTER, KEY_KP_ENTER:
-			get_viewport().set_input_as_handled()
-			confirmar_selecao()
-			return
 
 
 # ==========================================

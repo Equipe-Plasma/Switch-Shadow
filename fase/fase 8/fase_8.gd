@@ -7,6 +7,7 @@ extends Node2D
 
 var total_itens: int = 0
 var fase_concluida: bool = false
+var portal_liberado: bool = false
 
 func _ready() -> void:
 	Global.registrar_fase(scene_file_path)
@@ -71,16 +72,14 @@ func realizar_troca() -> void:
 
 
 func verificar_progresso() -> void:
-	# Verifica quantos itens ainda existem na fase
-	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
+	if portal_liberado:
+		return
 
-	# Quando todos os itens forem coletados
+	var itens_restantes := get_tree().get_nodes_in_group("itens").size()
 	if total_itens > 0 and itens_restantes == 0:
+		portal_liberado = true
 		portal.ativar()
-		var mostrar
-		if mostrar:
-			print("Todos os itens coletados! Portal ativado!")
-			mostrar = false # Bloqueia o if para sempre
+		print("Todos os itens coletados! Portal ativado!")
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:
