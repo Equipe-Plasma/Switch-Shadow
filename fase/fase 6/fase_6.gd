@@ -26,10 +26,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("trocar_sombra"):
 		trocar_posicoes()
 		
-	# Atalho para avançar de fase ao apertar Enter (ui_accept) ou a ação configurada
-	if event.is_action_pressed("proxima_fase"):
-		avancar_para_proxima_fase()
-	# TEm q apagar isso dps ^
 
 func trocar_posicoes() -> void:
 	if player == null or sombra == null:
