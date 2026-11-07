@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cjaipngqkbh75"]
+[gd_scene format=4 uid="uid://cjaipngqkbh75"]
 
 [ext_resource type="Script" uid="uid://dy77pa4hfph3d" path="res://fase/fase 7/fase_7.gd" id="1_fj8f5"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_d5gv1"]
@@ -13,11 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="11_ijp16"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="12_0pwnx"]
 [ext_resource type="PackedScene" uid="uid://dqb1rqaao6bbb" path="res://editor/tileMaps/chao/tileMap_chao.tscn" id="13_585da"]
+[ext_resource type="PackedScene" uid="uid://c08xdriyi328g" path="res://editor/tileMaps/parede_bloqueia_player/tileMap_PBP.tscn" id="14_0ggf1"]
 
 [node name="Fase7" type="Node2D" unique_id=1904190499]
 script = ExtResource("1_fj8f5")
 
-[node name="ParedeAlternada3" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
+[node name="ParedeAlternada" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
 position = Vector2(576, 160)
 tamanho = Vector2(64, 256)
 
@@ -30,7 +31,6 @@ textura_frente = ExtResource("3_thqe0")
 textura_costas = ExtResource("4_85moy")
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("7_mb6o6")]
-visible = false
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("8_2ew01")]
 position = Vector2(1152, 128)
@@ -79,7 +79,6 @@ position = Vector2(512, 576)
 tamanho = Vector2(64, 192)
 
 [node name="ParedeBloqueiaSombra4" parent="." unique_id=634432890 instance=ExtResource("12_0pwnx")]
-visible = false
 position = Vector2(768, 576)
 tamanho = Vector2(64, 192)
 
@@ -138,6 +137,8 @@ tamanho = Vector2(32, 32)
 
 [node name="tileMap_chao" parent="." unique_id=75164792 instance=ExtResource("13_585da")]
 
-[node name="ParedeBloqueiaSombra" parent="." unique_id=87217196 instance=ExtResource("12_0pwnx")]
-position = Vector2(768, 576)
-tamanho = Vector2(64, 192)
+[node name="tileMap_PAP" parent="." unique_id=1676319121 instance=ExtResource("14_0ggf1")]
+position = Vector2(32, 32)
+
+[node name="tileMap_PAS" parent="." unique_id=174614639 instance=ExtResource("14_0ggf1")]
+tile_map_data = PackedByteArray("AAAiAAIAAAAAAAgAAAAiAAMAAAAAAAkAAAAiAAQAAAAAAAoAAAAiAAUAAAAAAAsAAAAjAAIAAAABAAgAAAAjAAMAAAABAAkAAAAjAAQAAAABAAoAAAAjAAUAAAABAAsAAAAiAAYAAAAAAAAAAAAiAAcAAAAAAAEAAAAiAAgAAAAAAAIAAAAiAAkAAAAAAAMAAAAiAAoAAAAAAAQAAAAiAAsAAAAAAAUAAAAiAAwAAAAAAAYAAAAiAA0AAAAAAAcAAAAiAA4AAAAAAAgAAAAiAA8AAAAAAAkAAAAiABAAAAAAAAoAAAAiABEAAAAAAAsAAAAjAAYAAAABAAAAAAAjAAcAAAABAAEAAAAjAAgAAAABAAIAAAAjAAkAAAABAAMAAAAjAAoAAAABAAQAAAAjAAsAAAABAAUAAAAjAAwAAAABAAYAAAAjAA0AAAABAAcAAAAjAA4AAAABAAgAAAAjAA8AAAABAAkAAAAjABAAAAABAAoAAAAjABEAAAABAAsAAAAkAAIAAAAKAAgAAAAkAAMAAAAKAAkAAAAkAAQAAAAKAAoAAAAkAAUAAAAKAAsAAAAlAAIAAAALAAgAAAAlAAMAAAALAAkAAAAlAAQAAAALAAoAAAAlAAUAAAALAAsAAAAkAAYAAAAKAAAAAAAkAAcAAAAKAAEAAAAkAAgAAAAKAAIAAAAkAAkAAAAKAAMAAAAkAAoAAAAKAAQAAAAkAAsAAAAKAAUAAAAkAAwAAAAKAAYAAAAkAA0AAAAKAAcAAAAkAA4AAAAKAAgAAAAkAA8AAAAKAAkAAAAkABAAAAAKAAoAAAAkABEAAAAKAAsAAAAlAAYAAAALAAAAAAAlAAcAAAALAAEAAAAlAAgAAAALAAIAAAAlAAkAAAALAAMAAAAlAAoAAAALAAQAAAAlAAsAAAALAAUAAAAlAAwAAAALAAYAAAAlAA0AAAALAAcAAAAlAA4AAAALAAgAAAAlAA8AAAALAAkAAAAlABAAAAALAAoAAAAlABEAAAALAAsAAAA=")
