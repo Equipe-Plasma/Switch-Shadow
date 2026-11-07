@@ -4,15 +4,16 @@
 [ext_resource type="Texture2D" uid="uid://bp08yhpr36gvb" path="res://assets/paredes/parede_anti_troca.png" id="1_whjpq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oqikr"]
-size = Vector2(128, 128)
+size = Vector2(64, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5m5ql"]
-size = Vector2(128, 128)
+size = Vector2(64, 64)
 
 [node name="ParedeAntiTroca" type="StaticBody2D" unique_id=651491399 groups=["paredes_anti_troca"]]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_oqikr")
+tamanho = Vector2(64, 64)
 
 [node name="Textura" type="TextureRect" parent="." unique_id=105984327]
 anchors_preset = 8
@@ -20,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -64.0
-offset_right = 64.0
-offset_bottom = 64.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_whjpq")

@@ -30,6 +30,7 @@ textura_frente = ExtResource("3_thqe0")
 textura_costas = ExtResource("4_85moy")
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("7_mb6o6")]
+visible = false
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("8_2ew01")]
 position = Vector2(1152, 128)
