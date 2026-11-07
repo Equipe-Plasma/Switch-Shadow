@@ -6,52 +6,57 @@ extends Node2D
 # ==========================================
 
 @onready var player: CharacterBody2D = $Player
-@onready var sombra: CharacterBody2D = $Sombra_reversa
-@onready var portal_saida: Area2D = $PortalSaida
+@onready var sombra: CharacterBody2D = $Sombra
+@onready var portal = $PortalSaida
 @onready var trocar: AudioStreamPlayer = $Player/Trocar
 
 var portal_liberado: bool = false
 var fase_concluida: bool = false
-
-@onready var itens: Array[Node] = [
-	$Item,
-	$Item2,
-	$Item3
-]
-
-var troca_em_andamento: bool = false
 
 var itens_coletados: int = 0
 var total_itens: int = 0
 
 
 # ==========================================
-# INICIALIZAÇÃO DA FASE 3
+# INICIALIZAÇÃO DA FASE 2
 # ==========================================
 
 func _ready() -> void:
+	print("=== INICIANDO FASE 2 ===")
+
 	Global.registrar_fase(scene_file_path)
-	Global.ultima_fase = scene_file_path
+
+	if not portal.portal_utilizado.is_connected(avancar_para_proxima_fase):
+		portal.portal_utilizado.connect(avancar_para_proxima_fase)
 
 	configurar_itens()
 
-	if not portal_saida.portal_utilizado.is_connected(avancar_para_proxima_fase):
-		portal_saida.portal_utilizado.connect(avancar_para_proxima_fase)
+	print("=== FASE 2 PRONTA ===")
 
-	print("=== FASE 3 INICIADA ===")
 
 # ==========================================
-# SISTEMA DE ITENS E PORTAL
+# SISTEMA DE ITENS
 # ==========================================
 
 func configurar_itens() -> void:
 	itens_coletados = 0
-	total_itens = itens.size()
 
-	for item in itens:
+	var itens_da_fase: Array[Node] = []
+
+	for filho in get_children():
+		if filho.name == "Item" or filho.name.begins_with("Item"):
+			if filho is Area2D:
+				itens_da_fase.append(filho)
+
+	total_itens = itens_da_fase.size()
+
+	for item in itens_da_fase:
 		item.tree_exiting.connect(_on_item_coletado)
 
-	print("Total de itens: ", total_itens)
+	print("Total de itens da Fase 2: ", total_itens)
+
+	if total_itens == 0:
+		push_warning("Nenhum item encontrado na Fase 2!")
 
 
 func _on_item_coletado() -> void:
@@ -64,28 +69,27 @@ func _on_item_coletado() -> void:
 		total_itens
 	)
 
-	if itens_coletados == total_itens:
-		ativar_portal()
+	if itens_coletados >= total_itens and total_itens > 0:
+		liberar_portal()
 
 
-func ativar_portal() -> void:
+# ==========================================
+# ATIVAÇÃO DO PORTAL
+# ==========================================
+
+func liberar_portal() -> void:
 	if portal_liberado:
 		return
 
-	if not is_instance_valid(portal_saida):
-		push_error("PortalSaida não encontrado!")
-		return
+	portal_liberado = true
+	portal.ativar()
 
-	if portal_saida.has_method("ativar"):
-		portal_saida.ativar()
-		portal_liberado = true
+	print("Todos os itens coletados!")
+	print("Portal da Fase 2 liberado!")
 
-		print("Todos os itens foram coletados!")
-		print("Portal da Fase 3 liberado!")
-	else:
-		push_error("PortalSaida não possui o método ativar()!")
+
 # ==========================================
-# CONTROLE DO TECLADO
+# TROCA DE POSIÇÕES
 # ==========================================
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -95,153 +99,63 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		trocar_posicoes()
 
-# ==========================================
-# SOLICITAR TROCA
-# ==========================================
-
 func trocar_posicoes() -> void:
-	if troca_em_andamento:
+	if player == null or sombra == null:
 		return
 
-	if not is_instance_valid(player):
-		return
-
-	if not is_instance_valid(sombra):
-		return
-
-	troca_em_andamento = true
-
-	# Aguarda o próximo momento seguro
-	# para verificar colisões e trocar posições.
-	realizar_troca_segura.call_deferred()
-
-func realizar_troca_segura() -> void:
 	if not pode_trocar_posicoes():
-		print("Troca bloqueada: destino ocupado!")
-		troca_em_andamento = false
+		print("Ação bloqueada: personagem na parede!")
 		return
 
-	# Se chegou aqui, a troca é válida! O som toca apenas agora.
+	realizar_troca()
 	if trocar:
 		trocar.play()
+	else:
+		print("Aviso: O AudioStreamPlayer 'change' não foi encontrado nesta cena.")
 
-	var pos_player: Vector2 = player.global_position
-	var pos_sombra: Vector2 = sombra.global_position
-
-	print("================================")
-	print("ANTES DA TROCA")
-	print("Player: ", pos_player)
-	print("Sombra: ", pos_sombra)
-
-	# Interrompe velocidades anteriores
-	player.velocity = Vector2.ZERO
-	sombra.velocity = Vector2.ZERO
-
-	# Troca exatamente as posições globais
-	player.global_position = pos_sombra
-	sombra.global_position = pos_player
-
-	# Atualiza as transformações físicas
-	player.force_update_transform()
-	sombra.force_update_transform()
-
-	print("DEPOIS DA TROCA")
-	print("Player: ", player.global_position)
-	print("Sombra: ", sombra.global_position)
-	print("================================")
-
-	troca_em_andamento = false
-
-
-# ==========================================
-# VERIFICAR SE A TROCA É POSSÍVEL
-# ==========================================
 
 func pode_trocar_posicoes() -> bool:
-	var pos_player: Vector2 = player.global_position
-	var pos_sombra: Vector2 = sombra.global_position
+	var trans_player_destino = player.global_transform
+	trans_player_destino.origin = sombra.global_position
 
-	# Verifica se o Player cabe na posição da Sombra
-	var player_bate: bool = destino_bloqueado(
-		player,
-		pos_sombra
+	var trans_sombra_destino = sombra.global_transform
+	trans_sombra_destino.origin = player.global_position
+
+	var player_bate = player.test_move(
+		trans_player_destino,
+		Vector2.ZERO
 	)
 
-	# Verifica se a Sombra cabe na posição do Player
-	var sombra_bate: bool = destino_bloqueado(
-		sombra,
-		pos_player
+	var sombra_bate = sombra.test_move(
+		trans_sombra_destino,
+		Vector2.ZERO
 	)
 
-	print("Colisão Player: ", player_bate)
-	print("Colisão Sombra: ", sombra_bate)
+	return not (player_bate or sombra_bate)
 
-	return not player_bate and not sombra_bate
+
+func realizar_troca() -> void:
+	var pos_temp_player = player.global_position
+
+	player.global_position = sombra.global_position
+	sombra.global_position = pos_temp_player
+
+	print("Posições trocadas!")
 
 
 # ==========================================
-# VERIFICAR COLISÃO NO DESTINO
+# BOTÃO DE PRESSÃO
 # ==========================================
 
-func destino_bloqueado(
-	personagem: CharacterBody2D,
-	destino: Vector2
-) -> bool:
-
-	var colisao: CollisionShape2D = personagem.get_node(
-        "CollisionShape2D"
-	)
-
-	if colisao.shape == null:
-		return true
-
-	var parametros = PhysicsShapeQueryParameters2D.new()
-
-	parametros.shape = colisao.shape
-
-	# Usa a transformação real da colisão no destino
-	var transform_destino: Transform2D = personagem.global_transform
-	transform_destino.origin = destino
-
-	parametros.transform = (
-		transform_destino * colisao.transform
-	)
-
-	# Verifica apenas as camadas que o personagem detecta
-	parametros.collision_mask = personagem.collision_mask
-
-	# Ignora os dois personagens
-	parametros.exclude = [
-		player.get_rid(),
-		sombra.get_rid()
-	]
-
-	parametros.margin = 0.0
-
-	var espaco = get_world_2d().direct_space_state
-
-	var resultados = espaco.intersect_shape(
-		parametros,
-		32
-	)
-
-	return not resultados.is_empty()
-
-
-func _on_portal_saida_body_entered(body: Node2D) -> void:
-	if body != player:
-		return
-
-	if itens_coletados < total_itens:
-		print("Portal bloqueado: faltam itens!")
-		return
-
-	print("Player entrou no portal!")
-	print("Todos os itens coletados!")
+func _on_estado_botao_alterado(pressionado: bool) -> void:
+	# O botão não controla mais o portal.
+	# Mantemos a função para não quebrar
+	# conexões de sinais existentes.
+	print("Botão pressionado: ", pressionado)
 
 
 # ==========================================
-# CONCLUSÃO DA FASE 3
+# CONCLUSÃO DA FASE
 # ==========================================
 
 func avancar_para_proxima_fase() -> void:
@@ -255,7 +169,7 @@ func avancar_para_proxima_fase() -> void:
 	fase_concluida = true
 
 	print("Player entrou no portal!")
-	print("Fase 3 concluída!")
+	print("Fase 2 concluída!")
 	print("Abrindo tela de vitória...")
 
 	var caminho_vitoria := "res://menu/telas/tela_vitoria/tela_vitoria.tscn"

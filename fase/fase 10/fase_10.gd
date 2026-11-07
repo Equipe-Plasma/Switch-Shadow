@@ -90,20 +90,22 @@ func realizar_troca() -> void:
 
 
 func verificar_progresso() -> void:
+	# Impede ativar o portal novamente.
 	if portal_liberado:
 		return
 
-	# Verifica se todos os itens foram coletados.
+	# Verifica os itens restantes.
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
 
+	# Todos os itens precisam ser coletados.
 	if total_itens <= 0 or itens_restantes > 0:
 		return
 
-	# Se a fase possui botão, ele precisa estar pressionado.
+	# Se existir um botão, ele precisa estar pressionado.
 	if botao != null and not botao.pressionado:
 		return
 
-	# Libera o portal permanentemente.
+	# Todas as condições foram atendidas.
 	portal_liberado = true
 	portal.ativar()
 
@@ -119,5 +121,5 @@ func avancar_para_proxima_fase() -> void:
 
 	get_tree().call_deferred(
 		"change_scene_to_file",
-        "res://Sistema/creditos/Creditos.tscn"
+        "res://menu/telas/tela_vitoria/tela_vitoria.tscn"
 	)

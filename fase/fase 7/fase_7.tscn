@@ -1,144 +1,133 @@
-[gd_scene format=4 uid="uid://cjaipngqkbh75"]
+[gd_scene format=4 uid="uid://bbwsc1gx52fin"]
 
-[ext_resource type="Script" uid="uid://dy77pa4hfph3d" path="res://fase/fase 7/fase_7.gd" id="1_fj8f5"]
+[ext_resource type="Script" uid="uid://d0351lhu5km2k" path="res://fase/fase 7/fase_7.gd" id="1_fj8f5"]
+[ext_resource type="PackedScene" uid="uid://b0nugb86ufv0r" path="res://editor/paredes/parede_bloqueia_player/parede_bloqueia_player.tscn" id="2_85k44"]
 [ext_resource type="PackedScene" uid="uid://ct6jg287mf5y7" path="res://editor/player/player.tscn" id="2_d5gv1"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="3_thqe0"]
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="4_85moy"]
+[ext_resource type="PackedScene" uid="uid://do7u25nau3eb0" path="res://editor/paredes/parede_anti_troca/parede_anti_troca.tscn" id="5_yxqkk"]
 [ext_resource type="PackedScene" uid="uid://bg3d3dk0l61jv" path="res://editor/item/item.tscn" id="6_1n14e"]
 [ext_resource type="PackedScene" uid="uid://dq80e6b58tnmu" path="res://menu/menu_pausa/menu_pausa.tscn" id="7_mb6o6"]
 [ext_resource type="PackedScene" uid="uid://cdy22u33xic2q" path="res://editor/portal_saida/portal_saida.tscn" id="8_2ew01"]
+[ext_resource type="PackedScene" uid="uid://c38q4f7g50dtq" path="res://editor/sombras/sombra/sombra.tscn" id="8_q3qqw"]
 [ext_resource type="PackedScene" uid="uid://g6bshavfposa" path="res://editor/paredes/parede_geral/parede_geral.tscn" id="9_mglbt"]
-[ext_resource type="PackedScene" uid="uid://ca0sreux3v314" path="res://editor/sombras/sombra_reversa/sombra_reversa.tscn" id="10_vgkgr"]
 [ext_resource type="PackedScene" uid="uid://02o86sq42eyk" path="res://editor/paredes/parede_alternada/parede_alternada.tscn" id="10_xitbr"]
-[ext_resource type="PackedScene" uid="uid://cl7s6ng8cubbt" path="res://editor/espinho/espinho.tscn" id="11_ijp16"]
 [ext_resource type="PackedScene" uid="uid://cv1kaaq84myxc" path="res://editor/paredes/parede_bloqueia_sombra/parede_bloqueia_sombra.tscn" id="12_0pwnx"]
 [ext_resource type="PackedScene" uid="uid://dqb1rqaao6bbb" path="res://editor/tileMaps/chao/tileMap_chao.tscn" id="13_585da"]
 [ext_resource type="PackedScene" uid="uid://c08xdriyi328g" path="res://editor/tileMaps/parede_bloqueia_player/tileMap_PBP.tscn" id="14_0ggf1"]
 
-[node name="Fase7" type="Node2D" unique_id=1904190499]
+[node name="Fase7" type="Node2D" unique_id=800180011]
 script = ExtResource("1_fj8f5")
 
-[node name="ParedeAlternada" parent="." unique_id=241979264 instance=ExtResource("10_xitbr")]
-position = Vector2(576, 160)
-tamanho = Vector2(64, 256)
-
-[node name="Sombra_reversa" parent="." unique_id=1092208446 instance=ExtResource("10_vgkgr")]
-position = Vector2(480, 352)
-
-[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_d5gv1")]
-position = Vector2(480, 352)
-textura_frente = ExtResource("3_thqe0")
-textura_costas = ExtResource("4_85moy")
+[node name="ParedeBloqueiaPlayer" parent="." unique_id=87217196 instance=ExtResource("2_85k44")]
+position = Vector2(1152, 352)
+tamanho = Vector2(192, 256)
 
 [node name="MenuPausa" parent="." unique_id=1672884906 instance=ExtResource("7_mb6o6")]
 
 [node name="PortalSaida" parent="." unique_id=1057710737 instance=ExtResource("8_2ew01")]
-position = Vector2(1152, 128)
+position = Vector2(608, 352)
 
-[node name="Espinho" parent="." unique_id=1268178226 instance=ExtResource("11_ijp16")]
-position = Vector2(32, 224)
+[node name="ParedeAntiTroca" parent="." unique_id=651491399 instance=ExtResource("5_yxqkk")]
+position = Vector2(1152, 576)
+tamanho = Vector2(192, 192)
 
-[node name="Espinho2" parent="." unique_id=196923540 instance=ExtResource("11_ijp16")]
-position = Vector2(352, 32)
+[node name="Parede" parent="." unique_id=1879328223 instance=ExtResource("9_mglbt")]
+position = Vector2(1024, 352)
+tamanho = Vector2(64, 256)
 
-[node name="Parede" parent="." unique_id=16774898 instance=ExtResource("9_mglbt")]
-position = Vector2(288, 448)
-tamanho = Vector2(512, 64)
-
-[node name="Parede2" parent="." unique_id=2145106210 instance=ExtResource("9_mglbt")]
-position = Vector2(576, 384)
-tamanho = Vector2(64, 192)
-
-[node name="Parede3" parent="." unique_id=2077240476 instance=ExtResource("9_mglbt")]
-position = Vector2(800, 128)
-tamanho = Vector2(64, 192)
-
-[node name="Espinho3" parent="." unique_id=69802471 instance=ExtResource("11_ijp16")]
-position = Vector2(32, 96)
-
-[node name="Espinho4" parent="." unique_id=502950295 instance=ExtResource("11_ijp16")]
-position = Vector2(32, 352)
-
-[node name="Espinho5" parent="." unique_id=1981612925 instance=ExtResource("11_ijp16")]
-position = Vector2(480, 32)
-
-[node name="Parede5" parent="." unique_id=2144013641 instance=ExtResource("9_mglbt")]
-position = Vector2(832, 448)
+[node name="Parede2" parent="." unique_id=62913751 instance=ExtResource("9_mglbt")]
+position = Vector2(768, 448)
 tamanho = Vector2(448, 64)
 
-[node name="Parede6" parent="." unique_id=2080912397 instance=ExtResource("9_mglbt")]
-position = Vector2(1024, 320)
-tamanho = Vector2(64, 192)
+[node name="ParedeAntiTroca2" parent="." unique_id=228174811 instance=ExtResource("5_yxqkk")]
+position = Vector2(128, 576)
+tamanho = Vector2(192, 192)
 
-[node name="ParedeBloqueiaSombra2" parent="." unique_id=942673260 instance=ExtResource("12_0pwnx")]
-position = Vector2(256, 576)
-tamanho = Vector2(64, 192)
+[node name="ParedeAlternada" parent="." unique_id=1462242306 instance=ExtResource("10_xitbr")]
+position = Vector2(896, 256)
+tamanho = Vector2(192, 64)
 
-[node name="ParedeBloqueiaSombra3" parent="." unique_id=478598455 instance=ExtResource("12_0pwnx")]
-position = Vector2(512, 576)
-tamanho = Vector2(64, 192)
+[node name="Parede3" parent="." unique_id=1216342437 instance=ExtResource("9_mglbt")]
+position = Vector2(288, 448)
+tamanho = Vector2(128, 448)
 
-[node name="ParedeBloqueiaSombra4" parent="." unique_id=634432890 instance=ExtResource("12_0pwnx")]
-position = Vector2(768, 576)
-tamanho = Vector2(64, 192)
+[node name="Sombra" parent="." unique_id=1092208446 instance=ExtResource("8_q3qqw")]
+position = Vector2(1152, 128)
+textura_frente = ExtResource("3_thqe0")
+textura_costas = ExtResource("4_85moy")
+
+[node name="Player" parent="." unique_id=2008145688 instance=ExtResource("2_d5gv1")]
+position = Vector2(1152, 128)
+textura_frente = ExtResource("3_thqe0")
+textura_costas = ExtResource("4_85moy")
+
+[node name="ParedeBloqueiaSombra" parent="." unique_id=1794457449 instance=ExtResource("12_0pwnx")]
+position = Vector2(800, 576)
+tamanho = Vector2(512, 192)
+
+[node name="ParedeBloqueiaSombra2" parent="." unique_id=466094922 instance=ExtResource("12_0pwnx")]
+position = Vector2(128, 352)
+tamanho = Vector2(192, 256)
+
+[node name="Parede4" parent="." unique_id=1507033069 instance=ExtResource("9_mglbt")]
+position = Vector2(736, 320)
+tamanho = Vector2(128, 192)
 
 [node name="Item" parent="." unique_id=1168481889 instance=ExtResource("6_1n14e")]
-position = Vector2(128, 576)
+position = Vector2(1152, 576)
 
 [node name="Item2" parent="." unique_id=1003667387 instance=ExtResource("6_1n14e")]
-position = Vector2(192, 192)
+position = Vector2(128, 576)
 
-[node name="Item3" parent="." unique_id=720673298 instance=ExtResource("6_1n14e")]
-position = Vector2(800, 320)
-
-[node name="ParedeBloqueiaSombra5" parent="." unique_id=1457875701 instance=ExtResource("12_0pwnx")]
-position = Vector2(1024, 576)
-tamanho = Vector2(64, 192)
+[node name="Item3" parent="." unique_id=1165220140 instance=ExtResource("6_1n14e")]
+position = Vector2(896, 352)
 
 [node name="ParedeSuperior" parent="." unique_id=925734375 instance=ExtResource("9_mglbt")]
 position = Vector2(640, 16)
 collision_mask = 257
 tamanho = Vector2(1216, 32)
 
-[node name="ParedeInferior" parent="." unique_id=1927026565 instance=ExtResource("9_mglbt")]
+[node name="ParedeInferior" parent="." unique_id=2030951774 instance=ExtResource("9_mglbt")]
 position = Vector2(640, 688)
 collision_mask = 257
 tamanho = Vector2(1216, 32)
 
-[node name="ParedeEsquerda" parent="." unique_id=246718404 instance=ExtResource("9_mglbt")]
+[node name="ParedeEsquerda" parent="." unique_id=1519121802 instance=ExtResource("9_mglbt")]
 position = Vector2(16, 352)
 collision_mask = 257
 tamanho = Vector2(32, 640)
 
-[node name="ParedeDireita" parent="." unique_id=399272181 instance=ExtResource("9_mglbt")]
+[node name="ParedeDireita" parent="." unique_id=115548886 instance=ExtResource("9_mglbt")]
 position = Vector2(1264, 352)
 collision_mask = 257
 tamanho = Vector2(32, 640)
 
-[node name="ParedeBloqueiaSombra6" parent="." unique_id=1743627035 instance=ExtResource("12_0pwnx")]
-position = Vector2(1152, 448)
-tamanho = Vector2(192, 64)
-
-[node name="Parede7" parent="." unique_id=2127897230 instance=ExtResource("9_mglbt")]
+[node name="Parede5" parent="." unique_id=1767614013 instance=ExtResource("9_mglbt")]
 position = Vector2(1264, 16)
 tamanho = Vector2(32, 32)
 
-[node name="Parede8" parent="." unique_id=2005565373 instance=ExtResource("9_mglbt")]
+[node name="Parede6" parent="." unique_id=1553327498 instance=ExtResource("9_mglbt")]
 position = Vector2(1264, 688)
 tamanho = Vector2(32, 32)
 
-[node name="Parede9" parent="." unique_id=582922905 instance=ExtResource("9_mglbt")]
+[node name="Parede7" parent="." unique_id=1182373311 instance=ExtResource("9_mglbt")]
 position = Vector2(16, 688)
 tamanho = Vector2(32, 32)
 
-[node name="Parede10" parent="." unique_id=533572013 instance=ExtResource("9_mglbt")]
+[node name="Parede8" parent="." unique_id=816963456 instance=ExtResource("9_mglbt")]
 position = Vector2(16, 16)
 tamanho = Vector2(32, 32)
 
 [node name="tileMap_chao" parent="." unique_id=75164792 instance=ExtResource("13_585da")]
 
-[node name="tileMap_PAP" parent="." unique_id=1676319121 instance=ExtResource("14_0ggf1")]
+[node name="tileMap_PAP" parent="." unique_id=665837978 instance=ExtResource("14_0ggf1")]
+visible = false
 position = Vector2(32, 32)
 
-[node name="tileMap_PAS" parent="." unique_id=174614639 instance=ExtResource("14_0ggf1")]
-tile_map_data = PackedByteArray("AAAiAAIAAAAAAAgAAAAiAAMAAAAAAAkAAAAiAAQAAAAAAAoAAAAiAAUAAAAAAAsAAAAjAAIAAAABAAgAAAAjAAMAAAABAAkAAAAjAAQAAAABAAoAAAAjAAUAAAABAAsAAAAiAAYAAAAAAAAAAAAiAAcAAAAAAAEAAAAiAAgAAAAAAAIAAAAiAAkAAAAAAAMAAAAiAAoAAAAAAAQAAAAiAAsAAAAAAAUAAAAiAAwAAAAAAAYAAAAiAA0AAAAAAAcAAAAiAA4AAAAAAAgAAAAiAA8AAAAAAAkAAAAiABAAAAAAAAoAAAAiABEAAAAAAAsAAAAjAAYAAAABAAAAAAAjAAcAAAABAAEAAAAjAAgAAAABAAIAAAAjAAkAAAABAAMAAAAjAAoAAAABAAQAAAAjAAsAAAABAAUAAAAjAAwAAAABAAYAAAAjAA0AAAABAAcAAAAjAA4AAAABAAgAAAAjAA8AAAABAAkAAAAjABAAAAABAAoAAAAjABEAAAABAAsAAAAkAAIAAAAKAAgAAAAkAAMAAAAKAAkAAAAkAAQAAAAKAAoAAAAkAAUAAAAKAAsAAAAlAAIAAAALAAgAAAAlAAMAAAALAAkAAAAlAAQAAAALAAoAAAAlAAUAAAALAAsAAAAkAAYAAAAKAAAAAAAkAAcAAAAKAAEAAAAkAAgAAAAKAAIAAAAkAAkAAAAKAAMAAAAkAAoAAAAKAAQAAAAkAAsAAAAKAAUAAAAkAAwAAAAKAAYAAAAkAA0AAAAKAAcAAAAkAA4AAAAKAAgAAAAkAA8AAAAKAAkAAAAkABAAAAAKAAoAAAAkABEAAAAKAAsAAAAlAAYAAAALAAAAAAAlAAcAAAALAAEAAAAlAAgAAAALAAIAAAAlAAkAAAALAAMAAAAlAAoAAAALAAQAAAAlAAsAAAALAAUAAAAlAAwAAAALAAYAAAAlAA0AAAALAAcAAAAlAA4AAAALAAgAAAAlAA8AAAALAAkAAAAlABAAAAALAAoAAAAlABEAAAALAAsAAAA=")
+[node name="tileMap_PAS" parent="." unique_id=1224257706 instance=ExtResource("14_0ggf1")]
+tile_map_data = PackedByteArray("AAAyAA4AAQAAAAAAAAAyAA8AAQAAAAEAAAAzAA4AAQABAAAAAAAzAA8AAQABAAEAAAA0AA4AAQACAAAAAAA0AA8AAQACAAEAAAA1AA4AAQADAAAAAAA1AA8AAQADAAEAAAA2AA4AAQAEAAAAAAA2AA8AAQAEAAEAAAA3AA4AAQAFAAAAAAA3AA8AAQAFAAEAAAA4AA4AAQAGAAAAAAA4AA8AAQAGAAEAAAA5AA4AAQAHAAAAAAA5AA8AAQAHAAEAAAA6AA4AAQAIAAAAAAA6AA8AAQAIAAEAAAA7AA4AAQAJAAAAAAA7AA8AAQAJAAEAAAA8AA4AAQAKAAAAAAA8AA8AAQAKAAEAAAA9AA4AAQALAAAAAAA9AA8AAQALAAEAAAAyABAAAQAAAAoAAAAyABEAAQAAAAsAAAAzABAAAQABAAoAAAAzABEAAQABAAsAAAA0ABAAAQACAAoAAAA0ABEAAQACAAsAAAA1ABAAAQADAAoAAAA1ABEAAQADAAsAAAA2ABAAAQAEAAoAAAA2ABEAAQAEAAsAAAA3ABAAAQAFAAoAAAA3ABEAAQAFAAsAAAA4ABAAAQAGAAoAAAA4ABEAAQAGAAsAAAA5ABAAAQAHAAoAAAA5ABEAAQAHAAsAAAA6ABAAAQAIAAoAAAA6ABEAAQAIAAsAAAA7ABAAAQAJAAoAAAA7ABEAAQAJAAsAAAA8ABAAAQAKAAoAAAA8ABEAAQAKAAsAAAA9ABAAAQALAAoAAAA9ABEAAQALAAsAAAA=")
+
+[node name="tileMap_PBP" parent="." unique_id=1103946581 instance=ExtResource("14_0ggf1")]
+position = Vector2(32, 32)
+tile_map_data = PackedByteArray("AABAAAwAAQAAAAAAAABAAA0AAQAAAAEAAABAAA4AAQAAAAIAAABAAA8AAQAAAAcAAABBAAwAAQABAAAAAABBAA0AAQABAAEAAABBAA4AAQABAAIAAABBAA8AAQABAAcAAABCAAwAAQACAAAAAABCAA0AAQACAAEAAABCAA4AAQACAAIAAABCAA8AAQACAAcAAABDAAwAAQADAAAAAABDAA0AAQADAAEAAABDAA4AAQADAAIAAABDAA8AAQADAAcAAABEAAwAAQAEAAAAAABEAA0AAQAEAAEAAABEAA4AAQAEAAIAAABEAA8AAQAEAAcAAABFAAwAAQAFAAAAAABFAA0AAQAFAAEAAABFAA4AAQAFAAIAAABFAA8AAQAFAAcAAABGAAwAAQAGAAAAAABGAA0AAQAGAAEAAABGAA4AAQAGAAIAAABGAA8AAQAGAAcAAABHAAwAAQAHAAAAAABHAA0AAQAHAAEAAABHAA4AAQAHAAIAAABHAA8AAQAHAAcAAABIAAwAAQAIAAAAAABIAA0AAQAIAAEAAABIAA4AAQAIAAIAAABIAA8AAQAIAAcAAABJAAwAAQAJAAAAAABJAA0AAQAJAAEAAABJAA4AAQAJAAIAAABJAA8AAQAJAAcAAABKAAwAAQAKAAAAAABKAA0AAQAKAAEAAABKAA4AAQAKAAIAAABKAA8AAQAKAAcAAABLAAwAAQALAAAAAABLAA0AAQALAAEAAABLAA4AAQALAAIAAABLAA8AAQALAAcAAABAABAAAQAAAAMAAABAABEAAQAAAAQAAABBABAAAQABAAMAAABBABEAAQABAAQAAABCABAAAQACAAMAAABCABEAAQACAAQAAABDABAAAQADAAMAAABDABEAAQADAAQAAABEABAAAQAEAAMAAABEABEAAQAEAAQAAABFABAAAQAFAAMAAABFABEAAQAFAAQAAABGABAAAQAGAAMAAABGABEAAQAGAAQAAABHABAAAQAHAAMAAABHABEAAQAHAAQAAABIABAAAQAIAAMAAABIABEAAQAIAAQAAABJABAAAQAJAAMAAABJABEAAQAJAAQAAABKABAAAQAKAAMAAABKABEAAQAKAAQAAABLABAAAQALAAMAAABLABEAAQALAAQAAABAABoAAQAAAAoAAABAABsAAQAAAAsAAABBABoAAQABAAoAAABBABsAAQABAAsAAABCABoAAQACAAoAAABCABsAAQACAAsAAABDABoAAQADAAoAAABDABsAAQADAAsAAABEABoAAQAEAAoAAABEABsAAQAEAAsAAABFABoAAQAFAAoAAABFABsAAQAFAAsAAABGABoAAQAGAAoAAABGABsAAQAGAAsAAABHABoAAQAHAAoAAABHABsAAQAHAAsAAABIABoAAQAIAAoAAABIABsAAQAIAAsAAABJABoAAQAJAAoAAABJABsAAQAJAAsAAABKABoAAQAKAAoAAABKABsAAQAKAAsAAABLABoAAQALAAoAAABLABsAAQALAAsAAABAABIAAQAAAAUAAABAABMAAQAAAAYAAABAABQAAQAAAAcAAABBABIAAQABAAUAAABBABMAAQABAAYAAABBABQAAQABAAcAAABCABIAAQACAAUAAABCABMAAQACAAYAAABCABQAAQACAAcAAABDABIAAQADAAUAAABDABMAAQADAAYAAABDABQAAQADAAcAAABEABIAAQAEAAUAAABEABMAAQAEAAYAAABEABQAAQAEAAcAAABFABIAAQAFAAUAAABFABMAAQAFAAYAAABFABQAAQAFAAcAAABGABIAAQAGAAUAAABGABMAAQAGAAYAAABGABQAAQAGAAcAAABHABIAAQAHAAUAAABHABMAAQAHAAYAAABHABQAAQAHAAcAAABIABIAAQAIAAUAAABIABMAAQAIAAYAAABIABQAAQAIAAcAAABJABIAAQAJAAUAAABJABMAAQAJAAYAAABJABQAAQAJAAcAAABKABIAAQAKAAUAAABKABMAAQAKAAYAAABKABQAAQAKAAcAAABLABIAAQALAAUAAABLABMAAQALAAYAAABLABQAAQALAAcAAABAABUAAQAAAAMAAABAABYAAQAAAAQAAABAABcAAQAAAAUAAABAABgAAQAAAAYAAABAABkAAQAAAAcAAABBABUAAQABAAMAAABBABYAAQABAAQAAABBABcAAQABAAUAAABBABgAAQABAAYAAABBABkAAQABAAcAAABCABUAAQACAAMAAABCABYAAQACAAQAAABCABcAAQACAAUAAABCABgAAQACAAYAAABCABkAAQACAAcAAABDABUAAQADAAMAAABDABYAAQADAAQAAABDABcAAQADAAUAAABDABgAAQADAAYAAABDABkAAQADAAcAAABEABUAAQAEAAMAAABEABYAAQAEAAQAAABEABcAAQAEAAUAAABEABgAAQAEAAYAAABEABkAAQAEAAcAAABFABUAAQAFAAMAAABFABYAAQAFAAQAAABFABcAAQAFAAUAAABFABgAAQAFAAYAAABFABkAAQAFAAcAAABGABUAAQAGAAMAAABGABYAAQAGAAQAAABGABcAAQAGAAUAAABGABgAAQAGAAYAAABGABkAAQAGAAcAAABHABUAAQAHAAMAAABHABYAAQAHAAQAAABHABcAAQAHAAUAAABHABgAAQAHAAYAAABHABkAAQAHAAcAAABIABUAAQAIAAMAAABIABYAAQAIAAQAAABIABcAAQAIAAUAAABIABgAAQAIAAYAAABIABkAAQAIAAcAAABJABUAAQAJAAMAAABJABYAAQAJAAQAAABJABcAAQAJAAUAAABJABgAAQAJAAYAAABJABkAAQAJAAcAAABKABUAAQAKAAMAAABKABYAAQAKAAQAAABKABcAAQAKAAUAAABKABgAAQAKAAYAAABKABkAAQAKAAcAAABLABUAAQALAAMAAABLABYAAQALAAQAAABLABcAAQALAAUAAABLABgAAQALAAYAAABLABkAAQALAAcAAAA=")

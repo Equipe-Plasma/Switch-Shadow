@@ -4,6 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://p85hfea614fx" path="res://assets/player/paracima.png" id="2_edr3p"]
 [ext_resource type="Texture2D" uid="uid://rn6frb51q6g1" path="res://assets/player/parabaixo.png" id="2_tcpa7"]
 [ext_resource type="Texture2D" uid="uid://x3xvexgyh3de" path="res://assets/player/paraesquerda.png" id="4_edr3p"]
+[ext_resource type="Shader" uid="uid://4d1qr225iq4a" path="res://editor/sombras/sombra_reversa/sombra_reversa.gdshader" id="5_j7o13"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_shrem"]
+shader = ExtResource("5_j7o13")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(128, 128)
@@ -18,7 +22,7 @@ textura_costas = ExtResource("2_edr3p")
 textura_dos_lados_direta = ExtResource("4_edr3p")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1460049725]
-modulate = Color(0.7178759, 0.41044083, 1, 1)
+material = SubResource("ShaderMaterial_shrem")
 texture = ExtResource("2_tcpa7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1255377934]

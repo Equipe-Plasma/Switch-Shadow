@@ -1,7 +1,7 @@
 extends Node2D
-var portal_liberado: bool = false
+
 @onready var player: CharacterBody2D = $Player
-@onready var sombra: CharacterBody2D = $Sombra
+@onready var sombra: CharacterBody2D = $Sombra_reversa
 @onready var portal = $PortalSaida
 @onready var trocar: AudioStreamPlayer = $Player/Trocar
 
@@ -57,19 +57,6 @@ func pode_trocar_posicoes() -> bool:
 	var player_bate = player.test_move(trans_player_destino, Vector2.ZERO)
 	var sombra_bate = sombra.test_move(trans_sombra_destino, Vector2.ZERO)
 	
-	if player_bate or sombra_bate:
-		print("Ação bloqueada: Personagem bateria na parede!")
-		return false
-
-	# 4. Verifica se há alguma parede anti-troca bloqueando a troca
-	for parede in get_tree().get_nodes_in_group("paredes_anti_troca"):
-		# Acessamos a AreaDeteccao que está dentro da parede
-		if parede.has_node("AreaDeteccao"):
-			var area = parede.get_node("AreaDeteccao")
-			if area.overlaps_body(player) or area.overlaps_body(sombra):
-				print("Ação bloqueada: Proibido trocar de lugar sobre a barreira anti-troca!")
-				return false
-
 	# Retorna verdadeiro apenas se ambos estiverem livres para a troca
 	return not (player_bate or sombra_bate)
 	
@@ -92,10 +79,12 @@ func verificar_progresso() -> void:
 	var itens_restantes = get_tree().get_nodes_in_group("itens").size()
 
 	# Quando todos os itens forem coletados
-	if total_itens > 0 and itens_restantes == 0 and not portal_liberado:
-		portal_liberado = true
+	if total_itens > 0 and itens_restantes == 0:
 		portal.ativar()
-		print("Todos os itens coletados! Portal ativado!")
+		var mostrar
+		if mostrar:
+			print("Todos os itens coletados! Portal ativado!")
+			mostrar = false # Bloqueia o if para sempre
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:
