@@ -117,5 +117,5 @@ func avancar_para_proxima_fase() -> void:
 
 	get_tree().call_deferred(
 		"change_scene_to_file",
-        "res://menu/telas/tela_vitoria/tela_vitoria.tscn"
+        "res://Sistema/creditos/Creditos.tscn"
 	)
