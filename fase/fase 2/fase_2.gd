@@ -99,7 +99,6 @@ func _unhandled_input(event: InputEvent) -> void:
 
 		trocar_posicoes()
 
-
 func trocar_posicoes() -> void:
 	if player == null or sombra == null:
 		return

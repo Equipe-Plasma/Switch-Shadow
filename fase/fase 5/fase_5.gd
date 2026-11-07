@@ -91,8 +91,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 
 		trocar_posicoes()
-		if trocar:
-			trocar.play()
 
 # ==========================================
 # SOLICITAR TROCA
@@ -117,11 +115,16 @@ func trocar_posicoes() -> void:
 # ==========================================
 # EXECUTAR TROCA SEGURA
 # ==========================================
+
 func realizar_troca_segura() -> void:
 	if not pode_trocar_posicoes():
 		print("Troca bloqueada: destino ocupado!")
 		troca_em_andamento = false
 		return
+
+	# O som agora só toca AQUI, se a troca for realmente válida!
+	if trocar:
+		trocar.play()
 
 	var pos_player: Vector2 = player.global_position
 	var pos_sombra: Vector2 = sombra.global_position
@@ -149,7 +152,6 @@ func realizar_troca_segura() -> void:
 	print("================================")
 
 	troca_em_andamento = false
-
 
 # ==========================================
 # VERIFICAR SE A TROCA É POSSÍVEL

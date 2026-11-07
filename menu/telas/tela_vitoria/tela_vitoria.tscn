@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drc06yh60ttaj"]
 
 [ext_resource type="Script" uid="uid://bgv0tho60vngc" path="res://menu/telas/tela_vitoria/tela_vitoria.gd" id="1_vetyl"]
+[ext_resource type="AudioStream" uid="uid://c05anfv6dpns6" path="res://sons/fase_completa.mp3" id="2_hgvxo"]
 
 [node name="TelaVitoria" type="Control" unique_id=62974723 node_paths=PackedStringArray("botao_proxima_fase", "botao_menu")]
 layout_mode = 3
@@ -66,6 +67,10 @@ offset_bottom = 139.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "VOLTAR_MENU"
+
+[node name="audio_vitoria" type="AudioStreamPlayer" parent="." unique_id=1859594892]
+stream = ExtResource("2_hgvxo")
+volume_db = 6.386
 
 [connection signal="pressed" from="BotaoProximaFase" to="." method="_on_botao_proxima_fase_pressed"]
 [connection signal="pressed" from="BotaoMenu" to="." method="_on_botao_menu_pressed"]

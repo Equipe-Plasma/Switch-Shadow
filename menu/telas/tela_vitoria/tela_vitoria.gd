@@ -12,6 +12,7 @@ const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 
 @export var botao_proxima_fase: Button
 @export var botao_menu: Button
+@onready var audio_vitoria: AudioStreamPlayer = $audio_vitoria
 
 var botoes: Array[Button] = []
 var indice_selecionado: int = 0
@@ -136,7 +137,6 @@ func confirmar_selecao() -> void:
 
 func _on_botao_proxima_fase_pressed() -> void:
 	Global.proxima_fase()
-
 
 # ==========================================
 # VOLTAR AO MENU PRINCIPAL

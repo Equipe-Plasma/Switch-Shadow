@@ -27,15 +27,6 @@ func _unhandled_input(event: InputEvent) -> void:
 	# Quando o jogador apertar o botão de troca (ESPAÇO)
 	if event.is_action_pressed("trocar_sombra"):
 		trocar_posicoes()
-		if trocar:
-			trocar.play()
-		else:
-			print("Aviso: O AudioStreamPlayer 'change' não foi encontrado nesta cena.")
-		
-	# Atalho para avançar de fase ao apertar Enter (ui_accept) ou a ação configurada
-	if event.is_action_pressed("proxima_fase"):
-		avancar_para_proxima_fase()
-	# TEm q apagar isso dps ^
 
 func trocar_posicoes() -> void:
 	if player == null or sombra == null:
@@ -45,8 +36,13 @@ func trocar_posicoes() -> void:
 		print("Ação bloqueada: Personagem na parede!! ")
 		return
 
-	# Se estiver tudo certo, executa a troca
+	# Se estiver tudo certo, executa a troca e toca o som
 	realizar_troca()
+	
+	if trocar:
+		trocar.play()
+	else:
+		print("Aviso: O AudioStreamPlayer 'trocar' não foi encontrado nesta cena.")
 	
 func pode_trocar_posicoes() -> bool:
 	# 1. Simula a posição de destino do Player
@@ -89,8 +85,6 @@ func verificar_progresso() -> void:
 		portal_liberado = true
 		print("Todos os itens coletados! Portal ativado!")
 		portal.ativar()
-		
-
 
 func avancar_para_proxima_fase() -> void:
 	if fase_concluida:

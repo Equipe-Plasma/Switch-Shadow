@@ -5,4 +5,4 @@
 [node name="GlobalMusic" type="AudioStreamPlayer" unique_id=166330772]
 stream = ExtResource("1_wsj5q")
 autoplay = true
-parameters/looping = false
+parameters/looping = true
