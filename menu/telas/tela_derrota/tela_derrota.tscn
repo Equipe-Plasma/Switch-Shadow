@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cgtgr4idie5lh"]
 
 [ext_resource type="Script" uid="uid://dx1wlv0ejh75c" path="res://menu/telas/tela_derrota/tela_derrota.gd" id="1_pm3wf"]
+[ext_resource type="AudioStream" uid="uid://dla5rglil18kv" path="res://sons/morte.mp3" id="2_3iln6"]
 
 [node name="TelaDerrota" type="Control" unique_id=1428311591 node_paths=PackedStringArray("botao_tentar_novamente", "botao_menu")]
 layout_mode = 3
@@ -61,6 +62,10 @@ offset_top = 371.0
 offset_right = 775.0
 offset_bottom = 426.0
 text = "VOLTAR_MENU"
+
+[node name="morte" type="AudioStreamPlayer" parent="." unique_id=1760001674]
+stream = ExtResource("2_3iln6")
+volume_db = 8.491
 
 [connection signal="pressed" from="BotaoTentarNovamente" to="." method="_on_botao_tentar_novamente_pressed"]
 [connection signal="pressed" from="BotaoMenu" to="." method="_on_botao_menu_pressed"]

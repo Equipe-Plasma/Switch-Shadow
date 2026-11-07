@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bg3d3dk0l61jv"]
 
 [ext_resource type="Script" uid="uid://chtqxur71et2r" path="res://editor/item/item.gd" id="1_6t40p"]
-[ext_resource type="Texture2D" uid="uid://ddym0oeqa3oij" path="res://assets/outros/item.png" id="2_cjhq7"]
+[ext_resource type="Texture2D" uid="uid://ca7i15p5u7utb" path="res://assets/outros/item.png" id="2_cjhq7"]
 [ext_resource type="AudioStream" uid="uid://c5om5m4lvreut" path="res://sons/item_coletado.mp3" id="3_x7dig"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_123ki"]
@@ -14,6 +14,7 @@ script = ExtResource("1_6t40p")
 shape = SubResource("CircleShape2D_123ki")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=498615420]
+self_modulate = Color(18.892157, 18.892157, 18.892157, 1)
 texture = ExtResource("2_cjhq7")
 
 [node name="Item_coletado" type="AudioStreamPlayer2D" parent="." unique_id=395619158]

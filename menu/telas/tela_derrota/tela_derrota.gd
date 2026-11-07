@@ -7,6 +7,7 @@ extends Control
 
 @export var botao_tentar_novamente: Button
 @export var botao_menu: Button
+@onready var morte: AudioStreamPlayer = $morte
 
 var botoes: Array[Button] = []
 var indice_selecionado: int = 0
@@ -20,6 +21,7 @@ const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 
 func _ready() -> void:
 	get_tree().paused = false
+	morte.play()
 
 	botoes = [
 		botao_tentar_novamente,

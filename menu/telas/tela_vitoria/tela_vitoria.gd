@@ -12,7 +12,7 @@ const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 
 @export var botao_proxima_fase: Button
 @export var botao_menu: Button
-@onready var audio_vitoria: AudioStreamPlayer = $audio_vitoria
+@onready var vitoria: AudioStreamPlayer = $vitoria
 
 var botoes: Array[Button] = []
 var indice_selecionado: int = 0

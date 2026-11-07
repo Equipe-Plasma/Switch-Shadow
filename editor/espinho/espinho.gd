@@ -4,7 +4,6 @@ extends Area2D
 enum TipoEspinho { AMBOS, APENAS_PLAYER, APENAS_SOMBRA }
 
 @export var tipo: TipoEspinho = TipoEspinho.AMBOS
-
 @onready var sprite: Sprite2D = $Sprite2D
 
 func _ready() -> void:
