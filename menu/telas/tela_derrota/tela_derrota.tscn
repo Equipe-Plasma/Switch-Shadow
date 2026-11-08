@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dx1wlv0ejh75c" path="res://menu/telas/tela_derrota/tela_derrota.gd" id="1_pm3wf"]
 [ext_resource type="AudioStream" uid="uid://dla5rglil18kv" path="res://sons/morte.mp3" id="2_3iln6"]
+[ext_resource type="Texture2D" uid="uid://b1iws8kl2xl0k" path="res://assets/backgrounds/game_over.png" id="2_we1am"]
 
 [node name="TelaDerrota" type="Control" unique_id=1428311591 node_paths=PackedStringArray("botao_tentar_novamente", "botao_menu")]
 layout_mode = 3
@@ -13,6 +14,23 @@ grow_vertical = 2
 script = ExtResource("1_pm3wf")
 botao_tentar_novamente = NodePath("BotaoTentarNovamente")
 botao_menu = NodePath("BotaoMenu")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1479858992]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1273.0
+offset_top = -441.0
+offset_right = 1581.1367
+offset_bottom = 124.760376
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5707964
+mouse_filter = 2
+texture = ExtResource("2_we1am")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=102563856]
 layout_mode = 1

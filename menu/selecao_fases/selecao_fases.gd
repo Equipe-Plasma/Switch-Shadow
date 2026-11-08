@@ -203,8 +203,8 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	var novo_indice = indice_selecionado
 
 	if tecla == KEY_ESCAPE:
-		_on_botao_voltar_pressed()
 		get_viewport().set_input_as_handled()
+		_on_botao_voltar_pressed()
 		return
 
 	# Quando BACK TO MENU está selecionado

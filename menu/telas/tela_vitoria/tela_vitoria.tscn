@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drc06yh60ttaj"]
 
 [ext_resource type="Script" uid="uid://bgv0tho60vngc" path="res://menu/telas/tela_vitoria/tela_vitoria.gd" id="1_vetyl"]
+[ext_resource type="Texture2D" uid="uid://tqog0i2tojvj" path="res://assets/backgrounds/fase_completa.png" id="2_6qyaw"]
 [ext_resource type="AudioStream" uid="uid://b4f0hp0huk6tk" path="res://sons/vitoria.mp3" id="2_hgvxo"]
 
 [node name="TelaVitoria" type="Control" unique_id=62974723 node_paths=PackedStringArray("botao_proxima_fase", "botao_menu")]
@@ -14,14 +15,22 @@ script = ExtResource("1_vetyl")
 botao_proxima_fase = NodePath("BotaoProximaFase")
 botao_menu = NodePath("BotaoMenu")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=597272157]
+[node name="Background" type="TextureRect" parent="." unique_id=1624699947]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 1273.0
+offset_top = -441.0
+offset_right = 1581.1367
+offset_bottom = 124.760376
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
+rotation = 1.5707964
+mouse_filter = 2
+texture = ExtResource("2_6qyaw")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Label" type="Label" parent="." unique_id=518248372]
 layout_mode = 1
