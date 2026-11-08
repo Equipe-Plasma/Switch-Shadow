@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s0ypfvps41r1"]
 
 [ext_resource type="Script" uid="uid://dlpmtc7rdedku" path="res://menu/menu_principal/menu_principal.gd" id="1_yo6f2"]
-[ext_resource type="Texture2D" uid="uid://btlxuq24vlrsp" path="res://assets/backgrounds/temp_back.jpg" id="2_cme23"]
+[ext_resource type="Texture2D" uid="uid://quk7rdg44gag" path="res://assets/backgrounds/menu_principal.png" id="2_etabt"]
 [ext_resource type="StyleBox" uid="uid://dec4hdaqgkkgt" path="res://menu/new_style_box_flat.tres" id="3_oc0hg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2j2di"]
@@ -71,7 +71,7 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5707964
 mouse_filter = 2
-texture = ExtResource("2_cme23")
+texture = ExtResource("2_etabt")
 expand_mode = 1
 stretch_mode = 5
 

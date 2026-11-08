@@ -40,9 +40,17 @@ func _ready() -> void:
 			func(): indice_selecionado = indice
 		)
 
+		var estilo_normal = StyleBoxFlat.new()
+		estilo_normal.bg_color = Color.TRANSPARENT 
+		estilo_normal.border_color = Color(0.734, 0.436, 1.0, 1.0) 
+		estilo_normal.set_border_width_all(4)
+		estilo_normal.set_corner_radius_all(8)
+		
+		botao.add_theme_stylebox_override("normal", estilo_normal)
+
 		var estilo_foco = StyleBoxFlat.new()
 		estilo_foco.bg_color = Color.TRANSPARENT
-		estilo_foco.border_color = Color("#FFD700")
+		estilo_foco.border_color = Color("4f0072ff")
 		estilo_foco.set_border_width_all(4)
 		estilo_foco.set_corner_radius_all(8)
 

@@ -17,13 +17,13 @@ const MENU_PRINCIPAL = "res://menu/menu_principal/menu_principal.tscn"
 var botoes: Array[Button] = []
 var indice_selecionado: int = 0
 
-
 # ==========================================
 # INICIALIZAÇÃO
 # ==========================================
 
 func _ready() -> void:
 	get_tree().paused = false
+	vitoria.play()
 
 	botoes = [
 		botao_proxima_fase,
@@ -47,14 +47,13 @@ func _ready() -> void:
 		# Destaque amarelo do botão selecionado
 		var estilo_foco = StyleBoxFlat.new()
 		estilo_foco.bg_color = Color.TRANSPARENT
-		estilo_foco.border_color = Color("#FFD700")
+		estilo_foco.border_color = Color("4f0072ff")
 		estilo_foco.set_border_width_all(4)
 		estilo_foco.set_corner_radius_all(8)
 
 		botao.add_theme_stylebox_override("focus", estilo_foco)
 
 	selecionar_botao(0)
-
 
 # ==========================================
 # NAVEGAÇÃO PELO TECLADO

@@ -48,7 +48,7 @@ func atualizar_traducoes() -> void:
 		botao.text = tr("FASE") + " " + str(numero)
 
 		if numero <= FASES_PRONTAS:
-			botao.text += " ✓"
+			botao.text += " "
 		else:
 			botao.text += " 🔒"
 
@@ -133,7 +133,7 @@ func criar_botoes() -> void:
 
 		var estilo = StyleBoxFlat.new()
 		estilo.bg_color = Color("#101827")
-		estilo.border_color = Color("#D99A62")
+		estilo.border_color = Color(0.734, 0.436, 1.0, 1.0) 
 		estilo.set_border_width_all(2)
 		estilo.set_corner_radius_all(6)
 
@@ -146,7 +146,7 @@ func criar_botoes() -> void:
 		# Destaque da seleção pelo teclado
 		var estilo_foco = StyleBoxFlat.new()
 		estilo_foco.bg_color = Color.TRANSPARENT
-		estilo_foco.border_color = Color("#FFD700")
+		estilo_foco.border_color = Color("4f0072ff")
 		estilo_foco.set_border_width_all(4)
 		estilo_foco.set_corner_radius_all(8)
 

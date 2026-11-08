@@ -35,7 +35,7 @@ func _ready() -> void:
 
 		var estilo_foco = StyleBoxFlat.new()
 		estilo_foco.bg_color = Color.TRANSPARENT
-		estilo_foco.border_color = Color("#FFD700")
+		estilo_foco.border_color = Color("4f0072ff")
 		estilo_foco.set_border_width_all(4)
 		estilo_foco.set_corner_radius_all(8)
 
