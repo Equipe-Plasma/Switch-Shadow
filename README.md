@@ -10,7 +10,7 @@ Este projeto foi desenvolvido como submissão para a **[That Game Jam #02](https
 
 ## 🧩 Mecânicas Principais
 
-* **Troca de Posição (Swap):** O jogador e sua sombra se movem pelo mapa. A qualquer momento, você pode alternar a sua posição física com a da sombra para alcançar locais antes inacessíveis.
+* **Troca de Posição (Switch):** O jogador e sua sombra se movem pelo mapa. A qualquer momento, você pode alternar a sua posição física com a da sombra para alcançar locais antes inacessíveis.
 * **Paredes Anti-Troca:** Zonas seguras ou de interferência onde a habilidade de teletransporte/troca é bloqueada, exigindo planejamento de rota.
 * **Paredes Alternadas:** Obstáculos de estado que mudam dependendo de qual entidade (Player ou Sombra) está liderando a ação.
 
@@ -28,7 +28,7 @@ Este projeto foi desenvolvido como submissão para a **[That Game Jam #02](https
 ## 👥 Equipe de Desenvolvimento
 
 Projeto construído em colaboração por:
-* [1N-I (Giovani H.)](https://github.com/1N-I)
+* [1N-i (Giovani H.)](https://github.com/1N-I)
 * [Ghabriel-Boas](https://github.com/Ghabriel-Boas)
 * [KilldEmon](https://github.com/KilldEmon)
 * [Rubens5405 (Rubens Araujo)](https://github.com/Rubens5405)
