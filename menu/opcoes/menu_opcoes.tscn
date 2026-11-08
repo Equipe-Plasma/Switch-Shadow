@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://b3804r5u7qo5x"]
 
 [ext_resource type="Script" uid="uid://kc2yau0lytx5" path="res://menu/opcoes/menu_opcoes.gd" id="1_nvynx"]
-[ext_resource type="Texture2D" uid="uid://bn6b35dqjxspg" path="res://assets/backgrounds/temp_back2.jpg" id="2_cp615"]
 
 [node name="MenuOpcoes" type="Control" unique_id=1533226383]
 layout_mode = 3
@@ -25,7 +24,6 @@ grow_horizontal = 2
 grow_vertical = 2
 rotation = -1.5707964
 mouse_filter = 2
-texture = ExtResource("2_cp615")
 expand_mode = 1
 stretch_mode = 5
 
