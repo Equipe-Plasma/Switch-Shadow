@@ -28,10 +28,13 @@ Este projeto foi desenvolvido como submissão para a **[That Game Jam #02](https
 ## 👥 Equipe de Desenvolvimento
 
 Projeto construído em colaboração por:
-* [1N-i (Giovani H.)](https://github.com/1N-I)
-* [Ghabriel-Boas](https://github.com/Ghabriel-Boas)
-* [KilldEmon](https://github.com/KilldEmon)
-* [Rubens5405 (Rubens Araujo)](https://github.com/Rubens5405)
+* | Giovani Huguenin | [@1N-i](https://github.com/1N-i) |
+* | Ghabriel de Araujo | [@Ghabriel-Boas](https://github.com/Ghabriel-Boas) |
+* | Gustavo Oliveira | [@KilldEmon](https://github.com/KilldEmon) |
+* | Rubens Araujo | [@Rubens5405](https://github.com/Rubens5405) |
+
+
+
 
 ---
 *Obrigado por jogar! Se gostar do projeto, deixe uma estrelinha (⭐) no repositório e um comentário na página da Jam.*
