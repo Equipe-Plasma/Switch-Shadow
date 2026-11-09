@@ -28,7 +28,7 @@ Este projeto foi desenvolvido como submissão para a **[That Game Jam #02](https
 ## 👥 Equipe de Desenvolvimento
 
 Projeto construído em colaboração por:
-* | Giovani Huguenin | [@1N-i](https://github.com/1N-i) |
+* | Giovani H. | [@1N-i](https://github.com/1N-i) |
 * | Ghabriel de Araujo | [@Ghabriel-Boas](https://github.com/Ghabriel-Boas) |
 * | Gustavo Oliveira | [@KilldEmon](https://github.com/KilldEmon) |
 * | Rubens Araujo | [@Rubens5405](https://github.com/Rubens5405) |
